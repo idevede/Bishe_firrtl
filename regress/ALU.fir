@@ -1,0 +1,43 @@
+; SPDX-License-Identifier: Apache-2.0
+circuit ALU : 
+  module ALU : 
+    input clock : Clock
+    input reset : UInt<1>
+    output io : {flip fn : UInt<2>, flip in : UInt<32>, out : UInt<32>}
+    
+    wire a : UInt<32> @[cmd48.sc 8:15]
+    wire b : UInt<32> @[cmd48.sc 9:15]
+    wire c : UInt<32> @[cmd48.sc 10:15]
+    wire d : UInt<32> @[cmd48.sc 11:15]
+    wire e : UInt<32> @[cmd48.sc 12:15]
+    wire f : UInt<32> @[cmd48.sc 13:15]
+    a <= UInt<2>("h03") @[cmd48.sc 16:5]
+    b <= UInt<3>("h07") @[cmd48.sc 17:5]
+    c <= UInt<3>("h05") @[cmd48.sc 18:5]
+    d <= UInt<3>("h06") @[cmd48.sc 19:5]
+    e <= UInt<1>("h01") @[cmd48.sc 20:5]
+    f <= UInt<2>("h02") @[cmd48.sc 21:5]
+    wire result : UInt<32> @[cmd48.sc 24:20]
+    result <= UInt<1>("h01") @[cmd48.sc 25:10]
+    node _T = eq(UInt<2>("h02"), io.fn) @[Conditional.scala 37:30]
+    when _T : @[Conditional.scala 40:58]
+      node _T_1 = add(io.in, b) @[cmd48.sc 27:27]
+      node _T_2 = tail(_T_1, 1) @[cmd48.sc 27:27]
+      result <= _T_2 @[cmd48.sc 27:22]
+      skip @[Conditional.scala 40:58]
+    else : @[Conditional.scala 39:67]
+      node _T_3 = eq(UInt<1>("h01"), io.fn) @[Conditional.scala 37:30]
+      when _T_3 : @[Conditional.scala 39:67]
+        node _T_4 = add(io.in, d) @[cmd48.sc 28:27]
+        node _T_5 = tail(_T_4, 1) @[cmd48.sc 28:27]
+        result <= _T_5 @[cmd48.sc 28:22]
+        skip @[Conditional.scala 39:67]
+      else : @[Conditional.scala 39:67]
+        node _T_6 = eq(UInt<1>("h00"), io.fn) @[Conditional.scala 37:30]
+        when _T_6 : @[Conditional.scala 39:67]
+          node _T_7 = add(io.in, f) @[cmd48.sc 29:27]
+          node _T_8 = tail(_T_7, 1) @[cmd48.sc 29:27]
+          result <= _T_8 @[cmd48.sc 29:22]
+          skip @[Conditional.scala 39:67]
+    io.out <= result @[cmd48.sc 31:10]
+    io.out <= result @[cmd48.sc 33:10]

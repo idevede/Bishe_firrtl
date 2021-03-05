@@ -10,7 +10,7 @@ import firrtl.options.{Dependency, Phase, PhasePrerequisiteException}
 /** [[firrtl.options.Phase Phase]] that expands [[FirrtlFileAnnotation]]/[[FirrtlSourceAnnotation]] into
   * [[FirrtlCircuitAnnotation]]s and deletes the originals. This is part of the preprocessing done on an input
   * [[AnnotationSeq]] by [[FirrtlStage]].
-  *
+  *把原始文件转换成circult
   * The types of possible annotations are handled in the following ways:
   *  - [[FirrtlFileAnnotation]]s are read as Protocol Buffers if the file extension ends in `.pb`. Otherwise, these are
   *    assumed to be raw FIRRTL text and is sent to the [[Parser]]. The original [[FirrtlFileAnnotation]] is deleted.

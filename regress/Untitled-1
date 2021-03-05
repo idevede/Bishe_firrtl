@@ -1,0 +1,56 @@
+Reference(b,UIntType(IntWidth(8)),PortKind,SourceFlow)
+DoPrim(not,ArrayBuffer(Reference(b,UIntType(IntWidth(8)),PortKind,SourceFlow)),ArrayBuffer(),UIntType(IntWidth(8)))
+Reference(o,UIntType(IntWidth(9)),PortKind,SinkFlow)
+Reference(a,UIntType(IntWidth(8)),PortKind,SourceFlow)
+Reference(_GEN_0,UIntType(IntWidth(8)),NodeKind,SourceFlow)
+DoPrim(add,ArrayBuffer(Reference(a,UIntType(IntWidth(8)),PortKind,SourceFlow), Reference(_GEN_0,UIntType(IntWidth(8)),NodeKind,SourceFlow)),ArrayBuffer(),UIntType(IntWidth(9)))
+
+Circuit(,ArrayBuffer(Module(,AddNot,ArrayBuffer(Port(,a,Input,UIntType(IntWidth(8))), Port(,b,Input,UIntType(IntWidth(8))), Port(,o,Output,UIntType(IntWidth(9)))),Block(ArrayBuffer
+(DefNode(,_GEN_0,DoPrim(not,ArrayBuffer(Reference(b,UIntType(IntWidth(8)),PortKind,SourceFlow)),ArrayBuffer(),UIntType(IntWidth(8)))), Connect(,Reference(o,UIntType(IntWidth(9)),PortKind,SinkFlow),
+DoPrim(add,ArrayBuffer(Reference(a,UIntType(IntWidth(8)),PortKind,SourceFlow), Reference(_GEN_0,UIntType(IntWidth(8)),NodeKind,SourceFlow)),ArrayBuffer(),UIntType(IntWidth(9)))))))),AddNot)
+
+
+Reference(b,UIntType(IntWidth(8)),PortKind,SourceFlow)
+DoPrim(not,ArrayBuffer(Reference(b,UIntType(IntWidth(8)),PortKind,SourceFlow)),ArrayBuffer(),UIntType(IntWidth(8)))
+Reference(o,UIntType(IntWidth(9)),PortKind,SinkFlow)
+Reference(a,UIntType(IntWidth(8)),PortKind,SourceFlow)
+Reference(_GEN_0,UIntType(IntWidth(8)),NodeKind,SourceFlow)
+DoPrim(add,ArrayBuffer(Reference(a,UIntType(IntWidth(8)),PortKind,SourceFlow), Reference(_GEN_0,UIntType(IntWidth(8)),NodeKind,SourceFlow)),ArrayBuffer(),UIntType(IntWidth(9)))
+
+Circuit(,
+    ArrayBuffer(
+        Module(
+            ,
+            AddNot,
+            ArrayBuffer(
+                Port(,a,Input,UIntType(IntWidth(8))), 
+                Port(,b,Input,UIntType(IntWidth(8))), 
+                Port(,c,Input,UIntType(IntWidth(8))), 
+                Port(,o,Output,UIntType(IntWidth(9)))),
+            Block(
+                ArrayBuffer(
+                    DefNode(
+                        ,
+                        _GEN_0,
+                        DoPrim(not,
+                            ArrayBuffer(Reference(b,UIntType(IntWidth(8)),PortKind,SourceFlow)),
+                            ArrayBuffer(),
+                            UIntType(IntWidth(8)))
+                    ), 
+                    Connect(
+                        ,
+                        Reference(o,UIntType(IntWidth(9)),PortKind,SinkFlow),
+                        DoPrim(add,
+                        ArrayBuffer(
+                            Reference(a,UIntType(IntWidth(8)),PortKind,SourceFlow), 
+                            Reference(_GEN_0,UIntType(IntWidth(8)),NodeKind,SourceFlow)),
+                        ArrayBuffer(),
+                        UIntType(IntWidth(9)))
+                    )
+                )
+            )
+        )
+    )
+    ,AddNot
+)
+

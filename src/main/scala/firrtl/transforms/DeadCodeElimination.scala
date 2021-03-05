@@ -317,8 +317,20 @@ class DeadCodeElimination extends Transform with RegisteredTransform with Depend
 
   def run(state: CircuitState, dontTouches: Seq[LogicNode], doTouchExtMods: Set[String]): CircuitState = {
     val c = state.circuit
+
+    
+    
     val moduleMap = c.modules.map(m => m.name -> m).toMap
+    // println("This is moduleMap:")
+    // println(moduleMap)
+
     val iGraph = InstanceKeyGraph(c)
+
+    // println("This is iGraph:")
+    // println(iGraph)
+
+
+
     val moduleDeps = iGraph.graph.getEdgeMap.map({
       case (k, v) =>
         k.module -> v.map(i => i.name -> i.module).toMap
@@ -344,7 +356,11 @@ class DeadCodeElimination extends Transform with RegisteredTransform with Depend
     }
 
     val liveNodes = depGraph.reachableFrom(circuitSink) + circuitSink
+    // println("This is liveNodes:")
+    // println(liveNodes)
     val deadNodes = depGraph.getVertices -- liveNodes
+    // println("This is deadNodes:")
+    // println(deadNodes)
     val renames = RenameMap()
     renames.setCircuit(c.main)
 

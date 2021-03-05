@@ -10,6 +10,7 @@ import firrtl.stage.{FirrtlOptions, InfoModeAnnotation, RunFirrtlTransformAnnota
 
 /** [[firrtl.options.Phase Phase]] that adds default [[FirrtlOption]] [[firrtl.annotations.Annotation Annotation]]s.
   * This is a part of the preprocessing done by [[FirrtlStage]].
+  * 添加默认发射值
   */
 class AddDefaults extends Phase {
 
