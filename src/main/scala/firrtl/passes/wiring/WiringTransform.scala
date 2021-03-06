@@ -55,8 +55,13 @@ class WiringTransform extends Transform with DependencyAPIMigration {
       case a @ (_: SinkAnnotation | _: SourceAnnotation) => a
     }
     annos match {
-      case Seq() => state
+
+      
+      case Seq() => 
+        println("WiringTransform", annos, annos.getClass)
+        state
       case p =>
+        println("WiringTransform", annos, annos.getClass)
         val sinks = mutable.HashMap[String, Seq[Named]]()
         val sources = mutable.HashMap[String, ComponentName]()
         val errors = p.flatMap {
