@@ -282,7 +282,9 @@ object CommonSubexpressionElimination extends Pass {
           expr
         }
             
-        var new_Mux_1 = new_add2.args(1) match {
+        var new_Mux_1 = new_add1.args(1)
+        var new_Mux_0 = new_add1.args(0) 
+        new_add2.args(1) match {
             case WRef(name,_,_,_) =>
                 var temp2 = ""
                 new_add1.args(1) match {
@@ -291,12 +293,17 @@ object CommonSubexpressionElimination extends Pass {
                   case _ =>
                     temp2 = ""
                 }
-                name match {
-                  case temp2 =>
-                    new_add1.args(1)
-                  case _ => Mux(node._2._6, new_add2.args(1), new_add1.args(1), UnknownType)
+                //println("name,temp2", name,temp2)
+                var flag = name.equals(temp2)
+                flag match {
+                  case true =>
+                    new_Mux_1 = new_add1.args(1)
+                  case false => 
+                    println("name,temp2", name,temp2)
+                    new_Mux_1 = Mux(node._2._6, new_add2.args(1), new_add1.args(1), UnknownType)
                 }
             case UIntLiteral(value, width)  =>
+          
                 var temp2 = BigInt(0)
                 new_add1.args(1) match {
                   case UIntLiteral(value_add1, width) =>
@@ -304,16 +311,22 @@ object CommonSubexpressionElimination extends Pass {
                   case _ =>
                     temp2 = BigInt(0)
                 }
-                value match {
-                  case temp2 =>
-                    new_add1.args(1)
-                  case _ => Mux(node._2._6, new_add2.args(1), new_add1.args(1), UnknownType)
+              
+                var flag = value.equals(temp2)
+                flag match {
+                  case true =>
+                    //println("value,temp2", value,temp2)
+                    new_Mux_1 = new_add2.args(1)
+                  case false => 
+                    //println("value,temp2", value,temp2)
+                    new_Mux_1 = Mux(node._2._6, new_add2.args(1), new_add1.args(1), UnknownType)
                 }
                 
-            case _ => Mux(node._2._6, new_add2.args(1), new_add1.args(1), UnknownType)
+            case _ => 
+              new_Mux_1 = Mux(node._2._6, new_add2.args(1), new_add1.args(1), UnknownType)
         }
-
-        var new_Mux_0 = new_add2.args(0) match {
+        
+        new_add2.args(0) match {
             case WRef(name,_,_,_) =>
                 var temp2 = ""
                 new_add1.args(0) match {
@@ -322,10 +335,12 @@ object CommonSubexpressionElimination extends Pass {
                   case _ =>
                     temp2 = ""
                 }
-                name match {
-                  case temp2 =>
-                    new_add1.args(0)
-                  case _ => Mux(node._2._6, new_add2.args(0), new_add1.args(0), UnknownType)
+                var flag = name.equals(temp2)
+                flag match {
+                  case true =>
+                    new_Mux_0 = new_add1.args(0)
+                  case false => 
+                    new_Mux_0 = Mux(node._2._6, new_add2.args(0), new_add1.args(0), UnknownType)
                 }
             case UIntLiteral(value, width)  =>
                 var temp2 = BigInt(0)
@@ -335,14 +350,18 @@ object CommonSubexpressionElimination extends Pass {
                   case _ =>
                     temp2 = BigInt(0)
                 }
-                value match {
-                  case temp2 =>
-                    new_add1.args(0)
-                  case _ => Mux(node._2._6, new_add2.args(0), new_add1.args(0), UnknownType)
+                var flag = value.equals(temp2)
+                flag match {
+                  case true =>
+                    new_Mux_0 = new_add1.args(0)
+                  case false => 
+                    new_Mux_0 = Mux(node._2._6, new_add2.args(0), new_add1.args(0), UnknownType)
                 }
                 
-            case _ => Mux(node._2._6, new_add2.args(0), new_add1.args(0), UnknownType)
+            case _ => 
+              new_Mux_0 = Mux(node._2._6, new_add2.args(0), new_add1.args(0), UnknownType)
         }
+        
 
 
         // var new_Mux_0 = new_add2.args(0).toString match {
