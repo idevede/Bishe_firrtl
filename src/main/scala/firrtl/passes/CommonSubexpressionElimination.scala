@@ -283,10 +283,19 @@ object CommonSubexpressionElimination extends Pass {
         }
             
         var new_Mux_1 = new_add1.args(1)
-        var new_Mux_0 = new_add1.args(0) 
+        var new_Mux_0 = new_add1.args(0)
+        //var new_type= UIntType(IntWidth(33))
+        var new_width = BigInt(32)
         new_add2.args(1) match {
-            case WRef(name,_,_,_) =>
+            case WRef(name,tpe,_,_) =>
                 var temp2 = ""
+                //new_type = tpe
+                tpe match{
+                  case UIntType(IntWidth(w))=>
+                  new_width = w
+                  case _ =>
+                }
+                println("tpe",tpe)
                 new_add1.args(1) match {
                   case WRef(name_add1,_,_,_) =>
                     temp2 = name_add1
@@ -303,7 +312,13 @@ object CommonSubexpressionElimination extends Pass {
                     new_Mux_1 = Mux(node._2._6, new_add2.args(1), new_add1.args(1), UnknownType)
                 }
             case UIntLiteral(value, width)  =>
-          
+                println(width)
+                //new_width = width
+                width match{
+                  case IntWidth(w)=>
+                  new_width = w
+                  case _ =>
+                }
                 var temp2 = BigInt(0)
                 new_add1.args(1) match {
                   case UIntLiteral(value_add1, width) =>
@@ -327,8 +342,14 @@ object CommonSubexpressionElimination extends Pass {
         }
         
         new_add2.args(0) match {
-            case WRef(name,_,_,_) =>
+            case WRef(name,tpe,_,_) =>
                 var temp2 = ""
+                //new_type = tpe
+                tpe match{
+                  case UIntType(IntWidth(w))=>
+                  new_width = w
+                  case _ =>
+                }
                 new_add1.args(0) match {
                   case WRef(name_add0,_,_,_) =>
                     temp2 = name_add0
@@ -343,6 +364,15 @@ object CommonSubexpressionElimination extends Pass {
                     new_Mux_0 = Mux(node._2._6, new_add2.args(0), new_add1.args(0), UnknownType)
                 }
             case UIntLiteral(value, width)  =>
+                println(width)
+                //new_width = width
+                width match{
+                  case IntWidth(w)=>
+                  new_width = w
+                  case _ =>
+                  
+                }
+                
                 var temp2 = BigInt(0)
                 new_add1.args(0) match {
                   case UIntLiteral(value_add0, width) =>
@@ -362,14 +392,6 @@ object CommonSubexpressionElimination extends Pass {
               new_Mux_0 = Mux(node._2._6, new_add2.args(0), new_add1.args(0), UnknownType)
         }
         
-
-
-        // var new_Mux_0 = new_add2.args(0).toString match {
-        //     case new_add1.args(0).toString =>
-        //         new_add1.args(0)
-        //     case _ => Mux(node._2._6, new_add2.args(0), new_add1.args(0), UnknownType)
-        // }
-
         println("new_Mux_0",new_Mux_0)
         println("new_Mux_1",new_Mux_1)
           
@@ -379,10 +401,10 @@ object CommonSubexpressionElimination extends Pass {
         //println("MUXs", node._1,node._2,node._2._1)
         var new_Mux = Mux(node._2._6, new_add2.args(1), new_add1.args(1), UnknownType)
         //println("newExp", new_Mux)
-        var new_add = DoPrim(PrimOps.Add, collection.mutable.ArrayBuffer(new_add2.args(0), WRef("_T_7", UIntType(IntWidth(32)),NodeKind,SourceFlow)),collection.mutable.ArrayBuffer.empty,UIntType(IntWidth(33)))
+        var new_add = DoPrim(PrimOps.Add, collection.mutable.ArrayBuffer(new_Mux_0, new_Mux_1),collection.mutable.ArrayBuffer.empty,UIntType(IntWidth(new_width+1)))
         //println("new_add3", new_add)
 
-        var new_Tail = DoPrim(PrimOps.Tail, collection.mutable.ArrayBuffer(WRef("_T_8", UIntType(IntWidth(33)),NodeKind,SourceFlow)),collection.mutable.ArrayBuffer(1),UIntType(IntWidth(32)))
+        var new_Tail = DoPrim(PrimOps.Tail, collection.mutable.ArrayBuffer(new_add),collection.mutable.ArrayBuffer(1),UIntType(IntWidth(new_width)))
         //println("new_add4", new_Tail)
 
         new_Tail_Node = firrtl.ir.DefNode(NoInfo,"_GEN_0",new_Tail)
