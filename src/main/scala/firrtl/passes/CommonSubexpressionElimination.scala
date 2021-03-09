@@ -245,6 +245,7 @@ object CommonSubexpressionElimination extends Pass {
         //第一个tail
         //MUXs [String, (Expression,Expression,String,String,String, Expression)]
         //println("node._2._4",node._2._4)
+        println(node._1)
         Tails.get(node._2._4) match {
               case Some(tuple) =>
                 //println("MUX get", tuple, tuple._2)
@@ -407,17 +408,17 @@ object CommonSubexpressionElimination extends Pass {
         var new_Tail = DoPrim(PrimOps.Tail, collection.mutable.ArrayBuffer(new_add),collection.mutable.ArrayBuffer(1),UIntType(IntWidth(new_width)))
         //println("new_add4", new_Tail)
 
-        new_Tail_Node = firrtl.ir.DefNode(NoInfo,"_GEN_0",new_Tail)
-        new_add_Node = firrtl.ir.DefNode(NoInfo,"_T_8",new_add)
-        new_Mux_Node = firrtl.ir.DefNode(NoInfo,"_T_7",buildExpression(new_Mux))
+        new_Tail_Node = firrtl.ir.DefNode(NoInfo,node._1,new_Tail)
+        //new_add_Node = firrtl.ir.DefNode(NoInfo,"_T_8",new_add)
+        //new_Mux_Node = firrtl.ir.DefNode(NoInfo,"_T_7",buildExpression(new_Mux))
         // expressions.getOrElseUpdate(new_Mux, "_T_7")
         // expressions.getOrElseUpdate(new_add, "_T_8")
         // expressions.getOrElseUpdate(new_Tail, "io_out")
         new_conn2 = new_Tail
         
         new_Stat += new_Tail_Node
-        new_Stat += new_add_Node
-        new_Stat += new_Mux_Node
+        //new_Stat += new_add_Node
+        //new_Stat += new_Mux_Node
         
         //var new_Stat2 = collection.mutable.ArrayBuffer[DefNode](new_Tail_Node, new_add_Node, new_Mux_Node)
         //var new_Stat = collection.mutable.ArrayBuffer[DefNode](DefNode(_,"_GEN_0",new_Tail), DefNode(_,"_T_8",new_add), DefNode(_,"_T_7",new_Mux))
@@ -477,8 +478,8 @@ object CommonSubexpressionElimination extends Pass {
         }
     }
 
-    stmts += new_Mux_Node
-    stmts += new_add_Node
+    //stmts += new_Mux_Node
+    //stmts += new_add_Node
     stmts += new_Tail_Node   
     stmts += ir.Connect(NoInfo,WRef("io_out",UIntType(IntWidth(32)),PortKind,SinkFlow),new_conn2)
     // println("expressions")
@@ -490,7 +491,10 @@ object CommonSubexpressionElimination extends Pass {
     //println("buildStatement(new_Stat)",buildStatement(new_Stat))
     //println("Statement1",Statement2.getClass)
     val final_stmts = Block(stmts) // buildStatement(new_Stat)
-    //println("final_stmts",final_stmts)
+    // final_stmts.foreach{
+    //   final_stmt => println("final_stmts",final_stmt)
+    // }
+    println("final_stmts",final_stmts)
     final_stmts
     // println("Nodes:")
     // println(nodes)
