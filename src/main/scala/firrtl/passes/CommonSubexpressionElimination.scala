@@ -176,61 +176,19 @@ object CommonSubexpressionElimination extends Pass {
             case _ =>
               expressions.getOrElseUpdate(new_exp, x.name)
           }
-          
-          // println("expressions")
-          //println("This is x", x,x.getClass)
+        
           x
         case other => other.map(eliminateNodeRefs)
       }
 
       
     }
-
-
-    def eliminateNewExp(e: Expression): Expression = {
-        MUXs.foreach{
-          node=> 
-            println("eliminateNewExp",node)
-        }
-        e
-        
-    }
-
-  
-    
+   
 
     val Statement1 = eliminateNodeRefs(s)
-    //Statement1.map(eliminateNewExp)//(Statement1)
-    // println("Statement1")
-    // println(Statement1)
-    // println("nodes")
-    // //println(nodes.key)
-    // nodes.foreach{
-    //   node=>
-    //     println("node", node._1,checkExpr(node._2))
-    // }
-    // println("expressions")
-    // //println(nodes.key)
-    // expressions.foreach{
-    //   expression=>
-    //     println(expression._1,expression._2)
-    // }
-    
-    //(ADDs,_T_3,(DoPrim(add,ArrayBuffer(Reference(io_in,UIntType(IntWidth(32)),PortKind,SourceFlow), UIntLiteral(6,IntWidth(32))),ArrayBuffer(),UIntType(IntWidth(33))),io_in,6))
-    // ADDs.foreach{
-    //   node=>
-    //     println("ADDs", node._1,node._2) 
-    // }
 
-    //(MUXs,_GEN_0,(Reference(_T_2,UIntType(IntWidth(32)),NodeKind,SourceFlow),Reference(_T_4,UIntType(IntWidth(32)),NodeKind,SourceFlow),_T,_T_2,_T_4),Reference(_T_2,UIntType(IntWidth(32)),NodeKind,SourceFlow))
-    //var new_add1 : Expression =new Expression()
-    // var new_add1 =ADDs.foreach{
-    //   node=>
-    //     println("ADDs", node._1,node._2) 
-    //   node._2
-    // } //=new firrtl.ir.Expression//= MUXs(0)._2//DoPrim("","")
-    // println(new_add1.getClass)
-    //var new_add2 : Expression = new Expression()
+    //接下来的数据分支进行处理
+  
     var new_add1 = DoPrim(PrimOps.Not, Seq(), Nil,UnknownType)
     var new_add2 = DoPrim(PrimOps.Not, Seq(), Nil,UnknownType)
     var new_conn2 = DoPrim(PrimOps.Not, Seq(), Nil,UnknownType)
@@ -436,38 +394,20 @@ object CommonSubexpressionElimination extends Pass {
           //newExp.map(updateExpType)
       
     }
-    // (Tails,_T_2,(DoPrim(tail,ArrayBuffer(Reference(_T_1,UIntType(IntWidth(33)),NodeKind,SourceFlow)),ArrayBuffer(1),UIntType(IntWidth(32))),_T_1))
-    // Tails.foreach{
-    //   node=>
-    //     println("Tails", node._1,node._2)
-    // }
-
-    // def buildStatement(s: collection.mutable.ArrayBuffer[DefNode]): Statement = {
-    //   s.foreach{
-    //     s_exp => s_exp
-    //     s_exp
-    //   }
-    // }
     
 
     new_block = Block(stmts)
-    //println("new_block",new_block,new_block.getClass)
     val Statement2 = eliminateNodeRefs(s)
 
     Statement2.foreachStmt{
-        // state =>
-        //   println("state",state,state.getClass)
-        //   stmts+= state
         state => state match{
           case ir.Connect(_,_,_)=>
             println("state",state,state.getClass)
           case DefNode(info,name,value)=>
             name match{
               case "_T" =>
-                //println("_T")
                 stmts+= state
               case "_GEN_0" =>
-                //println("_GEN_0")
                 stmts+= state
               case _ =>
                 stmts+= state
@@ -482,14 +422,6 @@ object CommonSubexpressionElimination extends Pass {
     //stmts += new_add_Node
     stmts += new_Tail_Node   
     stmts += ir.Connect(NoInfo,WRef("io_out",UIntType(IntWidth(32)),PortKind,SinkFlow),new_conn2)
-    // println("expressions")
-    // //println(nodes.key)
-    // expressions.foreach{
-    //   expression=>
-    //     println(expression._1,expression._2)
-    // }
-    //println("buildStatement(new_Stat)",buildStatement(new_Stat))
-    //println("Statement1",Statement2.getClass)
     val final_stmts = Block(stmts) // buildStatement(new_Stat)
     // final_stmts.foreach{
     //   final_stmt => println("final_stmts",final_stmt)
@@ -511,20 +443,9 @@ object CommonSubexpressionElimination extends Pass {
         //println(m)
         m
       case m: Module    => 
-      // println(m.info)
-      // println(m.name)
-      // println(m.ports)
-      //println("m.body")
-      //println(m.body) //firrtl.ir.Statement
-      // //print(Parser.parseStatement(String.valueOf(m.body)))
-      // //print(ParseStatement.makeDUT(m.body))
-      //println("m.body",m.body,m.body.getClass)
 
-      var new_body = cse(m.body)
-
-      //println("new_body",new_body)
-
-      Module(m.info, m.name, m.ports, new_body)
+        var new_body = cse(m.body)
+        Module(m.info, m.name, m.ports, new_body)
     }
     // println("c.main")
     // println(c.main)
