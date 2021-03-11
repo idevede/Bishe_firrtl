@@ -31,7 +31,8 @@ object CommonSubexpressionElimination extends Pass {
     val nodes = collection.mutable.HashMap[String, Expression]()
     val Tails = collection.mutable.HashMap[String, (Expression,String)]()
     val ADDs = collection.mutable.HashMap[String, (DoPrim,String,String)]()
-    val MUXs = collection.mutable.HashMap[String, (Expression,Expression,String,String,String, Expression)]()
+    //val MUXs = collection.mutable.HashMap[String, (Expression,Expression,String,String,String, Expression)]()//ArrayBuffer
+    val MUXs = collection.mutable.ArrayBuffer[(Expression,Expression,String,String,String, Expression,String)]()//ArrayBuffer
     
 
     def eliminateNodeRef(e: Expression): Expression = e match {
@@ -50,7 +51,6 @@ object CommonSubexpressionElimination extends Pass {
           case _ => e
         }
       case _ => 
-        //println("eliminateNodeRef", e)
         e.map(eliminateNodeRef)
     }
 
@@ -71,6 +71,8 @@ object CommonSubexpressionElimination extends Pass {
             case PrimOps.Tail =>
               //println("Catch Tail")
               expr.foreachExpr(checkExpr)
+            case PrimOps.Eq =>
+              println("Eq")
             
             case _ =>
               println("Catch Other")
@@ -137,8 +139,9 @@ object CommonSubexpressionElimination extends Pass {
                       case _ => args
                     }//)
                     Tails(x.name) = (new_exp,tail_name)
-            
-                  case _ =>
+                case PrimOps.Eq =>
+                    println("Eq")
+                case _ =>
                     op
               }
             case WRef(name, _, _, _)=>
@@ -152,17 +155,31 @@ object CommonSubexpressionElimination extends Pass {
               cond match {
                 case WRef(name, _, _, _)=>
                   cond_name = name
+                case  DoPrim(op,args,consts,tpe) =>
+                  cond_name = op.toString
+                case _ =>
+                
               }
               tval match {
                 case WRef(name, _, _, _)=>
                   tval_name = name
+                case  DoPrim(op,args,consts,tpe) =>
+                  tval_name = op.toString
+                case _ =>
+
               }
               fval match {
                 case WRef(name, _, _, _)=>
                   fval_name = name
+                case  DoPrim(op,args,consts,tpe) =>
+                  fval_name = op.toString
+                case _ =>
+
               }
 
-              MUXs(x.name) = (tval, fval,cond_name,tval_name,fval_name,cond)//new_ex
+              MUXs += ((tval, fval,cond_name,tval_name,fval_name,cond,x.name))//new_ex
+                     //Expression,Expression,String,String,String, Expression,String
+              println(x.name)
         
             case _ => x.value
                   //println("New Type")
@@ -185,10 +202,130 @@ object CommonSubexpressionElimination extends Pass {
     }
    
 
-    val Statement1 = eliminateNodeRefs(s)
+    val Statement1 = eliminateNodeRefs(s)    
+    var stmts = new collection.mutable.ArrayBuffer[Statement]
+    var Stmts_node = collection.mutable.HashMap[String, Statement]()
+    var new_block = Block(stmts)
+    
+    var temp_count = 0
+    Statement1.foreachStmt{
+         state =>
+           //println("state",state,state.getClass)
+           //stmts+= state
+           state match{
+             case DefNode(_,name,_)=>
+                //println("name",name)
+                Stmts_node(name) = state
+              case Connect(_,outputPortRef, expr) =>
+                outputPortRef match {
+                  case WRef(name,_,_,_)=>
+                    Stmts_node(name) = state
+                  case _ =>
+                    Stmts_node("Connect"+temp_count.toString) = state
+                    temp_count +=1
+                }
+                //println("Connect!!",outputPortRef)
+              case _ =>
+                Stmts_node("Other"+temp_count.toString) = state
+           }
+    }
+
+    var new_name = "_Mux_op_"
+    var index = 0
+    //new_Tail_Node = firrtl.ir.DefNode(NoInfo,node._1,new_Tail)
+    var new_Node = collection.mutable.ArrayBuffer[DefNode]()
+    var new_mux_Node = collection.mutable.ArrayBuffer[DefNode]()
+    MUXs.foreach{
+      node=>
+        var flag = 0 
+        var Ref = new Array[Expression](3)
+        //println("node",node)
+        node._1 match {
+          case DoPrim(op,args,consts,tpe)=>
+            //rintln("node",node._2._1)
+            //node 直接就加进去
+            flag = 1
+            var new_Node_1 = firrtl.ir.DefNode(NoInfo,new_name+index.toString,node._1)
+            new_Node += new_Node_1
+            Ref(0) = WRef(new_name+index.toString,tpe,NodeKind,SourceFlow)
+            index = index+1
+          case _ =>
+            Ref(0) = node._1
+        }
+
+        node._2 match {
+          case DoPrim(op,args,consts,tpe)=>
+            flag = 1
+            var new_Node_2 = firrtl.ir.DefNode(NoInfo,new_name+index.toString,node._2)
+            new_Node += new_Node_2
+            Ref(1) = WRef(new_name+index.toString,tpe,NodeKind,SourceFlow)
+            index = index+1
+          case _ =>
+            Ref(1) = node._2
+        }
+
+        node._6 match {
+          case DoPrim(op,args,consts,tpe)=>
+            flag = 1
+            var new_Node_6 = firrtl.ir.DefNode(NoInfo,new_name+index.toString,node._6)
+            new_Node += new_Node_6
+            Ref(2) = WRef(new_name+index.toString,tpe,NodeKind,SourceFlow)
+            index = index+1
+          case _ =>
+            Ref(2) = node._6
+        }
+      
+      flag match{
+        case 1 =>
+          Stmts_node.get(node._7) match {
+              case Some(expr)  =>
+                //println("Catch Expr!", expr)
+                //println(node._1)
+                Stmts_node -= node._7
+              case _ => 
+            }
+          new_Node += DefNode(NoInfo,node._7,Mux(Ref(2),Ref(0),Ref(1)))
+          
+          
+        case 0 =>
+      }
+    }
+
+    Stmts_node.foreach{
+      node => node._2 match{
+        case DefNode(_,name,_)=>
+            stmts += node._2
+        case  _ =>
+      }    
+    }
+    new_Node.foreach{
+      node =>
+        println(node)
+        stmts += node
+    }
+
+    // new_mux_Node.foreach{
+    //   node =>
+    //     //println(node)
+    //     stmts += node
+    // }
+
+    Stmts_node.foreach{
+      node => node._2 match{
+        case DefNode(_,name,_)=>
+            
+        case  _ =>
+          stmts += node._2
+      }    
+    }
+
+    //stmts + new_Node
+    val final_stmts = Block(stmts)
+    //Statement1
+    final_stmts
 
     //接下来的数据分支进行处理
-  
+  /*
     var new_add1 = DoPrim(PrimOps.Not, Seq(), Nil,UnknownType)
     var new_add2 = DoPrim(PrimOps.Not, Seq(), Nil,UnknownType)
     var new_conn2 = DoPrim(PrimOps.Not, Seq(), Nil,UnknownType)
@@ -430,6 +567,7 @@ object CommonSubexpressionElimination extends Pass {
     final_stmts
     // println("Nodes:")
     // println(nodes)
+    */
   }
 /*
 从mux入手，寻找跟mux相关的节点，然后查找共同操作，寻找相同节点的
