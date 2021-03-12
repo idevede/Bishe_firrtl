@@ -31,7 +31,8 @@ object CommonSubexpressionElimination extends Pass {
     val nodes = collection.mutable.HashMap[String, Expression]()
     val Tails = collection.mutable.HashMap[String, (Expression,String)]()
     val ADDs = collection.mutable.HashMap[String, (DoPrim,String,String)]()
-    val MUXs = collection.mutable.HashMap[String, (Expression,Expression,String,String,String, Expression)]()
+    //val MUXs = collection.mutable.HashMap[String, (Expression,Expression,String,String,String, Expression)]()
+    val MUXs = collection.mutable.ArrayBuffer[(Expression,Expression,String,String,String, Expression,String)]()//ArrayBuffer
     
 
     def eliminateNodeRef(e: Expression): Expression = e match {
@@ -162,7 +163,7 @@ object CommonSubexpressionElimination extends Pass {
                   fval_name = name
               }
 
-              MUXs(x.name) = (tval, fval,cond_name,tval_name,fval_name,cond)//new_ex
+              MUXs += ((tval, fval,cond_name,tval_name,fval_name,cond,x.name))//new_ex
         
             case _ => x.value
                   //println("New Type")
@@ -244,9 +245,10 @@ object CommonSubexpressionElimination extends Pass {
       node=>
         //第一个tail
         //MUXs [String, (Expression,Expression,String,String,String, Expression)]
+        //val ADDs = collection.mutable.HashMap[String, (DoPrim,String,String)]()
         //println("node._2._4",node._2._4)
-        println(node._1)
-        Tails.get(node._2._4) match {
+        println(node._7)
+        Tails.get(node._4) match {
               case Some(tuple) =>
                 //println("MUX get", tuple, tuple._2)
                 ADDs.get(tuple._2) match {
@@ -259,9 +261,9 @@ object CommonSubexpressionElimination extends Pass {
                 }
               case _ => node
           }
-        Tails.get(node._2._5) match {
+        Tails.get(node._5) match {
               case Some(tuple) =>
-                //println("MUX get2", tuple, tuple._2)
+                println("MUX get2", tuple, tuple._2)
                 ADDs.get(tuple._2) match {
                   case Some(tuple_add)=>
                     //println("ADD get2", tuple_add)
@@ -310,7 +312,7 @@ object CommonSubexpressionElimination extends Pass {
                     new_Mux_1 = new_add1.args(1)
                   case false => 
                     println("name,temp2", name,temp2)
-                    new_Mux_1 = Mux(node._2._6, new_add2.args(1), new_add1.args(1), UnknownType)
+                    new_Mux_1 = Mux(node._6, new_add2.args(1), new_add1.args(1), UnknownType)
                 }
             case UIntLiteral(value, width)  =>
                 println(width)
@@ -335,11 +337,11 @@ object CommonSubexpressionElimination extends Pass {
                     new_Mux_1 = new_add2.args(1)
                   case false => 
                     //println("value,temp2", value,temp2)
-                    new_Mux_1 = Mux(node._2._6, new_add2.args(1), new_add1.args(1), UnknownType)
+                    new_Mux_1 = Mux(node._6, new_add2.args(1), new_add1.args(1), UnknownType)
                 }
                 
             case _ => 
-              new_Mux_1 = Mux(node._2._6, new_add2.args(1), new_add1.args(1), UnknownType)
+              new_Mux_1 = Mux(node._6, new_add2.args(1), new_add1.args(1), UnknownType)
         }
         
         new_add2.args(0) match {
@@ -362,7 +364,7 @@ object CommonSubexpressionElimination extends Pass {
                   case true =>
                     new_Mux_0 = new_add1.args(0)
                   case false => 
-                    new_Mux_0 = Mux(node._2._6, new_add2.args(0), new_add1.args(0), UnknownType)
+                    new_Mux_0 = Mux(node._6, new_add2.args(0), new_add1.args(0), UnknownType)
                 }
             case UIntLiteral(value, width)  =>
                 println(width)
@@ -386,11 +388,11 @@ object CommonSubexpressionElimination extends Pass {
                   case true =>
                     new_Mux_0 = new_add1.args(0)
                   case false => 
-                    new_Mux_0 = Mux(node._2._6, new_add2.args(0), new_add1.args(0), UnknownType)
+                    new_Mux_0 = Mux(node._6, new_add2.args(0), new_add1.args(0), UnknownType)
                 }
                 
             case _ => 
-              new_Mux_0 = Mux(node._2._6, new_add2.args(0), new_add1.args(0), UnknownType)
+              new_Mux_0 = Mux(node._6, new_add2.args(0), new_add1.args(0), UnknownType)
         }
         
         println("new_Mux_0",new_Mux_0)
@@ -400,7 +402,7 @@ object CommonSubexpressionElimination extends Pass {
 
 
         //println("MUXs", node._1,node._2,node._2._1)
-        var new_Mux = Mux(node._2._6, new_add2.args(1), new_add1.args(1), UnknownType)
+        var new_Mux = Mux(node._6, new_add2.args(1), new_add1.args(1), UnknownType)
         //println("newExp", new_Mux)
         var new_add = DoPrim(PrimOps.Add, collection.mutable.ArrayBuffer(new_Mux_0, new_Mux_1),collection.mutable.ArrayBuffer.empty,UIntType(IntWidth(new_width+1)))
         //println("new_add3", new_add)
@@ -408,7 +410,7 @@ object CommonSubexpressionElimination extends Pass {
         var new_Tail = DoPrim(PrimOps.Tail, collection.mutable.ArrayBuffer(new_add),collection.mutable.ArrayBuffer(1),UIntType(IntWidth(new_width)))
         //println("new_add4", new_Tail)
 
-        new_Tail_Node = firrtl.ir.DefNode(NoInfo,node._1,new_Tail)
+        new_Tail_Node = firrtl.ir.DefNode(NoInfo,node._7,new_Tail)
         //new_add_Node = firrtl.ir.DefNode(NoInfo,"_T_8",new_add)
         //new_Mux_Node = firrtl.ir.DefNode(NoInfo,"_T_7",buildExpression(new_Mux))
         // expressions.getOrElseUpdate(new_Mux, "_T_7")
@@ -453,14 +455,23 @@ object CommonSubexpressionElimination extends Pass {
     new_block = Block(stmts)
     //println("new_block",new_block,new_block.getClass)
     val Statement2 = eliminateNodeRefs(s)
-
+    var conn_name = ""
+    var conn_tpe = UIntType(IntWidth(33))//new ir.Type
     Statement2.foreachStmt{
         // state =>
         //   println("state",state,state.getClass)
         //   stmts+= state
         state => state match{
-          case ir.Connect(_,_,_)=>
-            println("state",state,state.getClass)
+          case ir.Connect(_,WRef(name,tpe,_,_),_)=>
+            conn_name = name
+            var new_width = BigInt(0)
+            tpe match{
+                  case UIntType(IntWidth(w))=>
+                  new_width = w
+                  case _ =>
+                }
+            conn_tpe = UIntType(IntWidth(new_width))
+            //println("state",state,state.getClass)
           case DefNode(info,name,value)=>
             name match{
               case "_T" =>
@@ -481,24 +492,16 @@ object CommonSubexpressionElimination extends Pass {
     //stmts += new_Mux_Node
     //stmts += new_add_Node
     stmts += new_Tail_Node   
-    stmts += ir.Connect(NoInfo,WRef("io_out",UIntType(IntWidth(32)),PortKind,SinkFlow),new_conn2)
-    // println("expressions")
-    // //println(nodes.key)
-    // expressions.foreach{
-    //   expression=>
-    //     println(expression._1,expression._2)
-    // }
-    //println("buildStatement(new_Stat)",buildStatement(new_Stat))
-    //println("Statement1",Statement2.getClass)
+    stmts += ir.Connect(NoInfo,WRef(conn_name,conn_tpe,PortKind,SinkFlow),new_conn2)
+   
     val final_stmts = Block(stmts) // buildStatement(new_Stat)
-    // final_stmts.foreach{
-    //   final_stmt => println("final_stmts",final_stmt)
-    // }
     println("final_stmts",final_stmts)
     final_stmts
     // println("Nodes:")
     // println(nodes)
   }
+
+
 /*
 从mux入手，寻找跟mux相关的节点，然后查找共同操作，寻找相同节点的
 */
@@ -511,14 +514,6 @@ object CommonSubexpressionElimination extends Pass {
         //println(m)
         m
       case m: Module    => 
-      // println(m.info)
-      // println(m.name)
-      // println(m.ports)
-      //println("m.body")
-      //println(m.body) //firrtl.ir.Statement
-      // //print(Parser.parseStatement(String.valueOf(m.body)))
-      // //print(ParseStatement.makeDUT(m.body))
-      //println("m.body",m.body,m.body.getClass)
 
       var new_body = cse(m.body)
 
@@ -526,12 +521,6 @@ object CommonSubexpressionElimination extends Pass {
 
       Module(m.info, m.name, m.ports, new_body)
     }
-    // println("c.main")
-    // println(c.main)
-    // println("this is moudlex")
-    // println(modulesx)
-    // println("c.info")
-    // println(c.info)
     Circuit(c.info, modulesx, c.main)
   }
 }
