@@ -30,7 +30,7 @@ object CommonSubexpressionElimination extends Pass {
     val expressions = collection.mutable.HashMap[MemoizedHash[Expression], String]()
     val nodes = collection.mutable.HashMap[String, Expression]()
     val Tails = collection.mutable.HashMap[String, (Expression,String)]()
-    val ADDs = collection.mutable.HashMap[String, (DoPrim,String,String)]()
+    val ADDs = collection.mutable.HashMap[String, (DoPrim,String,String,firrtl.ir.PrimOp)]()
     //val MUXs = collection.mutable.HashMap[String, (Expression,Expression,String,String,String, Expression)]()
     val MUXs = collection.mutable.ArrayBuffer[(Expression,Expression,String,String,String, Expression,String)]()//ArrayBuffer
     
@@ -129,7 +129,97 @@ object CommonSubexpressionElimination extends Pass {
                       add2_name = name.toString
                     case _ => args
                   }//)
-                  ADDs(x.name) = (DoPrim(op,args,consts,tpe),add1_name,add2_name)
+                  ADDs(x.name) = (DoPrim(op,args,consts,tpe),add1_name,add2_name,op)
+                case PrimOps.Sub =>
+                  var add1_name : String =""
+                  var add2_name : String =""
+                  args(0) match {
+                    case WRef(name, _, _, _)=>
+                      add1_name = name
+                    case UIntLiteral(name, _)=>
+                      add1_name = name.toString
+                    case _ => args
+                  }//)
+                  args(1) match {
+                    case WRef(name, _, _, _)=>
+                      add2_name = name
+                    case UIntLiteral(name, _)=>
+                      add2_name = name.toString
+                    case _ => args
+                  }//)
+                  ADDs(x.name) = (DoPrim(op,args,consts,tpe),add1_name,add2_name,op)
+                case PrimOps.Div =>
+                  var add1_name : String =""
+                  var add2_name : String =""
+                  args(0) match {
+                    case WRef(name, _, _, _)=>
+                      add1_name = name
+                    case UIntLiteral(name, _)=>
+                      add1_name = name.toString
+                    case _ => args
+                  }//)
+                  args(1) match {
+                    case WRef(name, _, _, _)=>
+                      add2_name = name
+                    case UIntLiteral(name, _)=>
+                      add2_name = name.toString
+                    case _ => args
+                  }//)
+                  ADDs(x.name) = (DoPrim(op,args,consts,tpe),add1_name,add2_name,op)
+                case PrimOps.And =>
+                  var add1_name : String =""
+                  var add2_name : String =""
+                  args(0) match {
+                    case WRef(name, _, _, _)=>
+                      add1_name = name
+                    case UIntLiteral(name, _)=>
+                      add1_name = name.toString
+                    case _ => args
+                  }//)
+                  args(1) match {
+                    case WRef(name, _, _, _)=>
+                      add2_name = name
+                    case UIntLiteral(name, _)=>
+                      add2_name = name.toString
+                    case _ => args
+                  }//)
+                  ADDs(x.name) = (DoPrim(op,args,consts,tpe),add1_name,add2_name,op)
+                case PrimOps.Or =>
+                  var add1_name : String =""
+                  var add2_name : String =""
+                  args(0) match {
+                    case WRef(name, _, _, _)=>
+                      add1_name = name
+                    case UIntLiteral(name, _)=>
+                      add1_name = name.toString
+                    case _ => args
+                  }//)
+                  args(1) match {
+                    case WRef(name, _, _, _)=>
+                      add2_name = name
+                    case UIntLiteral(name, _)=>
+                      add2_name = name.toString
+                    case _ => args
+                  }//)
+                  ADDs(x.name) = (DoPrim(op,args,consts,tpe),add1_name,add2_name,op)
+                case PrimOps.Xor =>
+                  var add1_name : String =""
+                  var add2_name : String =""
+                  args(0) match {
+                    case WRef(name, _, _, _)=>
+                      add1_name = name
+                    case UIntLiteral(name, _)=>
+                      add1_name = name.toString
+                    case _ => args
+                  }//)
+                  args(1) match {
+                    case WRef(name, _, _, _)=>
+                      add2_name = name
+                    case UIntLiteral(name, _)=>
+                      add2_name = name.toString
+                    case _ => args
+                  }//)
+                  ADDs(x.name) = (DoPrim(op,args,consts,tpe),add1_name,add2_name,op)
                 case PrimOps.Tail =>
                   var tail_name : String =""
                     args(0) match {
@@ -201,37 +291,10 @@ object CommonSubexpressionElimination extends Pass {
     
 
     val Statement1 = eliminateNodeRefs(s)
-    //Statement1.map(eliminateNewExp)//(Statement1)
-    // println("Statement1")
-    // println(Statement1)
-    // println("nodes")
-    // //println(nodes.key)
-    // nodes.foreach{
-    //   node=>
-    //     println("node", node._1,checkExpr(node._2))
-    // }
-    // println("expressions")
-    // //println(nodes.key)
-    // expressions.foreach{
-    //   expression=>
-    //     println(expression._1,expression._2)
-    // }
+    var stmts = new collection.mutable.ArrayBuffer[Statement]
+    var Stmts_node = collection.mutable.HashMap[String, Statement]()
+    var new_block_head = Block(stmts)
     
-    //(ADDs,_T_3,(DoPrim(add,ArrayBuffer(Reference(io_in,UIntType(IntWidth(32)),PortKind,SourceFlow), UIntLiteral(6,IntWidth(32))),ArrayBuffer(),UIntType(IntWidth(33))),io_in,6))
-    // ADDs.foreach{
-    //   node=>
-    //     println("ADDs", node._1,node._2) 
-    // }
-
-    //(MUXs,_GEN_0,(Reference(_T_2,UIntType(IntWidth(32)),NodeKind,SourceFlow),Reference(_T_4,UIntType(IntWidth(32)),NodeKind,SourceFlow),_T,_T_2,_T_4),Reference(_T_2,UIntType(IntWidth(32)),NodeKind,SourceFlow))
-    //var new_add1 : Expression =new Expression()
-    // var new_add1 =ADDs.foreach{
-    //   node=>
-    //     println("ADDs", node._1,node._2) 
-    //   node._2
-    // } //=new firrtl.ir.Expression//= MUXs(0)._2//DoPrim("","")
-    // println(new_add1.getClass)
-    //var new_add2 : Expression = new Expression()
     var new_add1 = DoPrim(PrimOps.Not, Seq(), Nil,UnknownType)
     var new_add2 = DoPrim(PrimOps.Not, Seq(), Nil,UnknownType)
     var new_conn2 = DoPrim(PrimOps.Not, Seq(), Nil,UnknownType)
@@ -241,6 +304,34 @@ object CommonSubexpressionElimination extends Pass {
     var new_Tail_Node = DefNode(NoInfo,"_GEN_0",new_add1)
     var new_add_Node = DefNode(NoInfo,"_T_8",new_add1)
     var new_Mux_Node = DefNode(NoInfo,"_T_7",new_add1)
+    var temp_count = 0
+    Statement1.foreachStmt{
+         state =>
+           //println("state",state,state.getClass)
+           //stmts+= state
+           state match{
+             case DefNode(_,name,_)=>
+                //println("name",name)
+                Stmts_node(name) = state
+              case Connect(_,outputPortRef, expr) =>
+                outputPortRef match {
+                  case WRef(name,_,_,_)=>
+                    Stmts_node(name) = state
+                  case _ =>
+                    Stmts_node("Connect"+temp_count.toString) = state
+                    temp_count +=1
+                }
+                //println("Connect!!",outputPortRef)
+              case _ =>
+                Stmts_node("Other"+temp_count.toString) = state
+           }
+    }
+    var new_name = "_Mux_op_"
+    var index = 0
+    //new_Tail_Node = firrtl.ir.DefNode(NoInfo,node._1,new_Tail)
+    var new_Node = collection.mutable.ArrayBuffer[DefNode]()
+    var new_mux_Node = collection.mutable.ArrayBuffer[DefNode]()
+
     MUXs.foreach{
       node=>
         //第一个tail
@@ -275,15 +366,9 @@ object CommonSubexpressionElimination extends Pass {
               case _ => node
           }
 
-        //println("new_add1", new_add1)
-        def buildExpression(expr: Expression): Expression = {
-          expr match {
-            case _: DoPrim | _: Mux | _: ValidIf | _: Literal =>
-              expr.map(buildExpression)
-            case _ =>
-          }
-          expr
-        }
+        
+        
+        
             
         var new_Mux_1 = new_add1.args(1)
         var new_Mux_0 = new_add1.args(0)
