@@ -115,6 +115,7 @@ object CommonSubexpressionElimination extends Pass {
                 case PrimOps.Add =>
                   var add1_name : String =""
                   var add2_name : String =""
+                  println("Op",op.toString)
                   args(0) match {
                     case WRef(name, _, _, _)=>
                       add1_name = name
@@ -291,9 +292,10 @@ object CommonSubexpressionElimination extends Pass {
     
 
     val Statement1 = eliminateNodeRefs(s)
-    var stmts = new collection.mutable.ArrayBuffer[Statement]
+    //var stmts = new collection.mutable.ArrayBuffer[Statement]
     var Stmts_node = collection.mutable.HashMap[String, Statement]()
-    var new_block_head = Block(stmts)
+    //var new_block_head = Block(stmts)
+    var Stmts_node_array = collection.mutable.ArrayBuffer[(String, Statement)]()
     
     var new_add1 = DoPrim(PrimOps.Not, Seq(), Nil,UnknownType)
     var new_add2 = DoPrim(PrimOps.Not, Seq(), Nil,UnknownType)
@@ -313,17 +315,69 @@ object CommonSubexpressionElimination extends Pass {
              case DefNode(_,name,_)=>
                 //println("name",name)
                 Stmts_node(name) = state
-              case Connect(_,outputPortRef, expr) =>
+                Stmts_node_array += ((name,state))
+              case Connect(info,outputPortRef, expr) =>
+                expr match {
+                  case Mux(cond, tval, fval, tpe) =>
+              
+                    MUXs.foreach{
+                      mux_temp =>
+                        cond match{
+                          case mux_temp._6 =>
+                          tval match{
+                            case mux_temp._1 =>
+                              tpe match 
+                              {
+                                case mux_temp._2 =>
+                                  
+                                  outputPortRef match {
+                                    case WRef(name,tpe,_,_)=>
+                                      //Stmts_node(name) = state
+                                      
+                                      Stmts_node(name) = ir.Connect(info,outputPortRef,WRef(mux_temp._7,tpe,NodeKind,SinkFlow))
+                                      Stmts_node_array += ((name,ir.Connect(info,outputPortRef,WRef(mux_temp._7,tpe,NodeKind,SinkFlow))))
+                                    case _ =>
+                                      Stmts_node("Connect"+temp_count.toString) = ir.Connect(info,outputPortRef,WRef(mux_temp._7,tpe,NodeKind,SinkFlow))
+                                      Stmts_node_array += (("Connect"+temp_count.toString,ir.Connect(info,outputPortRef,WRef(mux_temp._7,tpe,NodeKind,SinkFlow))))
+                                      temp_count +=1
+                                  }
+                                case _ =>
+                                  Stmts_node("Connect"+temp_count.toString) = state
+                                  Stmts_node_array += (("Connect"+temp_count.toString,state))
+                                  temp_count +=1
+                              }
+                            case _ =>
+                              Stmts_node("Connect"+temp_count.toString) = state
+                              Stmts_node_array += (("Connect"+temp_count.toString,state))
+                              temp_count +=1
+                          }
+                          case _ =>
+                            Stmts_node("Connect"+temp_count.toString) = state
+                            Stmts_node_array += (("Connect"+temp_count.toString,state))
+                            temp_count +=1
+                        }
+                    }
+                  
+                  case _ =>
+                    Stmts_node("Connect"+temp_count.toString) = state
+                    Stmts_node_array += (("Connect"+temp_count.toString,state))
+                    temp_count +=1
+
+
+                }
                 outputPortRef match {
                   case WRef(name,_,_,_)=>
                     Stmts_node(name) = state
+                    Stmts_node_array += ((name,state))
                   case _ =>
                     Stmts_node("Connect"+temp_count.toString) = state
+                    Stmts_node_array += (("Connect"+temp_count.toString,state))
                     temp_count +=1
                 }
-                //println("Connect!!",outputPortRef)
+                println("Connect!!",state)
               case _ =>
                 Stmts_node("Other"+temp_count.toString) = state
+                Stmts_node_array += (("Other"+temp_count.toString,state))//存储了所有的Stmts
            }
     }
     var new_name = "_Mux_op_"
@@ -331,19 +385,23 @@ object CommonSubexpressionElimination extends Pass {
     //new_Tail_Node = firrtl.ir.DefNode(NoInfo,node._1,new_Tail)
     var new_Node = collection.mutable.ArrayBuffer[DefNode]()
     var new_mux_Node = collection.mutable.ArrayBuffer[DefNode]()
-
+    
+    
     MUXs.foreach{
       node=>
+        var flag_1 = 0
         //第一个tail
         //MUXs [String, (Expression,Expression,String,String,String, Expression)]
         //val ADDs = collection.mutable.HashMap[String, (DoPrim,String,String)]()
         //println("node._2._4",node._2._4)
         println(node._7)
+        //提取共同的加法操作
         Tails.get(node._4) match {
               case Some(tuple) =>
                 //println("MUX get", tuple, tuple._2)
                 ADDs.get(tuple._2) match {
                   case Some(tuple_add)=>
+                    flag_1 +=1
                     //println("ADD get", tuple_add)
                     new_add1 = tuple_add._1 //DoPrim(add,ArrayBuffer(Reference(io_in,UIntType(IntWidth(32)),PortKind,SourceFlow), UIntLiteral(7,IntWidth(32))),ArrayBuffer(),UIntType(IntWidth(33)))
                     //println("tuple_add",tuple_add._1)
@@ -357,6 +415,7 @@ object CommonSubexpressionElimination extends Pass {
                 println("MUX get2", tuple, tuple._2)
                 ADDs.get(tuple._2) match {
                   case Some(tuple_add)=>
+                    flag_1 +=1
                     //println("ADD get2", tuple_add)
                     //println(tuple_add)
                     new_add2 = tuple_add._1
@@ -365,145 +424,163 @@ object CommonSubexpressionElimination extends Pass {
                 }
               case _ => node
           }
-
+        var eq_op = ""
+        ADDs.get(node._4) match {
+          case Some(tuple_add)=>
+            flag_1 +=2
+            //println("ADD get", tuple_add)
+            eq_op = tuple_add._4.toString
+            new_add1 = tuple_add._1 //DoPrim(add,ArrayBuffer(Reference(io_in,UIntType(IntWidth(32)),PortKind,SourceFlow), UIntLiteral(7,IntWidth(32))),ArrayBuffer(),UIntType(IntWidth(33)))
+            //println("tuple_add",tuple_add._1)
+            node
+          case _ => node        
+        }
+        ADDs.get(node._5) match {
+          case Some(tuple_add)=>
+            tuple_add._4.toString match{
+              case eq_op =>
+                flag_1 +=2
+                //println("ADD get", tuple_add)
+                new_add2 = tuple_add._1 //DoPrim(add,ArrayBuffer(Reference(io_in,UIntType(IntWidth(32)),PortKind,SourceFlow), UIntLiteral(7,IntWidth(32))),ArrayBuffer(),UIntType(IntWidth(33)))
+                //println("tuple_add",tuple_add._1)
+                node
+              case _ =>
+            }
+            
+          case _ => node        
+        }
         
-        
+        flag_1 match{
+          case 2|4 =>
+            var new_Mux_1 = new_add1.args(1)//无意义的初始化
+            var new_Mux_0 = new_add1.args(0)
+            //var new_type= UIntType(IntWidth(33))
+            var new_width = BigInt(32)
+            new_add2.args(1) match {
+                case WRef(name,tpe,_,_) =>
+                    var temp2 = ""
+                    tpe match{
+                      case UIntType(IntWidth(w))=>
+                      new_width = w
+                      case _ =>
+                    }
+                    new_add1.args(1) match {
+                      case WRef(name_add1,_,_,_) =>
+                        temp2 = name_add1
+                      case _ =>
+                        temp2 = ""
+                    }
+                    //println("name,temp2", name,temp2)
+                    var flag = name.equals(temp2)
+                    flag match {
+                      case true =>
+                        new_Mux_1 = new_add1.args(1)
+                      case false => 
+                        //println("name,temp2", name,temp2)
+                        new_Mux_1 = Mux(node._6, new_add2.args(1), new_add1.args(1), UnknownType)
+                    }
+                case UIntLiteral(value, width)  =>
+                    println(width)
+                    //new_width = width
+                    width match{
+                      case IntWidth(w)=>
+                      new_width = w
+                      case _ =>
+                    }
+                    var temp2 = BigInt(0)
+                    new_add1.args(1) match {
+                      case UIntLiteral(value_add1, width) =>
+                        temp2 = value_add1
+                      case _ =>
+                        temp2 = BigInt(0)
+                    }
+                  
+                    var flag = value.equals(temp2)
+                    flag match {
+                      case true =>
+                        //println("value,temp2", value,temp2)
+                        new_Mux_1 = new_add2.args(1)
+                      case false => 
+                        //println("value,temp2", value,temp2)
+                        new_Mux_1 = Mux(node._6, new_add2.args(1), new_add1.args(1), UnknownType)
+                    }
+                    
+                case _ => 
+                  new_Mux_1 = Mux(node._6, new_add2.args(1), new_add1.args(1), UnknownType)
+            }
+            
+            new_add2.args(0) match {
+                case WRef(name,tpe,_,_) =>
+                    var temp2 = ""
+                    //new_type = tpe
+                    tpe match{
+                      case UIntType(IntWidth(w))=>
+                      new_width = w
+                      case _ =>
+                    }
+                    new_add1.args(0) match {
+                      case WRef(name_add0,_,_,_) =>
+                        temp2 = name_add0
+                      case _ =>
+                        temp2 = ""
+                    }
+                    var flag = name.equals(temp2)
+                    flag match {
+                      case true =>
+                        new_Mux_0 = new_add1.args(0)
+                      case false => 
+                        new_Mux_0 = Mux(node._6, new_add2.args(0), new_add1.args(0), UnknownType)
+                    }
+                case UIntLiteral(value, width)  =>
+                    println(width)
+                    //new_width = width
+                    width match{
+                      case IntWidth(w)=>
+                      new_width = w
+                      case _ =>
+                      
+                    }
+                    
+                    var temp2 = BigInt(0)
+                    new_add1.args(0) match {
+                      case UIntLiteral(value_add0, width) =>
+                        temp2 = value_add0
+                      case _ =>
+                        temp2 = BigInt(0)
+                    }
+                    var flag = value.equals(temp2)
+                    flag match {
+                      case true =>
+                        new_Mux_0 = new_add1.args(0)
+                      case false => 
+                        new_Mux_0 = Mux(node._6, new_add2.args(0), new_add1.args(0), UnknownType)
+                    }
+                    
+                case _ => 
+                  new_Mux_0 = Mux(node._6, new_add2.args(0), new_add1.args(0), UnknownType)
+            }
+            var new_add = DoPrim(PrimOps.Add, collection.mutable.ArrayBuffer(new_Mux_0, new_Mux_1),collection.mutable.ArrayBuffer.empty,UIntType(IntWidth(new_width+1)))
+            var new_Tail = DoPrim(PrimOps.Tail, collection.mutable.ArrayBuffer(new_add),collection.mutable.ArrayBuffer(1),UIntType(IntWidth(new_width)))
+            new_Tail_Node = firrtl.ir.DefNode(NoInfo,node._7,new_Tail)
+            new_Stat += new_Tail_Node
+            //stmts += new_Tail_Node
+            new_conn2 = new_Tail
+          case _=>
+        }
         
             
-        var new_Mux_1 = new_add1.args(1)
-        var new_Mux_0 = new_add1.args(0)
-        //var new_type= UIntType(IntWidth(33))
-        var new_width = BigInt(32)
-        new_add2.args(1) match {
-            case WRef(name,tpe,_,_) =>
-                var temp2 = ""
-                //new_type = tpe
-                tpe match{
-                  case UIntType(IntWidth(w))=>
-                  new_width = w
-                  case _ =>
-                }
-                println("tpe",tpe)
-                new_add1.args(1) match {
-                  case WRef(name_add1,_,_,_) =>
-                    temp2 = name_add1
-                  case _ =>
-                    temp2 = ""
-                }
-                //println("name,temp2", name,temp2)
-                var flag = name.equals(temp2)
-                flag match {
-                  case true =>
-                    new_Mux_1 = new_add1.args(1)
-                  case false => 
-                    println("name,temp2", name,temp2)
-                    new_Mux_1 = Mux(node._6, new_add2.args(1), new_add1.args(1), UnknownType)
-                }
-            case UIntLiteral(value, width)  =>
-                println(width)
-                //new_width = width
-                width match{
-                  case IntWidth(w)=>
-                  new_width = w
-                  case _ =>
-                }
-                var temp2 = BigInt(0)
-                new_add1.args(1) match {
-                  case UIntLiteral(value_add1, width) =>
-                    temp2 = value_add1
-                  case _ =>
-                    temp2 = BigInt(0)
-                }
-              
-                var flag = value.equals(temp2)
-                flag match {
-                  case true =>
-                    //println("value,temp2", value,temp2)
-                    new_Mux_1 = new_add2.args(1)
-                  case false => 
-                    //println("value,temp2", value,temp2)
-                    new_Mux_1 = Mux(node._6, new_add2.args(1), new_add1.args(1), UnknownType)
-                }
-                
-            case _ => 
-              new_Mux_1 = Mux(node._6, new_add2.args(1), new_add1.args(1), UnknownType)
-        }
         
-        new_add2.args(0) match {
-            case WRef(name,tpe,_,_) =>
-                var temp2 = ""
-                //new_type = tpe
-                tpe match{
-                  case UIntType(IntWidth(w))=>
-                  new_width = w
-                  case _ =>
-                }
-                new_add1.args(0) match {
-                  case WRef(name_add0,_,_,_) =>
-                    temp2 = name_add0
-                  case _ =>
-                    temp2 = ""
-                }
-                var flag = name.equals(temp2)
-                flag match {
-                  case true =>
-                    new_Mux_0 = new_add1.args(0)
-                  case false => 
-                    new_Mux_0 = Mux(node._6, new_add2.args(0), new_add1.args(0), UnknownType)
-                }
-            case UIntLiteral(value, width)  =>
-                println(width)
-                //new_width = width
-                width match{
-                  case IntWidth(w)=>
-                  new_width = w
-                  case _ =>
-                  
-                }
-                
-                var temp2 = BigInt(0)
-                new_add1.args(0) match {
-                  case UIntLiteral(value_add0, width) =>
-                    temp2 = value_add0
-                  case _ =>
-                    temp2 = BigInt(0)
-                }
-                var flag = value.equals(temp2)
-                flag match {
-                  case true =>
-                    new_Mux_0 = new_add1.args(0)
-                  case false => 
-                    new_Mux_0 = Mux(node._6, new_add2.args(0), new_add1.args(0), UnknownType)
-                }
-                
-            case _ => 
-              new_Mux_0 = Mux(node._6, new_add2.args(0), new_add1.args(0), UnknownType)
-        }
         
-        println("new_Mux_0",new_Mux_0)
-        println("new_Mux_1",new_Mux_1)
-          
-          //Mux(node._2._6, new_add2.args(1), new_add1.args(1), UnknownType)
-
-
-        //println("MUXs", node._1,node._2,node._2._1)
-        var new_Mux = Mux(node._6, new_add2.args(1), new_add1.args(1), UnknownType)
-        //println("newExp", new_Mux)
-        var new_add = DoPrim(PrimOps.Add, collection.mutable.ArrayBuffer(new_Mux_0, new_Mux_1),collection.mutable.ArrayBuffer.empty,UIntType(IntWidth(new_width+1)))
-        //println("new_add3", new_add)
-
-        var new_Tail = DoPrim(PrimOps.Tail, collection.mutable.ArrayBuffer(new_add),collection.mutable.ArrayBuffer(1),UIntType(IntWidth(new_width)))
-        //println("new_add4", new_Tail)
-
-        new_Tail_Node = firrtl.ir.DefNode(NoInfo,node._7,new_Tail)
+        
+        
         //new_add_Node = firrtl.ir.DefNode(NoInfo,"_T_8",new_add)
         //new_Mux_Node = firrtl.ir.DefNode(NoInfo,"_T_7",buildExpression(new_Mux))
         // expressions.getOrElseUpdate(new_Mux, "_T_7")
         // expressions.getOrElseUpdate(new_add, "_T_8")
         // expressions.getOrElseUpdate(new_Tail, "io_out")
-        new_conn2 = new_Tail
+        //new_conn2 = new_Tail
         
-        new_Stat += new_Tail_Node
+        
         //new_Stat += new_add_Node
         //new_Stat += new_Mux_Node
         
@@ -574,10 +651,21 @@ object CommonSubexpressionElimination extends Pass {
         }
     }
 
+    stmts += new_Tail_Node  
+    Statement2.foreachStmt{
+        state => state match{
+          case ir.Connect(_,WRef(name,tpe,_,_),_)=>
+            stmts+= state
+          case _ =>
+            
+        }
+    }
+
+
     //stmts += new_Mux_Node
     //stmts += new_add_Node
-    stmts += new_Tail_Node   
-    stmts += ir.Connect(NoInfo,WRef(conn_name,conn_tpe,PortKind,SinkFlow),new_conn2)
+     
+    //stmts += ir.Connect(NoInfo,WRef(conn_name,conn_tpe,PortKind,SinkFlow),new_conn2)
    
     val final_stmts = Block(stmts) // buildStatement(new_Stat)
     println("final_stmts",final_stmts)
