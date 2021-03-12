@@ -9,6 +9,7 @@ import firrtl.ir._
 import firrtl.Mappers._
 import firrtl.options.Dependency
 import firrtl.PrimOps
+import scala.util.control.Breaks._
 
 object CommonSubexpressionElimination extends Pass {
 
@@ -204,7 +205,8 @@ object CommonSubexpressionElimination extends Pass {
 
     val Statement1 = eliminateNodeRefs(s)    
     var stmts = new collection.mutable.ArrayBuffer[Statement]
-    var Stmts_node = collection.mutable.HashMap[String, Statement]()
+    var Stmts_node = collection.mutable.LinkedHashMap[String, Statement]()
+    var Stmts_node_array = collection.mutable.ArrayBuffer[(String, Statement)]()
     var new_block = Block(stmts)
     
     var temp_count = 0
@@ -216,30 +218,36 @@ object CommonSubexpressionElimination extends Pass {
              case DefNode(_,name,_)=>
                 //println("name",name)
                 Stmts_node(name) = state
+                Stmts_node_array += ((name,state))
               case Connect(_,outputPortRef, expr) =>
                 outputPortRef match {
                   case WRef(name,_,_,_)=>
                     Stmts_node(name) = state
+                    Stmts_node_array += ((name,state))
                   case _ =>
                     Stmts_node("Connect"+temp_count.toString) = state
+                    Stmts_node_array += (("Connect"+temp_count.toString,state))
                     temp_count +=1
                 }
                 //println("Connect!!",outputPortRef)
               case _ =>
                 Stmts_node("Other"+temp_count.toString) = state
+                Stmts_node_array += (("Other"+temp_count.toString,state))
            }
     }
+    println("Stmts_node_array",Stmts_node_array)
 
     var new_name = "_Mux_op_"
     var index = 0
     //new_Tail_Node = firrtl.ir.DefNode(NoInfo,node._1,new_Tail)
-    var new_Node = collection.mutable.ArrayBuffer[DefNode]()
+    
     var new_mux_Node = collection.mutable.ArrayBuffer[DefNode]()
     MUXs.foreach{
       node=>
+        var new_Node = collection.mutable.ArrayBuffer[DefNode]()
         var flag = 0 
         var Ref = new Array[Expression](3)
-        //println("node",node)
+        println("node",node)
         node._1 match {
           case DoPrim(op,args,consts,tpe)=>
             //rintln("node",node._2._1)
@@ -277,32 +285,70 @@ object CommonSubexpressionElimination extends Pass {
       
       flag match{
         case 1 =>
-          Stmts_node.get(node._7) match {
-              case Some(expr)  =>
-                //println("Catch Expr!", expr)
-                //println(node._1)
-                Stmts_node -= node._7
-              case _ => 
+          var i = 0
+          var pos = 0
+          Stmts_node_array.foreach{
+            stmt => stmt._1 match{
+              case node._7 =>
+                pos = i
+                //break
+              case _ =>
+                i +=1
             }
-          new_Node += DefNode(NoInfo,node._7,Mux(Ref(2),Ref(0),Ref(1)))
+          }
+
+          println("pos",pos)
+
+          Stmts_node_array.remove(pos)
+          var NN = DefNode(NoInfo,node._7,Mux(Ref(2),Ref(0),Ref(1))) 
+          new_Node.length match{
+            case 0 =>
+              Stmts_node_array.insert(pos,(node._7,NN))
+            case 1 =>
+              Stmts_node_array.insert(pos,(("a",new_Node(0))),((node._7,NN)))
+            case 2 =>
+              Stmts_node_array.insert(pos,(("a",new_Node(0))),(("b",new_Node(1))),((node._7,NN)))
+            case 3 =>
+              Stmts_node_array.insert(pos,(("a",new_Node(0))),(("b",new_Node(1))),(("c",new_Node(2))),((node._7,NN)) ) 
+          }
+
+          // Stmts_node.get(node._7) match {
+          //     case Some(expr)  =>
+          //       println("Catch Expr!", expr)
+          //       println(node._7)
+          //       //Stmts_node -= node._7
+          //       Stmts_node(node._7) =  DefNode(NoInfo,node._7,Mux(Ref(2),Ref(0),Ref(1)))
+          //       //new_Node+=expr
+          //     case _ => 
+          //   }
+          // new_Node += DefNode(NoInfo,node._7,Mux(Ref(2),Ref(0),Ref(1)))
           
           
         case 0 =>
       }
     }
 
-    Stmts_node.foreach{
-      node => node._2 match{
+    // new_Node.foreach{
+    //   node =>
+    //     println("new_node",node)
+    //     stmts += node
+    // }
+
+    Stmts_node_array.foreach{
+      node => 
+        println("node",node)
+        node._2 match{
         case DefNode(_,name,_)=>
+            println("node._2",node._2)
             stmts += node._2
         case  _ =>
       }    
     }
-    new_Node.foreach{
-      node =>
-        println(node)
-        stmts += node
-    }
+    // new_Node.foreach{
+    //   node =>
+    //     println(node)
+    //     stmts += node
+    // }
 
     // new_mux_Node.foreach{
     //   node =>
@@ -310,7 +356,7 @@ object CommonSubexpressionElimination extends Pass {
     //     stmts += node
     // }
 
-    Stmts_node.foreach{
+    Stmts_node_array.foreach{
       node => node._2 match{
         case DefNode(_,name,_)=>
             
@@ -322,6 +368,9 @@ object CommonSubexpressionElimination extends Pass {
     //stmts + new_Node
     val final_stmts = Block(stmts)
     //Statement1
+    stmts.foreach{
+      node => println("node",node)
+    }
     final_stmts
 
     //接下来的数据分支进行处理
