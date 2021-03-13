@@ -361,7 +361,14 @@ object CommonSubexpressionElimination extends Pass {
                             temp_count +=1
                         }
                     }
-                  
+                  case DoPrim(op,args,consts,tpe)=>
+                      var new_name = "new_DoPrim"+temp_count.toString
+                      var new_Node = firrtl.ir.DefNode(NoInfo,new_name,expr)
+                      Stmts_node("new_DoPrim"+temp_count.toString) = new_Node
+                      Stmts_node_array += (("new_DoPrim"+temp_count.toString,new_Node))
+                      Stmts_node("Connect"+temp_count.toString) = ir.Connect(info,outputPortRef,WRef(new_name,tpe,NodeKind,SinkFlow))
+                      Stmts_node_array += (("Connect"+temp_count.toString,ir.Connect(info,outputPortRef,WRef(new_name,tpe,NodeKind,SinkFlow))))
+                      temp_count +=1
                   case _ =>
                     Stmts_node("Connect"+temp_count.toString) = state
                     Stmts_node_array += (("Connect"+temp_count.toString,state))
@@ -578,60 +585,11 @@ object CommonSubexpressionElimination extends Pass {
               case _ =>
 
             }
-            // var new_add = DoPrim(PrimOps.Add, collection.mutable.ArrayBuffer(new_Mux_0, new_Mux_1),collection.mutable.ArrayBuffer.empty,UIntType(IntWidth(new_width+1)))
-            // var new_Tail = DoPrim(PrimOps.Tail, collection.mutable.ArrayBuffer(new_add),collection.mutable.ArrayBuffer(1),UIntType(IntWidth(new_width)))
-            // new_Tail_Node = firrtl.ir.DefNode(NoInfo,node._7,new_Tail)
-            // new_Stat += new_Tail_Node  // ------------------
-            // new_op_Nodes += firrtl.ir.DefNode(NoInfo,node._7,new_Tail)
-            // //stmts += new_Tail_Node
-            // new_conn2 = new_Tail
-          case _=>
-        }
-        
             
-        
-        
-        
-        
-        //new_add_Node = firrtl.ir.DefNode(NoInfo,"_T_8",new_add)
-        //new_Mux_Node = firrtl.ir.DefNode(NoInfo,"_T_7",buildExpression(new_Mux))
-        // expressions.getOrElseUpdate(new_Mux, "_T_7")
-        // expressions.getOrElseUpdate(new_add, "_T_8")
-        // expressions.getOrElseUpdate(new_Tail, "io_out")
-        //new_conn2 = new_Tail
-        
-        
-        //new_Stat += new_add_Node
-        //new_Stat += new_Mux_Node
-        
-        //var new_Stat2 = collection.mutable.ArrayBuffer[DefNode](new_Tail_Node, new_add_Node, new_Mux_Node)
-        //var new_Stat = collection.mutable.ArrayBuffer[DefNode](DefNode(_,"_GEN_0",new_Tail), DefNode(_,"_T_8",new_add), DefNode(_,"_T_7",new_Mux))
-        // println("new_Mux_Node",new_Mux_Node.toString,new_Mux_Node.getClass)
-        // println("new_Mux",new_Mux,buildExpression(new_Mux).getClass)
-        // println("new_Stat",new_Stat)
-        // println("new_Stmts",stmts,stmts.getClass)
-        //Block(Seq(DefNode(_, _, value))
-        //new_block = Block(new_Stat.toSeq)
-        // println("new_block",new_block)
-        
-
-        // case Mux(cond, tval, fval, tpe) =>
-        //   val newExp = Mux(cond, fval, tval, UnknownType)
-          //newExp.map(updateExpType)
-      
+          case _=>
+        }    
     }
-    // (Tails,_T_2,(DoPrim(tail,ArrayBuffer(Reference(_T_1,UIntType(IntWidth(33)),NodeKind,SourceFlow)),ArrayBuffer(1),UIntType(IntWidth(32))),_T_1))
-    // Tails.foreach{
-    //   node=>
-    //     println("Tails", node._1,node._2)
-    // }
-
-    // def buildStatement(s: collection.mutable.ArrayBuffer[DefNode]): Statement = {
-    //   s.foreach{
-    //     s_exp => s_exp
-    //     s_exp
-    //   }
-    // }
+    
     
 
     new_block = Block(stmts)
@@ -639,7 +597,7 @@ object CommonSubexpressionElimination extends Pass {
     //val Statement2 = eliminateNodeRefs(s)
     var conn_name = ""
     var conn_tpe = UIntType(IntWidth(33))//new ir.Type
-    Stmts_node.foreach{
+    Stmts_node_array.foreach{
         // state =>
         //   println("state",state,state.getClass)
         //   stmts+= state
@@ -676,7 +634,7 @@ object CommonSubexpressionElimination extends Pass {
       node =>
         stmts += node
     }
-    Stmts_node.foreach{
+    Stmts_node_array.foreach{
         state => state._2 match{
           case ir.Connect(_,WRef(name,tpe,_,_),_)=>
             stmts+= state._2
