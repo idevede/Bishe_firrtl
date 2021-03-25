@@ -167,42 +167,43 @@ object CommonSubexpressionElimination extends Pass {
                     case _ => args
                   }//)
                   ADDs(x.name) = (DoPrim(op,args,consts,tpe),add1_name,add2_name,op)
-                case PrimOps.And =>
-                  var add1_name : String =""
-                  var add2_name : String =""
-                  args(0) match {
-                    case WRef(name, _, _, _)=>
-                      add1_name = name
-                    case UIntLiteral(name, _)=>
-                      add1_name = name.toString
-                    case _ => args
-                  }//)
-                  args(1) match {
-                    case WRef(name, _, _, _)=>
-                      add2_name = name
-                    case UIntLiteral(name, _)=>
-                      add2_name = name.toString
-                    case _ => args
-                  }//)
-                  ADDs(x.name) = (DoPrim(op,args,consts,tpe),add1_name,add2_name,op)
-                case PrimOps.Or =>
-                  var add1_name : String =""
-                  var add2_name : String =""
-                  args(0) match {
-                    case WRef(name, _, _, _)=>
-                      add1_name = name
-                    case UIntLiteral(name, _)=>
-                      add1_name = name.toString
-                    case _ => args
-                  }//)
-                  args(1) match {
-                    case WRef(name, _, _, _)=>
-                      add2_name = name
-                    case UIntLiteral(name, _)=>
-                      add2_name = name.toString
-                    case _ => args
-                  }//)
-                  ADDs(x.name) = (DoPrim(op,args,consts,tpe),add1_name,add2_name,op)
+                // case PrimOps.And =>
+                //   println("And!!")
+                //   var add1_name : String =""
+                //   var add2_name : String =""
+                //   args(0) match {
+                //     case WRef(name, _, _, _)=>
+                //       add1_name = name
+                //     case UIntLiteral(name, _)=>
+                //       add1_name = name.toString
+                //     case _ => args
+                //   }//)
+                //   args(1) match {
+                //     case WRef(name, _, _, _)=>
+                //       add2_name = name
+                //     case UIntLiteral(name, _)=>
+                //       add2_name = name.toString
+                //     case _ => args
+                //   }//)
+                //   ADDs(x.name) = (DoPrim(op,args,consts,tpe),add1_name,add2_name,op)
+                // case PrimOps.Or =>
+                //   var add1_name : String =""
+                //   var add2_name : String =""
+                //   args(0) match {
+                //     case WRef(name, _, _, _)=>
+                //       add1_name = name
+                //     case UIntLiteral(name, _)=>
+                //       add1_name = name.toString
+                //     case _ => args
+                //   }//)
+                //   args(1) match {
+                //     case WRef(name, _, _, _)=>
+                //       add2_name = name
+                //     case UIntLiteral(name, _)=>
+                //       add2_name = name.toString
+                //     case _ => args
+                //   }//)
+                //   ADDs(x.name) = (DoPrim(op,args,consts,tpe),add1_name,add2_name,op)
                 case PrimOps.Xor =>
                   var add1_name : String =""
                   var add2_name : String =""
@@ -230,7 +231,7 @@ object CommonSubexpressionElimination extends Pass {
                     }//)
                     Tails(x.name) = (new_exp,tail_name)
             
-                  case _ =>
+                case _ =>
                     op
               }
             case WRef(name, _, _, _)=>
@@ -244,14 +245,20 @@ object CommonSubexpressionElimination extends Pass {
               cond match {
                 case WRef(name, _, _, _)=>
                   cond_name = name
+                case _ =>
+
               }
               tval match {
                 case WRef(name, _, _, _)=>
                   tval_name = name
+                case _ =>
+                
               }
               fval match {
                 case WRef(name, _, _, _)=>
                   fval_name = name
+                case _ =>
+                
               }
 
               MUXs += ((tval, fval,cond_name,tval_name,fval_name,cond,x.name))//new_ex
@@ -333,10 +340,11 @@ object CommonSubexpressionElimination extends Pass {
                             not_name = name
                           case UIntLiteral(name, _)=>
                             not_name = name.toString
-                          case _ => args
+                          case _ => 
                         }//)
                         Nots(name) = (DoPrim(op,args,consts,tpe),not_name)
                       case PrimOps.And =>
+                        println("and-here")
                         var add1_name = ""
                         var add2_name = ""
                         args(0) match {
@@ -344,14 +352,14 @@ object CommonSubexpressionElimination extends Pass {
                             add1_name = name
                           case UIntLiteral(name, _)=>
                             add1_name = name.toString
-                          case _ => args
+                          case _ => 
                         }//)
                         args(1) match {
                           case WRef(name, _, _, _)=>
                             add2_name = name
                           case UIntLiteral(name, _)=>
                             add2_name = name.toString
-                          case _ => args
+                          case _ => 
                         }//)
                         Ands += ((name,DoPrim(op,args,consts,tpe),add1_name,add2_name,op))
                       case _ =>
@@ -474,11 +482,11 @@ object CommonSubexpressionElimination extends Pass {
         var eq_op = ""
         ADDs.get(node._4) match {
           case Some(tuple_add)=>
-            flag_1 +=2
+            flag_1 +=3
             //println("ADD get", tuple_add)
             eq_op = tuple_add._4.toString
             new_add1 = tuple_add._1 //DoPrim(add,ArrayBuffer(Reference(io_in,UIntType(IntWidth(32)),PortKind,SourceFlow), UIntLiteral(7,IntWidth(32))),ArrayBuffer(),UIntType(IntWidth(33)))
-            println("new_add2",tuple_add._1)
+            println("new_add1",tuple_add._1)
             node
           case _ => node        
         }
@@ -486,8 +494,8 @@ object CommonSubexpressionElimination extends Pass {
           case Some(tuple_add)=>
             tuple_add._4.toString match{
               case eq_op =>
-                flag_1 +=2
-                //println("ADD get", tuple_add)
+                flag_1 +=3
+                println("ADD get", tuple_add)
                 new_add2 = tuple_add._1 //DoPrim(add,ArrayBuffer(Reference(io_in,UIntType(IntWidth(32)),PortKind,SourceFlow), UIntLiteral(7,IntWidth(32))),ArrayBuffer(),UIntType(IntWidth(33)))
                 println("new_add2",tuple_add._1)
                 node
@@ -498,10 +506,12 @@ object CommonSubexpressionElimination extends Pass {
         }
         
         flag_1 match{
-          case 2|4 =>
+          case 2|6 =>
             var new_Mux_1 = new_add1.args(1)//无意义的初始化
             var new_Mux_0 = new_add1.args(0)
             //var new_type= UIntType(IntWidth(33))
+            //println(new_add1.args.getClass)
+            //println(new_add2.args.getClass)
             var new_width = BigInt(32)
             new_add2.args(1) match {
                 case WRef(name,tpe,_,_) =>
@@ -613,7 +623,7 @@ object CommonSubexpressionElimination extends Pass {
                 new_Tail_Node = firrtl.ir.DefNode(NoInfo,node._7,new_Tail)
                 new_Stat += new_Tail_Node   
                 new_op_Nodes += firrtl.ir.DefNode(NoInfo,node._7,new_Tail)
-              case 4 =>
+              case 6 =>
                 //var opp = 
                 println("new_node_gen!",new_add2)
                 new_add2 match{
@@ -641,10 +651,10 @@ object CommonSubexpressionElimination extends Pass {
       state => state._2 match{
         case DefNode(info,name,value) =>
           value match{
-            case DoPrim(op,args,consts,tpe)=>
-                
+            case DoPrim(op,args,consts,tpe)=>               
               op match {
                 case PrimOps.And =>
+                  println(args.getClass)
                   var add1_name = ""
                   var add2_name = ""
                   args(0) match {
@@ -663,8 +673,8 @@ object CommonSubexpressionElimination extends Pass {
                   }//)
                   Ands += ((name,DoPrim(op,args,consts,tpe),add1_name,add2_name,op))
                 case _ =>
-
               }
+            case _ =>
           } 
         case _ =>
       }
@@ -692,7 +702,7 @@ object CommonSubexpressionElimination extends Pass {
             var new_or = DoPrim(PrimOps.Or, collection.mutable.ArrayBuffer(new_add1.args(0), new_add2.args(0)),collection.mutable.ArrayBuffer.empty,new_add1.tpe)
             var new_not = DoPrim(PrimOps.Not,collection.mutable.ArrayBuffer(new_or),collection.mutable.ArrayBuffer.empty,new_add1.tpe)
             var new_not_Node = firrtl.ir.DefNode(NoInfo,node._1,new_not)
-            println("new_not_Node",new_not_Node)
+            //println("new_not_Node",new_not_Node)
             var index = 0
             var dd=0
             Stmts_node_array.foreach{
@@ -707,11 +717,11 @@ object CommonSubexpressionElimination extends Pass {
             }
             
 
-            println("ddddddddd",dd)
+            //println("ddddddddd",dd)
             new_Stat += new_not_Node
             new_op_Nodes += new_not_Node
-            
-            Stmts_node_array.remove(dd)
+            //这个是修改ROcketCore之后需要的
+            //Stmts_node_array.remove(dd)
 
           case _ =>
         }
