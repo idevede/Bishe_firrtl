@@ -319,6 +319,7 @@ object CommonSubexpressionElimination extends Pass {
     //val MUXs = collection.mutable.HashMap[String, (Expression,Expression,String,String,String, Expression)]()
     //val MUXs = collection.mutable.ArrayBuffer[(Expression,Expression,String,String,String, Expression,String)]()//ArrayBuffer
 
+//common 
     Statement1.foreachStmt{
          state =>
            println("state",state,state.getClass)
@@ -644,93 +645,90 @@ object CommonSubexpressionElimination extends Pass {
         }    
     }
     
-    //处理(~A & ~B == ~(A|B))
-    //val Nots = collection.mutable.HashMap[String, (Expression,String)]()
-    //val Ands = collection.mutable.HashMap[(String, DoPrim,String,String,firrtl.ir.PrimOp)]()
-    Stmts_node_array.foreach{
-      state => state._2 match{
-        case DefNode(info,name,value) =>
-          value match{
-            case DoPrim(op,args,consts,tpe)=>               
-              op match {
-                case PrimOps.And =>
-                  println(args.getClass)
-                  var add1_name = ""
-                  var add2_name = ""
-                  args(0) match {
-                    case WRef(name, _, _, _)=>
-                      add1_name = name
-                    case UIntLiteral(name, _)=>
-                      add1_name = name.toString
-                    case _ => args
-                  }//)
-                  args(1) match {
-                    case WRef(name, _, _, _)=>
-                      add2_name = name
-                    case UIntLiteral(name, _)=>
-                      add2_name = name.toString
-                    case _ => args
-                  }//)
-                  Ands += ((name,DoPrim(op,args,consts,tpe),add1_name,add2_name,op))
-                case _ =>
-              }
-            case _ =>
-          } 
-        case _ =>
-      }
-    }
-    Ands.foreach{
-      node=>
-        var flag_1 = 0
-        //println("node!!", node)
-        Nots.get(node._3) match {
-              case Some(tuple) => //DoPrim(not,ArrayBuffer(Reference(io_in,UIntType(IntWidth(32)),PortKind,SourceFlow)),ArrayBuffer(),UIntType(IntWidth(32))))
-                flag_1 +=1
-                //println("tuple!!",tuple)
-                new_add1 = tuple._1
-              case _ => node
-          }
-        Nots.get(node._4) match {
-              case Some(tuple) => //DoPrim(not,ArrayBuffer(Reference(io_in,UIntType(IntWidth(32)),PortKind,SourceFlow)),ArrayBuffer(),UIntType(IntWidth(32))))
-                flag_1 +=1
-                new_add2 = tuple._1
-              case _ => node
-          }
-        flag_1 match{
-          case 2 =>
-            //DoPrim(not,ArrayBuffer(),ArrayBuffer(),UIntType(IntWidth(32))))
-            var new_or = DoPrim(PrimOps.Or, collection.mutable.ArrayBuffer(new_add1.args(0), new_add2.args(0)),collection.mutable.ArrayBuffer.empty,new_add1.tpe)
-            var new_not = DoPrim(PrimOps.Not,collection.mutable.ArrayBuffer(new_or),collection.mutable.ArrayBuffer.empty,new_add1.tpe)
-            var new_not_Node = firrtl.ir.DefNode(NoInfo,node._1,new_not)
-            //println("new_not_Node",new_not_Node)
-            var index = 0
-            var dd=0
-            Stmts_node_array.foreach{
-              state => state._2 match{
-                case DefNode(info,name,value) =>
-                  name match{
-                    case node._1 => dd =index
-                    case _ => index+=1
-                  }
-                case _ =>
-              }
-            }
+    // //处理(~A & ~B == ~(A|B))
+    // //val Nots = collection.mutable.HashMap[String, (Expression,String)]()
+    // //val Ands = collection.mutable.HashMap[(String, DoPrim,String,String,firrtl.ir.PrimOp)]()
+    // Stmts_node_array.foreach{
+    //   state => state._2 match{
+    //     case DefNode(info,name,value) =>
+    //       value match{
+    //         case DoPrim(op,args,consts,tpe)=>               
+    //           op match {
+    //             case PrimOps.And =>
+    //               println(args.getClass)
+    //               var add1_name = ""
+    //               var add2_name = ""
+    //               args(0) match {
+    //                 case WRef(name, _, _, _)=>
+    //                   add1_name = name
+    //                 case UIntLiteral(name, _)=>
+    //                   add1_name = name.toString
+    //                 case _ => args
+    //               }//)
+    //               args(1) match {
+    //                 case WRef(name, _, _, _)=>
+    //                   add2_name = name
+    //                 case UIntLiteral(name, _)=>
+    //                   add2_name = name.toString
+    //                 case _ => args
+    //               }//)
+    //               Ands += ((name,DoPrim(op,args,consts,tpe),add1_name,add2_name,op))
+    //             case _ =>
+    //           }
+    //         case _ =>
+    //       } 
+    //     case _ =>
+    //   }
+    // }
+    // Ands.foreach{
+    //   node=>
+    //     var flag_1 = 0
+    //     //println("node!!", node)
+    //     Nots.get(node._3) match {
+    //           case Some(tuple) => //DoPrim(not,ArrayBuffer(Reference(io_in,UIntType(IntWidth(32)),PortKind,SourceFlow)),ArrayBuffer(),UIntType(IntWidth(32))))
+    //             flag_1 +=1
+    //             //println("tuple!!",tuple)
+    //             new_add1 = tuple._1
+    //           case _ => node
+    //       }
+    //     Nots.get(node._4) match {
+    //           case Some(tuple) => //DoPrim(not,ArrayBuffer(Reference(io_in,UIntType(IntWidth(32)),PortKind,SourceFlow)),ArrayBuffer(),UIntType(IntWidth(32))))
+    //             flag_1 +=1
+    //             new_add2 = tuple._1
+    //           case _ => node
+    //       }
+    //     flag_1 match{
+    //       case 2 =>
+    //         //DoPrim(not,ArrayBuffer(),ArrayBuffer(),UIntType(IntWidth(32))))
+    //         var new_or = DoPrim(PrimOps.Or, collection.mutable.ArrayBuffer(new_add1.args(0), new_add2.args(0)),collection.mutable.ArrayBuffer.empty,new_add1.tpe)
+    //         var new_not = DoPrim(PrimOps.Not,collection.mutable.ArrayBuffer(new_or),collection.mutable.ArrayBuffer.empty,new_add1.tpe)
+    //         var new_not_Node = firrtl.ir.DefNode(NoInfo,node._1,new_not)
+    //         //println("new_not_Node",new_not_Node)
+    //         var index = 0
+    //         var dd=0
+    //         Stmts_node_array.foreach{
+    //           state => state._2 match{
+    //             case DefNode(info,name,value) =>
+    //               name match{
+    //                 case node._1 => dd =index
+    //                 case _ => index+=1
+    //               }
+    //             case _ =>
+    //           }
+    //         }
             
 
-            //println("ddddddddd",dd)
-            new_Stat += new_not_Node
-            new_op_Nodes += new_not_Node
-            //这个是修改ROcketCore之后需要的
-            //Stmts_node_array.remove(dd)
-
-          case _ =>
-        }
-
-
-    }
+    //         //println("ddddddddd",dd)
+    //         new_Stat += new_not_Node
+    //         new_op_Nodes += new_not_Node
+    //         //这个是修改ROcketCore之后需要的
+    //         //Stmts_node_array.remove(dd)
+    //       case _ =>
+    //     }
+    // }
 
 
-    new_block = Block(stmts)
+    //new_block = Block(stmts)
     //println("new_block",new_block,new_block.getClass)
     //val Statement2 = eliminateNodeRefs(s)
     var conn_name = ""
