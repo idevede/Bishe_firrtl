@@ -237,7 +237,7 @@ object SplitExpressions extends Pass {
                 new_Stat += new_not_Node
                 new_op_Nodes += new_not_Node
                 //这个是修改ROcketCore之后需要的
-                Stmts_node_array.remove(dd)
+                //Stmts_node_array.remove(dd)
               case _ =>
             }
       }
