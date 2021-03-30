@@ -299,6 +299,8 @@ object CommonSubexpressionElimination extends Pass {
     
 
     val Statement1 = eliminateNodeRefs(s)
+    //至此完成第一遍pass
+
     //var stmts = new collection.mutable.ArrayBuffer[Statement]
     var Stmts_node = collection.mutable.HashMap[String, Statement]()
     //var new_block_head = Block(stmts)
@@ -309,7 +311,7 @@ object CommonSubexpressionElimination extends Pass {
     var new_conn2 = DoPrim(PrimOps.Not, Seq(), Nil,UnknownType)
     var new_block = s
     var new_Stat = collection.mutable.ArrayBuffer[DefNode]()
-    var stmts = new collection.mutable.ArrayBuffer[Statement]
+    
     var new_Tail_Node = DefNode(NoInfo,"_GEN_0",new_add1)
     var new_add_Node = DefNode(NoInfo,"_T_8",new_add1)
     var new_Mux_Node = DefNode(NoInfo,"_T_7",new_add1)
@@ -318,16 +320,20 @@ object CommonSubexpressionElimination extends Pass {
     val Ands = collection.mutable.ArrayBuffer[(String,DoPrim,String,String,firrtl.ir.PrimOp)]()
     //val MUXs = collection.mutable.HashMap[String, (Expression,Expression,String,String,String, Expression)]()
     //val MUXs = collection.mutable.ArrayBuffer[(Expression,Expression,String,String,String, Expression,String)]()//ArrayBuffer
-
+    var all_statement = 0
+    var def_node_count = 0
     Statement1.foreachStmt{
          state =>
            //println("state",state,state.getClass)
            //stmts+= state
+           all_statement +=1
            state match{
+             //检查过没有问题
               case DefNode(info,name,oper)=>
                 ////println("name",name)
                 Stmts_node(name) = state
                 Stmts_node_array += ((name,state))
+                def_node_count += 1
                 //处理(~A & ~B == ~(A|B))
                 oper match{
                   case DoPrim(op,args,consts,tpe)=>
@@ -368,8 +374,12 @@ object CommonSubexpressionElimination extends Pass {
 
                   case _ =>
                 }
+              
+              
+              //待检查
               case Connect(info,outputPortRef, expr) =>
                 ////println("Catch Connect", expr)
+                var flag_mux = 0
                 expr match {
                   case Mux(cond, tval, fval, tpe) =>
                     //println("Catch Connect",expr)
@@ -389,29 +399,38 @@ object CommonSubexpressionElimination extends Pass {
                                     outputPortRef match {
                                       case WRef(name,tpe,_,_)=>
                                         //Stmts_node(name) = state
+                                        flag_mux = 1
                                         //println("Catch Connect",ir.Connect(info,outputPortRef,WRef(mux_temp._7,tpe,NodeKind,SinkFlow)))
                                         Stmts_node(name) = ir.Connect(info,outputPortRef,WRef(mux_temp._7,tpe,NodeKind,SinkFlow))
                                         Stmts_node_array += ((name,ir.Connect(info,outputPortRef,WRef(mux_temp._7,tpe,NodeKind,SinkFlow))))
                                       case _ =>
-                                        Stmts_node("Connect"+temp_count.toString) = ir.Connect(info,outputPortRef,WRef(mux_temp._7,tpe,NodeKind,SinkFlow))
-                                        Stmts_node_array += (("Connect"+temp_count.toString,ir.Connect(info,outputPortRef,WRef(mux_temp._7,tpe,NodeKind,SinkFlow))))
+                                        // Stmts_node("Connect"+temp_count.toString) = ir.Connect(info,outputPortRef,WRef(mux_temp._7,tpe,NodeKind,SinkFlow))
+                                        // Stmts_node_array += (("Connect"+temp_count.toString,ir.Connect(info,outputPortRef,WRef(mux_temp._7,tpe,NodeKind,SinkFlow))))
                                         temp_count +=1
                                     }
                                   case _ =>
-                                    Stmts_node("Connect"+temp_count.toString) = state
-                                    Stmts_node_array += (("Connect"+temp_count.toString,state))
+                                    // Stmts_node("Connect"+temp_count.toString) = state
+                                    // Stmts_node_array += (("Connect"+temp_count.toString,state))
                                     temp_count +=1
                                 }
                               case _ =>
-                                Stmts_node("Connect"+temp_count.toString) = state
-                                Stmts_node_array += (("Connect"+temp_count.toString,state))
+                                // Stmts_node("Connect"+temp_count.toString) = state
+                                // Stmts_node_array += (("Connect"+temp_count.toString,state))
                                 temp_count +=1
                             }
                           case _ =>
-                            Stmts_node("Connect"+temp_count.toString) = state
-                            Stmts_node_array += (("Connect"+temp_count.toString,state))
+                            //Stmts_node("Connect"+temp_count.toString) = state
+                            //Stmts_node_array += (("Connect"+temp_count.toString,state))
                             temp_count +=1
                         }
+                    }
+                    flag_mux match{
+                      case 0 =>
+                        Stmts_node("Connect"+temp_count.toString) = state
+                        Stmts_node_array += (("Connect"+temp_count.toString,state))
+                      case _ =>
+                        
+
                     }
                   case DoPrim(op,args,consts,tpe)=>
                       var new_name = "new_DoPrim"+temp_count.toString
@@ -435,6 +454,15 @@ object CommonSubexpressionElimination extends Pass {
                 Stmts_node_array += (("Other"+temp_count.toString,state))//存储了所有的Stmts
            }
     }
+    var  temp_count1 = 0
+    
+    
+    Stmts_node_array.foreach{
+      node=>
+        temp_count1 +=1
+    }
+    println("temp_count1",temp_count1)
+
     var new_name = "_Mux_op_"
     var index = 0
     //new_Tail_Node = firrtl.ir.DefNode(NoInfo,node._1,new_Tail)
@@ -729,17 +757,25 @@ object CommonSubexpressionElimination extends Pass {
 
     }
 
-
+    var stmts = new collection.mutable.ArrayBuffer[Statement]
     new_block = Block(stmts)
     ////println("new_block",new_block,new_block.getClass)
     //val Statement2 = eliminateNodeRefs(s)
     var conn_name = ""
     var conn_tpe = UIntType(IntWidth(33))//new ir.Type
+
+    println("def_node_count",def_node_count)
+    println("all_statement",all_statement)
+    all_statement = 0
     Stmts_node_array.foreach{
         // state =>
         //   //println("state",state,state.getClass)
         //   stmts+= state
-        state => state._2 match{
+
+        state => 
+        
+        state._2 match{
+
           case ir.Connect(_,WRef(name,tpe,_,_),_)=>
             conn_name = name
             var new_width = BigInt(0)
@@ -750,6 +786,7 @@ object CommonSubexpressionElimination extends Pass {
                 }
             conn_tpe = UIntType(IntWidth(new_width))
             ////println("state",state,state.getClass)
+          /*
           case DefNode(info,name,value)=>
             name match{
               case "_T" =>
@@ -764,22 +801,35 @@ object CommonSubexpressionElimination extends Pass {
             ////println("state",state,state.getClass)
           case _ =>
             stmts+= state._2
+          */
+          case _ =>
+            all_statement +=1
+            stmts+= state._2
         }
     }
+
+    println("all_statement1",all_statement)
 
     //stmts += new_Tail_Node  
     new_op_Nodes.foreach{
       node =>
         stmts += node
     }
+    
+    all_statement = 0
     Stmts_node_array.foreach{
-        state => state._2 match{
+        state => 
+          
+          state._2 match{
           case ir.Connect(_,WRef(name,tpe,_,_),_)=>
+            all_statement +=1
             stmts+= state._2
           case _ =>
             
         }
     }
+
+    println("all_statement2",all_statement)
 
 
     //stmts += new_Mux_Node
@@ -807,12 +857,9 @@ object CommonSubexpressionElimination extends Pass {
         ////println(m)
         m
       case m: Module    => 
-
-      var new_body = cse(m.body)
-
-      ////println("new_body",new_body)
-
-      Module(m.info, m.name, m.ports, new_body)
+        println("m.name",m.name)
+        var new_body = cse(m.body)
+        Module(m.info, m.name, m.ports, new_body)
     }
     Circuit(c.info, modulesx, c.main)
   }
