@@ -1,0 +1,5722 @@
+{
+  "name": "top",
+  "children": [{
+    "name": "AreaOp(not,(1),1,0) 20",
+    "size": 0
+  }, {
+    "name": "AreaMux(23,0,0) 1",
+    "size": 184
+  }, {
+    "name": "AreaOp(not,(12),12,0) 1",
+    "size": 0
+  }, {
+    "name": "AreaOp(shl,(3),9,0) 1",
+    "size": 0
+  }, {
+    "name": "AreaOp(xor,(12,12),12,1) 1",
+    "size": 0
+  }, {
+    "name": "AreaOp(neq,(8,8),1,1) 6",
+    "size": 132
+  }, {
+    "name": "AreaOp(bits,(32),5,0) 4",
+    "size": 0
+  }, {
+    "name": "AreaOp(bits,(9),2,0) 1",
+    "size": 0
+  }, {
+    "name": "AreaOp(cat,(10,23),33,0) 1",
+    "size": 0
+  }, {
+    "name": "AreaOp(and,(12,12),12,0) 1",
+    "size": 48
+  }, {
+    "name": "AreaOp(cat,(1,9),10,0) 1",
+    "size": 0
+  }, {
+    "name": "AreaOp(cat,(13,52),65,0) 1",
+    "size": 0
+  }, {
+    "name": "AreaOp(neq,(16,16),1,1) 3",
+    "size": 138
+  }, {
+    "name": "AreaOp(not,(9),9,0) 1",
+    "size": 0
+  }, {
+    "name": "AreaOp(eq,(5,5),1,1) 1",
+    "size": 12
+  }, {
+    "name": "AreaOp(neq,(5,5),1,1) 1",
+    "size": 12
+  }, {
+    "name": "AreaOp(or,(4,4),4,0) 2",
+    "size": 32
+  }, {
+    "name": "AreaMux(64,0,1) 1",
+    "size": 256
+  }, {
+    "name": "AreaOp(bits,(16),8,0) 12",
+    "size": 0
+  }, {
+    "name": "AreaOp(pad,(4),5,0) 1",
+    "size": 0
+  }, {
+    "name": "AreaOp(pad,(23),54,0) 1",
+    "size": 0
+  }, {
+    "name": "AreaOp(geq,(3,3),1,1) 1",
+    "size": 42
+  }, {
+    "name": "AreaMux(3,0,1) 1",
+    "size": 12
+  }, {
+    "name": "AreaOp(pad,(64),65,0) 2",
+    "size": 0
+  }, {
+    "name": "AreaOp(or,(9,9),9,0) 1",
+    "size": 36
+  }, {
+    "name": "AreaMux(2,0,0) 23",
+    "size": 368
+  }, {
+    "name": "AreaRegister(65) 1",
+    "size": 1950
+  }, {
+    "name": "AreaOp(or,(12,12),12,0) 1",
+    "size": 48
+  }, {
+    "name": "AreaMux(5,0,0) 39",
+    "size": 1560
+  }, {
+    "name": "AreaOp(bits,(4),1,0) 72",
+    "size": 0
+  }, {
+    "name": "AreaOp(pad,(8),9,0) 2",
+    "size": 0
+  }, {
+    "name": "AreaOp(pad,(3),5,0) 1",
+    "size": 0
+  }, {
+    "name": "AreaOp(bits,(32),3,0) 1",
+    "size": 0
+  }, {
+    "name": "AreaOp(pad,(33),65,0) 3",
+    "size": 0
+  }, {
+    "name": "AreaRegister(32) 2",
+    "size": 1920
+  }, {
+    "name": "AreaOp(neq,(32,32),1,1) 1",
+    "size": 94
+  }, {
+    "name": "AreaOp(and,(1,1),1,0) 41",
+    "size": 164
+  }, {
+    "name": "AreaOp(add,(12,12),13,0) 1",
+    "size": 416
+  }, {
+    "name": "AreaOp(xor,(9,9),9,1) 1",
+    "size": 0
+  }, {
+    "name": "AreaOp(eq,(23,23),1,1) 1",
+    "size": 66
+  }, {
+    "name": "AreaOp(cat,(51,1),52,1) 1",
+    "size": 0
+  }, {
+    "name": "AreaMux(4,0,2) 2",
+    "size": 0
+  }, {
+    "name": "AreaOp(pad,(11),12,0) 2",
+    "size": 0
+  }, {
+    "name": "AreaMux(9,0,0) 1",
+    "size": 72
+  }, {
+    "name": "AreaOp(pad,(6),12,0) 1",
+    "size": 0
+  }, {
+    "name": "AreaOp(bits,(8),4,0) 24",
+    "size": 0
+  }, {
+    "name": "AreaOp(or,(11,11),11,1) 1",
+    "size": 0
+  }, {
+    "name": "AreaOp(and,(5,5),5,0) 1",
+    "size": 20
+  }, {
+    "name": "AreaOp(bits,(64),8,0) 1",
+    "size": 0
+  }, {
+    "name": "AreaOp(bits,(64),23,0) 1",
+    "size": 0
+  }, {
+    "name": "AreaOp(pad,(1),2,0) 26",
+    "size": 0
+  }, {
+    "name": "AreaOp(bits,(32),16,0) 6",
+    "size": 0
+  }, {
+    "name": "AreaOp(pad,(52),115,0) 1",
+    "size": 0
+  }, {
+    "name": "AreaOp(bits,(115),51,0) 1",
+    "size": 0
+  }, {
+    "name": "AreaOp(shl,(3),12,0) 1",
+    "size": 0
+  }, {
+    "name": "AreaOp(pad,(7),9,0) 1",
+    "size": 0
+  }, {
+    "name": "AreaOp(lt,(2,2),1,1) 1",
+    "size": 28
+  }, {
+    "name": "AreaOp(dshlw,(54,5),54,0) 1",
+    "size": 3240
+  }, {
+    "name": "AreaOp(bits,(64),32,0) 2",
+    "size": 0
+  }, {
+    "name": "AreaRegister(3) 1",
+    "size": 90
+  }, {
+    "name": "AreaOp(pad,(2),3,0) 5",
+    "size": 0
+  }, {
+    "name": "AreaMux(2,0,1) 48",
+    "size": 384
+  }, {
+    "name": "AreaOp(pad,(2),11,0) 1",
+    "size": 0
+  }, {
+    "name": "AreaOp(bits,(64),11,0) 1",
+    "size": 0
+  }, {
+    "name": "AreaOp(or,(1,1),1,0) 31",
+    "size": 124
+  }, {
+    "name": "AreaMux(2,0,2) 6",
+    "size": 0
+  }, {
+    "name": "AreaOp(eq,(2,2),1,1) 3",
+    "size": 12
+  }, {
+    "name": "AreaOp(bits,(12),2,0) 1",
+    "size": 0
+  }, {
+    "name": "AreaOp(bits,(64),52,0) 1",
+    "size": 0
+  }, {
+    "name": "AreaOp(and,(5,5),5,1) 1",
+    "size": 0
+  }, {
+    "name": "AreaRegister(5) 11",
+    "size": 1650
+  }, {
+    "name": "AreaOp(cat,(1,12),13,0) 1",
+    "size": 0
+  }, {
+    "name": "AreaOp(or,(5,5),5,0) 4",
+    "size": 80
+  }, {
+    "name": "AreaOp(bits,(65),33,0) 1",
+    "size": 0
+  }, {
+    "name": "AreaOp(bits,(54),22,0) 1",
+    "size": 0
+  }, {
+    "name": "AreaOp(add,(9,9),10,0) 1",
+    "size": 320
+  }, {
+    "name": "AreaOp(shl,(1),7,0) 1",
+    "size": 0
+  }, {
+    "name": "AreaOp(pad,(3),4,0) 3",
+    "size": 0
+  }, {
+    "name": "AreaRegister(1) 39",
+    "size": 1170
+  }, {
+    "name": "AreaOp(eq,(52,52),1,1) 1",
+    "size": 154
+  }, {
+    "name": "AreaMux(3,0,0) 14",
+    "size": 336
+  }, {
+    "name": "AreaOp(eq,(8,8),1,1) 1",
+    "size": 22
+  }, {
+    "name": "AreaMux(64,0,0) 1",
+    "size": 512
+  }, {
+    "name": "AreaOp(cat,(22,1),23,1) 1",
+    "size": 0
+  }, {
+    "name": "AreaOp(not,(5),5,0) 1",
+    "size": 0
+  }, {
+    "name": "AreaRegister(64) 1",
+    "size": 1920
+  }, {
+    "name": "AreaOp(bits,(3),2,0) 1",
+    "size": 0
+  }, {
+    "name": "AreaOp(and,(4,4),4,0) 1",
+    "size": 16
+  }, {
+    "name": "AreaOp(tail,(13),12,0) 1",
+    "size": 0
+  }, {
+    "name": "AreaMux(3,0,2) 6",
+    "size": 0
+  }, {
+    "name": "AreaOp(bits,(32),2,0) 2",
+    "size": 0
+  }, {
+    "name": "AreaOp(shl,(52),64,0) 1",
+    "size": 0
+  }, {
+    "name": "AreaOp(or,(8,8),8,1) 1",
+    "size": 0
+  }, {
+    "name": "AreaMux(12,0,0) 1",
+    "size": 96
+  }, {
+    "name": "AreaMux(1,0,0) 61",
+    "size": 488
+  }, {
+    "name": "AreaMux(32,0,0) 2",
+    "size": 512
+  }, {
+    "name": "AreaOp(neq,(3,3),1,1) 1",
+    "size": 6
+  }, {
+    "name": "AreaOp(shl,(1),10,0) 1",
+    "size": 0
+  }, {
+    "name": "AreaOp(cat,(1,3),4,0) 6",
+    "size": 0
+  }, {
+    "name": "AreaOp(tail,(10),9,0) 1",
+    "size": 0
+  }, {
+    "name": "AreaOp(dshlw,(115,6),115,0) 1",
+    "size": 6900
+  }, {
+    "name": "AreaMux(1,0,1) 7",
+    "size": 28
+  }, {
+    "name": "AreaOp(geq,(2,2),1,1) 2",
+    "size": 56
+  }, {
+    "name": "AreaOp(or,(3,3),3,0) 4",
+    "size": 48
+  }, {
+    "name": "AreaOp(bits,(3),1,0) 7",
+    "size": 0
+  }, {
+    "name": "AreaOp(pad,(2),8,0) 1",
+    "size": 0
+  }, {
+    "name": "AreaOp(not,(6),6,0) 1",
+    "size": 0
+  }, {
+    "name": "AreaOp(bits,(64),1,0) 2",
+    "size": 0
+  }, {
+    "name": "AreaOp(and,(2,2),2,1) 1",
+    "size": 0
+  }, {
+    "name": "AreaMux(5,0,2) 1",
+    "size": 0
+  }, {
+    "name": "AreaOp(shr,(3),2,0) 1",
+    "size": 0
+  }, {
+    "name": "AreaOp(eq,(3,3),1,1) 1",
+    "size": 6
+  }, {
+    "name": "AreaOp(pad,(10),12,0) 1",
+    "size": 0
+  }, {
+    "name": "AreaOp(pad,(5),9,0) 1",
+    "size": 0
+  }, {
+    "name": "AreaRegister(2) 4",
+    "size": 240
+  }, {
+    "name": "AreaOp(and,(9,9),9,0) 1",
+    "size": 36
+  }, {
+    "name": "AreaMux(4,0,0) 3",
+    "size": 96
+  }, {
+    "name": "AreaMux(65,0,0) 23",
+    "size": 11960
+  }, {
+    "name": "AreaOp(cat,(1,4),5,0) 3",
+    "size": 0
+  }, {
+    "name": "AreaOp(neq,(4,4),1,1) 13",
+    "size": 130
+  }, {
+    "name": "AreaOp(eq,(11,11),1,1) 1",
+    "size": 30
+  }, {
+    "name": "AreaMemory(65,32,3,2,0) 1",
+    "size": 12480
+  }, {
+    "name": "AreaOp(cat,(1,2),3,0) 12",
+    "size": 0
+  }, {
+    "name": "AreaOp(bits,(32),1,0) 1",
+    "size": 0
+  }, {
+    "name": "AreaMux(5,0,1) 4",
+    "size": 80
+  }, {
+    "name": "AreaOp(or,(2,2),2,0) 4",
+    "size": 32
+  }, {
+    "name": "AreaMux(52,0,0) 1",
+    "size": 416
+  }, {
+    "name": "AreaOp(or,(65,65),65,1) 2",
+    "size": 0
+  }, {
+    "name": "AreaOp(shl,(23),32,0) 1",
+    "size": 0
+  }, {
+    "name": "AreaOp(cat,(1,5),6,0) 1",
+    "size": 0
+  }, {
+    "name": "fp_decoder",
+    "children": [{
+      "name": "AreaOp(and,(32,32),32,1) 29",
+      "size": 0
+    }, {
+      "name": "AreaOp(cat,(2,1),3,0) 1",
+      "size": 0
+    }, {
+      "name": "AreaOp(cat,(1,1),2,0) 2",
+      "size": 0
+    }, {
+      "name": "AreaOp(cat,(3,2),5,0) 1",
+      "size": 0
+    }, {
+      "name": "AreaOp(or,(1,1),1,0) 19",
+      "size": 76
+    }, {
+      "name": "AreaOp(eq,(32,32),1,1) 33",
+      "size": 3102
+    }]
+  }, {
+    "name": "RecFNToRecFN",
+    "children": [{
+      "name": "AreaOp(not,(1),1,0) 3",
+      "size": 0
+    }, {
+      "name": "AreaOp(bits,(12),1,0) 1",
+      "size": 0
+    }, {
+      "name": "AreaOp(cat,(1,9),10,0) 1",
+      "size": 0
+    }, {
+      "name": "AreaOp(bits,(56),30,0) 1",
+      "size": 0
+    }, {
+      "name": "AreaOp(and,(1,1),1,0) 4",
+      "size": 16
+    }, {
+      "name": "AreaOp(add,(13,13),14,1) 1",
+      "size": 196
+    }, {
+      "name": "AreaOp(bits,(14),4,0) 1",
+      "size": 0
+    }, {
+      "name": "AreaOp(bits,(27),1,0) 1",
+      "size": 0
+    }, {
+      "name": "AreaOp(eq,(2,2),1,1) 1",
+      "size": 4
+    }, {
+      "name": "AreaOp(bits,(12),2,0) 1",
+      "size": 0
+    }, {
+      "name": "AreaOp(cat,(26,1),27,0) 2",
+      "size": 0
+    }, {
+      "name": "AreaMux(9,0,1) 1",
+      "size": 36
+    }, {
+      "name": "AreaOp(bits,(12),3,0) 1",
+      "size": 0
+    }, {
+      "name": "AreaOp(bits,(14),9,0) 1",
+      "size": 0
+    }, {
+      "name": "AreaOp(lt,(14,14),1,1) 1",
+      "size": 196
+    }, {
+      "name": "AreaOp(cat,(52,2),54,1) 1",
+      "size": 0
+    }, {
+      "name": "AreaOp(bits,(65),12,0) 1",
+      "size": 0
+    }, {
+      "name": "AreaOp(cat,(1,1),2,1) 1",
+      "size": 0
+    }, {
+      "name": "AreaOp(bits,(65),52,0) 1",
+      "size": 0
+    }, {
+      "name": "AreaOp(eq,(3,3),1,1) 2",
+      "size": 12
+    }, {
+      "name": "AreaOp(cvt,(12),13,0) 1",
+      "size": 0
+    }, {
+      "name": "AreaOp(neq,(4,4),1,1) 1",
+      "size": 10
+    }, {
+      "name": "AreaOp(asSInt,(10),10,0) 1",
+      "size": 0
+    }, {
+      "name": "AreaOp(neq,(30,30),1,1) 1",
+      "size": 88
+    }, {
+      "name": "AreaOp(bits,(56),26,0) 1",
+      "size": 0
+    }, {
+      "name": "AreaOp(bits,(65),1,0) 1",
+      "size": 0
+    }, {
+      "name": "AreaOp(cat,(2,54),56,0) 1",
+      "size": 0
+    }, {
+      "name": "RoundRawFNToRecFN",
+      "children": [{
+        "name": "AreaOp(not,(1),1,0) 8",
+        "size": 0
+      }, {
+        "name": "AreaMux(23,0,0) 2",
+        "size": 368
+      }, {
+        "name": "AreaOp(or,(16,16),16,0) 4",
+        "size": 256
+      }, {
+        "name": "AreaOp(pad,(3),25,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(cat,(10,23),33,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaMux(23,0,2) 2",
+        "size": 0
+      }, {
+        "name": "AreaOp(neq,(27,27),1,1) 2",
+        "size": 156
+      }, {
+        "name": "AreaOp(cat,(2,1),3,0) 2",
+        "size": 0
+      }, {
+        "name": "AreaOp(cat,(1,9),10,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(not,(9),9,0) 5",
+        "size": 0
+      }, {
+        "name": "AreaOp(lt,(11,11),1,1) 1",
+        "size": 154
+      }, {
+        "name": "AreaMux(26,0,1) 1",
+        "size": 104
+      }, {
+        "name": "AreaOp(cat,(25,2),27,1) 2",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(16),8,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(7),6,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaMux(3,0,1) 1",
+        "size": 12
+      }, {
+        "name": "AreaOp(or,(9,9),9,0) 4",
+        "size": 144
+      }, {
+        "name": "AreaOp(shr,(27),26,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(16),12,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(pad,(8),16,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaMux(25,0,1) 1",
+        "size": 100
+      }, {
+        "name": "AreaOp(add,(25,25),26,1) 1",
+        "size": 364
+      }, {
+        "name": "AreaOp(shr,(27),25,0) 2",
+        "size": 0
+      }, {
+        "name": "AreaOp(dshr,(65,6),65,1) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(22),6,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(and,(1,1),1,0) 16",
+        "size": 64
+      }, {
+        "name": "AreaOp(bits,(8),7,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaMux(22,0,1) 1",
+        "size": 88
+      }, {
+        "name": "AreaOp(not,(26),26,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(shl,(14),16,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(shr,(28),27,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(cvt,(2),3,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(not,(27),27,0) 2",
+        "size": 0
+      }, {
+        "name": "AreaOp(cat,(4,2),6,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(or,(25,25),25,0) 2",
+        "size": 200
+      }, {
+        "name": "AreaOp(pad,(12),16,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(cat,(1,1),2,0) 5",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(22),16,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(pad,(25),26,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(pad,(14),16,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(6),4,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(cat,(3,2),5,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(shr,(11),4,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(pad,(3),10,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(and,(27,27),27,0) 4",
+        "size": 432
+      }, {
+        "name": "AreaOp(shr,(26),2,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(pad,(9),10,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(shr,(16),14,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(7),1,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(shl,(12),16,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(or,(1,1),1,0) 11",
+        "size": 44
+      }, {
+        "name": "AreaOp(eq,(2,2),1,1) 3",
+        "size": 12
+      }, {
+        "name": "AreaOp(bits,(27),1,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(lt,(10,10),1,0) 1",
+        "size": 320
+      }, {
+        "name": "AreaOp(shr,(16),12,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(8),1,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(cat,(2,2),4,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(or,(23,23),23,0) 1",
+        "size": 92
+      }, {
+        "name": "AreaOp(pad,(1),25,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(65),22,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaMux(25,0,2) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(9),1,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(65),3,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(geq,(4,4),1,1) 1",
+        "size": 56
+      }, {
+        "name": "AreaOp(bits,(16),15,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(not,(22),22,0) 2",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(3),2,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaMux(26,0,0) 1",
+        "size": 208
+      }, {
+        "name": "AreaOp(or,(27,27),27,0) 1",
+        "size": 108
+      }, {
+        "name": "AreaOp(and,(26,26),26,0) 1",
+        "size": 104
+      }, {
+        "name": "AreaMux(9,0,2) 9",
+        "size": 0
+      }, {
+        "name": "AreaOp(cat,(1,1),2,1) 1",
+        "size": 0
+      }, {
+        "name": "AreaMux(1,0,1) 1",
+        "size": 4
+      }, {
+        "name": "AreaOp(shr,(16),8,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(3),1,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(add,(10,10),11,0) 1",
+        "size": 352
+      }, {
+        "name": "AreaOp(cat,(1,27),28,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(shl,(15),16,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(and,(9,9),9,0) 4",
+        "size": 144
+      }, {
+        "name": "AreaOp(and,(16,16),16,1) 7",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(6),2,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(4),2,0) 2",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(2),1,0) 8",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(26),23,0) 2",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(11),9,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(10),9,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(pad,(15),16,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(shl,(8),16,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(shr,(16),15,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(cat,(22,3),25,1) 1",
+        "size": 0
+      }, {
+        "name": "AreaMux(25,0,0) 1",
+        "size": 200
+      }, {
+        "name": "AreaOp(lt,(10,10),1,1) 1",
+        "size": 140
+      }, {
+        "name": "AreaOp(bits,(16),14,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(9),8,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(cat,(16,6),22,0) 1",
+        "size": 0
+      }]
+    }]
+  }, {
+    "name": "ifpu",
+    "children": [{
+      "name": "AreaOp(not,(1),1,0) 6",
+      "size": 0
+    }, {
+      "name": "AreaOp(cvt,(32),33,0) 1",
+      "size": 0
+    }, {
+      "name": "AreaMux(23,0,0) 1",
+      "size": 184
+    }, {
+      "name": "AreaOp(not,(12),12,0) 1",
+      "size": 0
+    }, {
+      "name": "AreaOp(shl,(3),9,0) 1",
+      "size": 0
+    }, {
+      "name": "AreaOp(xor,(12,12),12,1) 1",
+      "size": 0
+    }, {
+      "name": "AreaOp(neq,(8,8),1,1) 6",
+      "size": 132
+    }, {
+      "name": "AreaOp(bits,(9),2,0) 1",
+      "size": 0
+    }, {
+      "name": "AreaOp(cat,(10,23),33,0) 1",
+      "size": 0
+    }, {
+      "name": "AreaOp(and,(12,12),12,0) 1",
+      "size": 48
+    }, {
+      "name": "AreaOp(bits,(65),64,0) 2",
+      "size": 0
+    }, {
+      "name": "AreaOp(cat,(1,9),10,0) 1",
+      "size": 0
+    }, {
+      "name": "AreaOp(cat,(13,52),65,0) 1",
+      "size": 0
+    }, {
+      "name": "AreaOp(neq,(16,16),1,1) 3",
+      "size": 138
+    }, {
+      "name": "AreaOp(not,(9),9,0) 1",
+      "size": 0
+    }, {
+      "name": "AreaOp(eq,(5,5),1,1) 1",
+      "size": 12
+    }, {
+      "name": "AreaOp(asSInt,(65),65,0) 1",
+      "size": 0
+    }, {
+      "name": "AreaOp(bits,(16),8,0) 12",
+      "size": 0
+    }, {
+      "name": "AreaOp(pad,(23),54,0) 1",
+      "size": 0
+    }, {
+      "name": "AreaMux(33,0,0) 1",
+      "size": 264
+    }, {
+      "name": "AreaOp(asSInt,(32),32,0) 1",
+      "size": 0
+    }, {
+      "name": "AreaOp(or,(9,9),9,0) 1",
+      "size": 36
+    }, {
+      "name": "AreaMux(2,0,0) 13",
+      "size": 208
+    }, {
+      "name": "AreaRegister(65) 2",
+      "size": 3900
+    }, {
+      "name": "AreaOp(or,(12,12),12,0) 1",
+      "size": 48
+    }, {
+      "name": "AreaMux(5,0,0) 4",
+      "size": 160
+    }, {
+      "name": "AreaOp(bits,(4),1,0) 72",
+      "size": 0
+    }, {
+      "name": "AreaOp(pad,(8),9,0) 2",
+      "size": 0
+    }, {
+      "name": "AreaOp(pad,(33),65,0) 2",
+      "size": 0
+    }, {
+      "name": "AreaOp(neq,(32,32),1,1) 1",
+      "size": 94
+    }, {
+      "name": "AreaOp(and,(1,1),1,0) 4",
+      "size": 16
+    }, {
+      "name": "AreaOp(add,(12,12),13,0) 1",
+      "size": 416
+    }, {
+      "name": "AreaOp(xor,(9,9),9,1) 1",
+      "size": 0
+    }, {
+      "name": "AreaOp(eq,(23,23),1,1) 1",
+      "size": 66
+    }, {
+      "name": "AreaOp(cat,(51,1),52,1) 1",
+      "size": 0
+    }, {
+      "name": "AreaOp(pad,(11),12,0) 2",
+      "size": 0
+    }, {
+      "name": "AreaMux(9,0,0) 1",
+      "size": 72
+    }, {
+      "name": "AreaOp(pad,(6),12,0) 1",
+      "size": 0
+    }, {
+      "name": "AreaOp(bits,(8),4,0) 24",
+      "size": 0
+    }, {
+      "name": "AreaOp(or,(11,11),11,1) 1",
+      "size": 0
+    }, {
+      "name": "AreaOp(pad,(1),2,0) 24",
+      "size": 0
+    }, {
+      "name": "AreaOp(bits,(32),16,0) 6",
+      "size": 0
+    }, {
+      "name": "AreaOp(pad,(52),115,0) 1",
+      "size": 0
+    }, {
+      "name": "AreaOp(bits,(115),51,0) 1",
+      "size": 0
+    }, {
+      "name": "AreaOp(shl,(3),12,0) 1",
+      "size": 0
+    }, {
+      "name": "AreaOp(pad,(7),9,0) 1",
+      "size": 0
+    }, {
+      "name": "AreaOp(dshlw,(54,5),54,0) 1",
+      "size": 3240
+    }, {
+      "name": "AreaOp(bits,(64),32,0) 2",
+      "size": 0
+    }, {
+      "name": "AreaOp(bits,(65),11,0) 1",
+      "size": 0
+    }, {
+      "name": "AreaMux(2,0,1) 48",
+      "size": 384
+    }, {
+      "name": "AreaRegister(3) 1",
+      "size": 90
+    }, {
+      "name": "AreaOp(pad,(2),11,0) 1",
+      "size": 0
+    }, {
+      "name": "AreaOp(eq,(2,2),1,1) 2",
+      "size": 8
+    }, {
+      "name": "AreaMux(2,0,2) 2",
+      "size": 0
+    }, {
+      "name": "AreaOp(bits,(12),2,0) 1",
+      "size": 0
+    }, {
+      "name": "AreaOp(shr,(65),32,0) 1",
+      "size": 0
+    }, {
+      "name": "AreaOp(and,(5,5),5,1) 1",
+      "size": 0
+    }, {
+      "name": "AreaRegister(5) 2",
+      "size": 300
+    }, {
+      "name": "AreaOp(cat,(1,12),13,0) 1",
+      "size": 0
+    }, {
+      "name": "AreaOp(cat,(32,33),65,0) 1",
+      "size": 0
+    }, {
+      "name": "AreaOp(pad,(32),33,0) 1",
+      "size": 0
+    }, {
+      "name": "AreaOp(bits,(54),22,0) 1",
+      "size": 0
+    }, {
+      "name": "AreaOp(add,(9,9),10,0) 1",
+      "size": 320
+    }, {
+      "name": "AreaOp(shl,(1),7,0) 1",
+      "size": 0
+    }, {
+      "name": "AreaRegister(1) 2",
+      "size": 60
+    }, {
+      "name": "AreaOp(eq,(52,52),1,1) 1",
+      "size": 154
+    }, {
+      "name": "AreaMux(3,0,0) 7",
+      "size": 168
+    }, {
+      "name": "AreaOp(eq,(8,8),1,1) 1",
+      "size": 22
+    }, {
+      "name": "AreaOp(cat,(22,1),23,1) 1",
+      "size": 0
+    }, {
+      "name": "AreaOp(not,(5),5,0) 1",
+      "size": 0
+    }, {
+      "name": "AreaOp(bits,(3),2,0) 2",
+      "size": 0
+    }, {
+      "name": "AreaOp(tail,(13),12,0) 1",
+      "size": 0
+    }, {
+      "name": "AreaMux(3,0,2) 2",
+      "size": 0
+    }, {
+      "name": "AreaOp(bits,(65),8,0) 1",
+      "size": 0
+    }, {
+      "name": "AreaOp(shl,(52),64,0) 1",
+      "size": 0
+    }, {
+      "name": "AreaOp(or,(8,8),8,1) 1",
+      "size": 0
+    }, {
+      "name": "AreaMux(12,0,0) 1",
+      "size": 96
+    }, {
+      "name": "AreaMux(1,0,0) 1",
+      "size": 8
+    }, {
+      "name": "AreaOp(shl,(1),10,0) 1",
+      "size": 0
+    }, {
+      "name": "AreaOp(cat,(1,3),4,0) 6",
+      "size": 0
+    }, {
+      "name": "AreaOp(tail,(10),9,0) 1",
+      "size": 0
+    }, {
+      "name": "AreaOp(dshlw,(115,6),115,0) 1",
+      "size": 6900
+    }, {
+      "name": "AreaMux(1,0,1) 1",
+      "size": 4
+    }, {
+      "name": "AreaOp(bits,(65),52,0) 1",
+      "size": 0
+    }, {
+      "name": "AreaOp(pad,(2),8,0) 1",
+      "size": 0
+    }, {
+      "name": "AreaOp(not,(6),6,0) 1",
+      "size": 0
+    }, {
+      "name": "AreaOp(pad,(10),12,0) 1",
+      "size": 0
+    }, {
+      "name": "AreaOp(pad,(5),9,0) 1",
+      "size": 0
+    }, {
+      "name": "AreaRegister(2) 1",
+      "size": 60
+    }, {
+      "name": "AreaOp(and,(9,9),9,0) 1",
+      "size": 36
+    }, {
+      "name": "AreaMux(4,0,0) 3",
+      "size": 96
+    }, {
+      "name": "AreaOp(cat,(1,4),5,0) 3",
+      "size": 0
+    }, {
+      "name": "AreaMux(65,0,0) 6",
+      "size": 3120
+    }, {
+      "name": "AreaOp(neq,(4,4),1,1) 12",
+      "size": 120
+    }, {
+      "name": "AreaOp(eq,(11,11),1,1) 1",
+      "size": 30
+    }, {
+      "name": "AreaOp(asUInt,(65),65,0) 1",
+      "size": 0
+    }, {
+      "name": "AreaOp(bits,(65),23,0) 1",
+      "size": 0
+    }, {
+      "name": "AreaOp(bits,(2),1,0) 2",
+      "size": 0
+    }, {
+      "name": "AreaOp(cat,(1,2),3,0) 12",
+      "size": 0
+    }, {
+      "name": "AreaMux(5,0,1) 1",
+      "size": 20
+    }, {
+      "name": "AreaMux(52,0,0) 1",
+      "size": 416
+    }, {
+      "name": "AreaOp(shl,(23),32,0) 1",
+      "size": 0
+    }, {
+      "name": "AreaOp(bits,(65),32,0) 1",
+      "size": 0
+    }, {
+      "name": "AreaOp(cat,(1,5),6,0) 1",
+      "size": 0
+    }, {
+      "name": "AreaOp(bits,(65),1,0) 2",
+      "size": 0
+    }, {
+      "name": "INToRecFN_1",
+      "children": [{
+        "name": "AreaOp(tail,(65),64,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(not,(1),1,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(54),1,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(neq,(8,8),1,1) 4",
+        "size": 88
+      }, {
+        "name": "AreaOp(cat,(2,1),3,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(cat,(13,52),65,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(neq,(16,16),1,1) 2",
+        "size": 92
+      }, {
+        "name": "AreaOp(bits,(16),8,0) 8",
+        "size": 0
+      }, {
+        "name": "AreaMux(2,0,0) 8",
+        "size": 128
+      }, {
+        "name": "AreaOp(bits,(127),64,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaMux(5,0,0) 1",
+        "size": 40
+      }, {
+        "name": "AreaOp(cat,(1,10),11,1) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(4),1,0) 48",
+        "size": 0
+      }, {
+        "name": "AreaOp(neq,(10,10),1,1) 1",
+        "size": 28
+      }, {
+        "name": "AreaOp(neq,(32,32),1,1) 1",
+        "size": 94
+      }, {
+        "name": "AreaOp(and,(1,1),1,0) 6",
+        "size": 24
+      }, {
+        "name": "AreaOp(bits,(8),4,0) 16",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(64),10,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(add,(54,54),55,1) 1",
+        "size": 770
+      }, {
+        "name": "AreaOp(pad,(1),2,0) 16",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(32),16,0) 4",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(64),32,0) 2",
+        "size": 0
+      }, {
+        "name": "AreaMux(2,0,1) 32",
+        "size": 256
+      }, {
+        "name": "AreaOp(or,(1,1),1,0) 3",
+        "size": 12
+      }, {
+        "name": "AreaOp(pad,(64),127,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(eq,(2,2),1,1) 5",
+        "size": 20
+      }, {
+        "name": "AreaOp(bits,(54),52,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(cat,(1,12),13,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(sub,(64,64),65,1) 1",
+        "size": 910
+      }, {
+        "name": "AreaOp(not,(2),2,0) 2",
+        "size": 0
+      }, {
+        "name": "AreaMux(3,0,0) 4",
+        "size": 96
+      }, {
+        "name": "AreaOp(bits,(64),2,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(pad,(1),11,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(64),53,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaMux(64,0,0) 1",
+        "size": 512
+      }, {
+        "name": "AreaOp(tail,(12),11,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(3),2,0) 2",
+        "size": 0
+      }, {
+        "name": "AreaOp(neq,(2,2),1,1) 1",
+        "size": 4
+      }, {
+        "name": "AreaOp(tail,(55),54,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(cat,(1,3),4,0) 4",
+        "size": 0
+      }, {
+        "name": "AreaOp(dshlw,(127,6),127,0) 1",
+        "size": 7620
+      }, {
+        "name": "AreaOp(cat,(1,1),2,1) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(not,(6),6,0) 2",
+        "size": 0
+      }, {
+        "name": "AreaOp(cat,(3,2),5,1) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(cat,(1,11),12,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(64),1,0) 2",
+        "size": 0
+      }, {
+        "name": "AreaOp(cat,(1,53),54,1) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(cat,(4,6),10,1) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(cat,(1,4),5,0) 2",
+        "size": 0
+      }, {
+        "name": "AreaMux(4,0,0) 2",
+        "size": 64
+      }, {
+        "name": "AreaMux(54,0,0) 1",
+        "size": 432
+      }, {
+        "name": "AreaOp(add,(11,11),12,0) 1",
+        "size": 384
+      }, {
+        "name": "AreaOp(neq,(4,4),1,1) 8",
+        "size": 80
+      }, {
+        "name": "AreaOp(cat,(1,2),3,0) 8",
+        "size": 0
+      }, {
+        "name": "AreaOp(cat,(1,5),6,0) 1",
+        "size": 0
+      }]
+    }, {
+      "name": "INToRecFN",
+      "children": [{
+        "name": "AreaOp(tail,(65),64,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(not,(1),1,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(neq,(8,8),1,1) 4",
+        "size": 88
+      }, {
+        "name": "AreaOp(bits,(25),23,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(cat,(10,23),33,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(tail,(9),8,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(cat,(2,1),3,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(cat,(1,9),10,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(add,(8,8),9,0) 1",
+        "size": 288
+      }, {
+        "name": "AreaOp(neq,(16,16),1,1) 2",
+        "size": 92
+      }, {
+        "name": "AreaOp(bits,(16),8,0) 8",
+        "size": 0
+      }, {
+        "name": "AreaOp(cat,(1,6),7,1) 1",
+        "size": 0
+      }, {
+        "name": "AreaMux(2,0,0) 8",
+        "size": 128
+      }, {
+        "name": "AreaOp(bits,(127),64,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaMux(5,0,0) 1",
+        "size": 40
+      }, {
+        "name": "AreaOp(bits,(4),1,0) 48",
+        "size": 0
+      }, {
+        "name": "AreaOp(add,(25,25),26,1) 1",
+        "size": 364
+      }, {
+        "name": "AreaOp(neq,(32,32),1,1) 1",
+        "size": 94
+      }, {
+        "name": "AreaOp(cat,(1,24),25,1) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(cat,(1,7),8,1) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(and,(1,1),1,0) 6",
+        "size": 24
+      }, {
+        "name": "AreaOp(pad,(1),8,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(8),4,0) 16",
+        "size": 0
+      }, {
+        "name": "AreaOp(pad,(1),2,0) 16",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(32),16,0) 4",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(64),32,0) 2",
+        "size": 0
+      }, {
+        "name": "AreaMux(2,0,1) 32",
+        "size": 256
+      }, {
+        "name": "AreaOp(or,(1,1),1,0) 3",
+        "size": 12
+      }, {
+        "name": "AreaOp(pad,(64),127,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(eq,(2,2),1,1) 5",
+        "size": 20
+      }, {
+        "name": "AreaOp(sub,(64,64),65,1) 1",
+        "size": 910
+      }, {
+        "name": "AreaOp(not,(2),2,0) 2",
+        "size": 0
+      }, {
+        "name": "AreaMux(3,0,0) 4",
+        "size": 96
+      }, {
+        "name": "AreaOp(bits,(64),2,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaMux(64,0,0) 1",
+        "size": 512
+      }, {
+        "name": "AreaOp(neq,(39,39),1,1) 1",
+        "size": 114
+      }, {
+        "name": "AreaOp(bits,(64),24,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(3),2,0) 2",
+        "size": 0
+      }, {
+        "name": "AreaOp(neq,(2,2),1,1) 1",
+        "size": 4
+      }, {
+        "name": "AreaOp(cat,(1,3),4,0) 4",
+        "size": 0
+      }, {
+        "name": "AreaOp(dshlw,(127,6),127,0) 1",
+        "size": 7620
+      }, {
+        "name": "AreaOp(cat,(1,1),2,1) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(cat,(1,8),9,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(not,(6),6,0) 2",
+        "size": 0
+      }, {
+        "name": "AreaOp(cat,(3,2),5,1) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(64),1,0) 2",
+        "size": 0
+      }, {
+        "name": "AreaOp(cat,(1,4),5,0) 2",
+        "size": 0
+      }, {
+        "name": "AreaMux(4,0,0) 2",
+        "size": 64
+      }, {
+        "name": "AreaOp(bits,(25),1,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(neq,(4,4),1,1) 8",
+        "size": 80
+      }, {
+        "name": "AreaOp(cat,(1,2),3,0) 8",
+        "size": 0
+      }, {
+        "name": "AreaMux(25,0,0) 1",
+        "size": 200
+      }, {
+        "name": "AreaOp(bits,(64),39,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(tail,(26),25,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(cat,(1,5),6,0) 1",
+        "size": 0
+      }]
+    }]
+  }, {
+    "name": "FPUFMAPipe",
+    "children": [{
+      "name": "AreaOp(not,(1),1,0) 1",
+      "size": 0
+    }, {
+      "name": "AreaOp(bits,(5),1,0) 2",
+      "size": 0
+    }, {
+      "name": "AreaRegister(65) 6",
+      "size": 11700
+    }, {
+      "name": "AreaMux(5,0,0) 4",
+      "size": 160
+    }, {
+      "name": "AreaOp(and,(1,1),1,0) 1",
+      "size": 4
+    }, {
+      "name": "AreaOp(cat,(1,1),2,0) 1",
+      "size": 0
+    }, {
+      "name": "AreaOp(bits,(5),2,0) 1",
+      "size": 0
+    }, {
+      "name": "AreaRegister(3) 1",
+      "size": 90
+    }, {
+      "name": "AreaOp(or,(1,1),1,0) 1",
+      "size": 4
+    }, {
+      "name": "AreaRegister(5) 4",
+      "size": 600
+    }, {
+      "name": "AreaRegister(1) 3",
+      "size": 90
+    }, {
+      "name": "AreaMux(3,0,0) 1",
+      "size": 24
+    }, {
+      "name": "AreaOp(bits,(3),2,0) 1",
+      "size": 0
+    }, {
+      "name": "AreaMux(1,0,1) 2",
+      "size": 8
+    }, {
+      "name": "AreaOp(pad,(2),5,0) 1",
+      "size": 0
+    }, {
+      "name": "AreaMux(65,0,1) 1",
+      "size": 260
+    }, {
+      "name": "AreaMux(65,0,0) 7",
+      "size": 3640
+    }, {
+      "name": "AreaOp(xor,(1,1),1,0) 1",
+      "size": 10
+    }, {
+      "name": "AreaOp(bits,(65),1,0) 2",
+      "size": 0
+    }, {
+      "name": "AreaOp(shl,(1),65,0) 1",
+      "size": 0
+    }, {
+      "name": "fma",
+      "children": [{
+        "name": "AreaOp(pad,(106),107,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(cat,(1,106),107,1) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(mul,(53,53),106,0) 1",
+        "size": 183168
+      }, {
+        "name": "AreaOp(add,(107,107),108,0) 1",
+        "size": 3456
+      }, {
+        "name": "AreaOp(tail,(108),107,0) 1",
+        "size": 0
+      }, {
+        "name": "mulAddRecFN_preMul",
+        "children": [{
+          "name": "AreaOp(not,(1),1,0) 4",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(32),31,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(pad,(16),32,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(shl,(31),32,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(sub,(14,14),15,0) 1",
+          "size": 480
+        }, {
+          "name": "AreaOp(eq,(13,13),1,1) 1",
+          "size": 36
+        }, {
+          "name": "AreaOp(or,(16,16),16,0) 4",
+          "size": 256
+        }, {
+          "name": "AreaOp(asUInt,(162),162,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(and,(32,32),32,1) 9",
+          "size": 0
+        }, {
+          "name": "AreaMux(108,0,2) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(12),1,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(pad,(12),14,0) 3",
+          "size": 0
+        }, {
+          "name": "AreaOp(pad,(20),53,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaMux(20,0,1) 1",
+          "size": 80
+        }, {
+          "name": "AreaMux(14,0,0) 1",
+          "size": 112
+        }, {
+          "name": "AreaOp(pad,(24),32,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(cat,(1,52),53,0) 3",
+          "size": 0
+        }, {
+          "name": "AreaMux(33,0,1) 1",
+          "size": 132
+        }, {
+          "name": "AreaOp(not,(53),53,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(shl,(30),32,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(cat,(33,20),53,1) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(16),8,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(tail,(15),14,0) 3",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(7),6,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(65),20,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(shr,(32),28,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(cat,(54,108),162,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(16),12,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(pad,(8),16,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(dshr,(162,8),162,0) 1",
+          "size": 12960
+        }, {
+          "name": "AreaOp(bits,(20),16,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(33),32,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(cat,(32,1),33,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(dshr,(65,6),65,1) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(32),24,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(8),7,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(and,(1,1),1,0) 1",
+          "size": 4
+        }, {
+          "name": "AreaOp(shl,(14),16,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(pad,(30),32,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(cat,(16,4),20,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(162),106,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(pad,(12),16,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(cat,(1,1),2,0) 2",
+          "size": 0
+        }, {
+          "name": "AreaOp(cat,(1,53),54,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(32),16,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(pad,(14),16,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaMux(8,0,1) 2",
+          "size": 64
+        }, {
+          "name": "AreaOp(bits,(162),55,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(pad,(28),32,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(shr,(32),24,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(162),1,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(shr,(16),14,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(shl,(12),16,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(7),1,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(or,(1,1),1,0) 5",
+          "size": 20
+        }, {
+          "name": "AreaOp(shr,(16),12,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(8),1,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(not,(33),33,0) 2",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(12),11,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(cat,(2,2),4,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(65),33,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(neq,(53,53),1,1) 1",
+          "size": 156
+        }, {
+          "name": "AreaOp(bits,(12),3,0) 6",
+          "size": 0
+        }, {
+          "name": "AreaOp(shr,(32),31,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(shr,(32),30,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(33),1,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(asSInt,(162),162,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(shl,(28),32,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(16),15,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(or,(32,32),32,0) 5",
+          "size": 640
+        }, {
+          "name": "AreaOp(bits,(32),30,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(14),1,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaMux(3,0,2) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(cat,(3,11),14,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(14),13,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(65),12,0) 3",
+          "size": 0
+        }, {
+          "name": "AreaOp(shr,(16),8,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(65),52,0) 3",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(52),1,0) 3",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(20),4,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(shl,(15),16,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaMux(53,0,0) 2",
+          "size": 848
+        }, {
+          "name": "AreaOp(eq,(3,3),1,1) 3",
+          "size": 18
+        }, {
+          "name": "AreaOp(and,(16,16),16,1) 7",
+          "size": 0
+        }, {
+          "name": "AreaOp(xor,(1,1),1,0) 7",
+          "size": 70
+        }, {
+          "name": "AreaOp(shl,(24),32,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(4),2,0) 2",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(2),1,0) 6",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(32),28,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(and,(53,53),53,0) 1",
+          "size": 212
+        }, {
+          "name": "AreaOp(pad,(15),16,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(lt,(13,13),1,1) 2",
+          "size": 364
+        }, {
+          "name": "AreaOp(pad,(31),32,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(shl,(8),16,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(shr,(16),15,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(14),8,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(163),162,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(cat,(162,1),163,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(add,(14,14),15,0) 1",
+          "size": 480
+        }, {
+          "name": "AreaOp(bits,(16),14,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(shl,(16),32,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(shr,(32),16,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(65),1,0) 3",
+          "size": 0
+        }, {
+          "name": "AreaOp(add,(14,14),15,1) 1",
+          "size": 210
+        }]
+      }, {
+        "name": "mulAddRecFN_postMul",
+        "children": [{
+          "name": "AreaOp(not,(1),1,0) 38",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(32),31,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaMux(54,0,1) 2",
+          "size": 432
+        }, {
+          "name": "AreaOp(bits,(88),57,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(not,(12),12,0) 4",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(107),1,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(pad,(16),32,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(162),34,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(not,(162),162,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(shl,(31),32,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(44),12,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(shl,(4),8,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(sub,(14,14),15,0) 1",
+          "size": 480
+        }, {
+          "name": "AreaOp(bits,(7),4,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(cat,(50,4),54,1) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(or,(16,16),16,0) 8",
+          "size": 512
+        }, {
+          "name": "AreaOp(neq,(8,8),1,1) 6",
+          "size": 132
+        }, {
+          "name": "AreaOp(bits,(162),64,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(and,(32,32),32,1) 9",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(57),1,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(14),12,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(tail,(9),8,0) 2",
+          "size": 0
+        }, {
+          "name": "AreaOp(shl,(7),8,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(pad,(87),88,0) 2",
+          "size": 0
+        }, {
+          "name": "AreaOp(cat,(8,7),15,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(and,(12,12),12,0) 4",
+          "size": 192
+        }, {
+          "name": "AreaOp(shr,(8),4,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(tail,(56),55,0) 2",
+          "size": 0
+        }, {
+          "name": "AreaOp(cat,(31,1),32,1) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(cat,(2,1),3,0) 2",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(12),1,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(11),10,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(12),4,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(15),7,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(cat,(13,52),65,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(neq,(16,16),1,1) 3",
+          "size": 138
+        }, {
+          "name": "AreaOp(bits,(7),3,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(cat,(65,22),87,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(pad,(24),32,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(eq,(57,57),1,1) 1",
+          "size": 168
+        }, {
+          "name": "AreaOp(shl,(30),32,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(18),2,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(16),8,0) 14",
+          "size": 0
+        }, {
+          "name": "AreaOp(tail,(15),14,0) 3",
+          "size": 0
+        }, {
+          "name": "AreaOp(pad,(4),5,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaMux(6,0,0) 1",
+          "size": 48
+        }, {
+          "name": "AreaOp(bits,(15),8,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaMux(12,0,2) 8",
+          "size": 0
+        }, {
+          "name": "AreaOp(cat,(16,15),31,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(7),6,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(shr,(8),6,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(shr,(32),28,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(not,(32),32,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaMux(2,0,0) 13",
+          "size": 208
+        }, {
+          "name": "AreaOp(shl,(66),88,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(cat,(55,106),161,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(or,(12,12),12,0) 4",
+          "size": 192
+        }, {
+          "name": "AreaOp(cat,(1,6),7,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(16),12,0) 2",
+          "size": 0
+        }, {
+          "name": "AreaMux(5,0,0) 2",
+          "size": 80
+        }, {
+          "name": "AreaOp(pad,(8),16,0) 2",
+          "size": 0
+        }, {
+          "name": "AreaOp(not,(56),56,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(cat,(161,1),162,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(neq,(57,57),1,1) 2",
+          "size": 336
+        }, {
+          "name": "AreaOp(bits,(4),1,0) 81",
+          "size": 0
+        }, {
+          "name": "AreaOp(and,(8,8),8,1) 5",
+          "size": 0
+        }, {
+          "name": "AreaOp(dshr,(65,6),65,1) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(neq,(32,32),1,1) 4",
+          "size": 376
+        }, {
+          "name": "AreaOp(bits,(55),52,0) 2",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(32),24,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(shl,(2),88,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(pad,(7),8,0) 2",
+          "size": 0
+        }, {
+          "name": "AreaOp(pad,(6),8,0) 2",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(8),7,0) 2",
+          "size": 0
+        }, {
+          "name": "AreaOp(and,(1,1),1,0) 61",
+          "size": 244
+        }, {
+          "name": "AreaOp(bits,(44),32,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(shl,(34),88,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(shl,(14),16,0) 2",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(162),44,0) 2",
+          "size": 0
+        }, {
+          "name": "AreaOp(pad,(30),32,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(pad,(4),54,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(pad,(108),109,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(107),106,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(10),1,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(57),3,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(65),4,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(cat,(32,18),50,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(pad,(12),16,0) 2",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(55),1,0) 2",
+          "size": 0
+        }, {
+          "name": "AreaOp(cat,(1,1),2,0) 9",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(8),4,0) 27",
+          "size": 0
+        }, {
+          "name": "AreaOp(and,(56,56),56,0) 1",
+          "size": 224
+        }, {
+          "name": "AreaOp(pad,(1),2,0) 27",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(32),16,0) 7",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(50),18,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(pad,(14),16,0) 2",
+          "size": 0
+        }, {
+          "name": "AreaOp(dshr,(87,5),87,0) 1",
+          "size": 5220
+        }, {
+          "name": "AreaOp(bits,(50),32,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(shr,(56),55,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(cat,(65,1),66,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(not,(57),57,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaMux(14,0,1) 3",
+          "size": 168
+        }, {
+          "name": "AreaOp(bits,(33),31,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaMux(11,0,2) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(cat,(3,2),5,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(not,(55),55,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(shr,(8),7,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(pad,(28),32,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(64),32,0) 2",
+          "size": 0
+        }, {
+          "name": "AreaMux(87,0,1) 4",
+          "size": 1392
+        }, {
+          "name": "AreaOp(shr,(32),24,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(or,(57,57),57,0) 1",
+          "size": 228
+        }, {
+          "name": "AreaOp(shr,(16),14,0) 2",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(162),1,0) 2",
+          "size": 0
+        }, {
+          "name": "AreaOp(cat,(1,86),87,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaMux(2,0,1) 54",
+          "size": 432
+        }, {
+          "name": "AreaOp(pad,(2),3,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(neq,(12,12),1,1) 1",
+          "size": 34
+        }, {
+          "name": "AreaOp(bits,(31),16,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(shl,(12),16,0) 2",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(7),1,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(cat,(87,1),88,0) 2",
+          "size": 0
+        }, {
+          "name": "AreaOp(or,(54,54),54,0) 1",
+          "size": 216
+        }, {
+          "name": "AreaOp(or,(1,1),1,0) 41",
+          "size": 164
+        }, {
+          "name": "AreaOp(sub,(8,8),9,1) 2",
+          "size": 252
+        }, {
+          "name": "AreaOp(eq,(2,2),1,1) 8",
+          "size": 32
+        }, {
+          "name": "AreaOp(eq,(32,32),1,1) 1",
+          "size": 94
+        }, {
+          "name": "AreaOp(cat,(1,12),13,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(shr,(16),12,0) 2",
+          "size": 0
+        }, {
+          "name": "AreaOp(cat,(33,54),87,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(8),1,0) 5",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(12),11,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(cat,(2,2),4,0) 2",
+          "size": 0
+        }, {
+          "name": "AreaOp(and,(57,57),57,0) 4",
+          "size": 912
+        }, {
+          "name": "AreaOp(bits,(162),87,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaMux(87,0,0) 5",
+          "size": 3480
+        }, {
+          "name": "AreaOp(xor,(109,109),109,0) 1",
+          "size": 1090
+        }, {
+          "name": "AreaOp(shr,(57),55,0) 2",
+          "size": 0
+        }, {
+          "name": "AreaOp(shr,(32),31,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(shr,(32),30,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(162),65,0) 2",
+          "size": 0
+        }, {
+          "name": "AreaMux(3,0,0) 7",
+          "size": 168
+        }, {
+          "name": "AreaOp(cat,(86,1),87,0) 5",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(13),12,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaMux(52,0,2) 2",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(88),32,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaMux(50,0,1) 4",
+          "size": 800
+        }, {
+          "name": "AreaOp(pad,(55),56,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(shl,(28),32,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(not,(5),5,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(162),33,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(or,(8,8),8,0) 3",
+          "size": 96
+        }, {
+          "name": "AreaMux(86,0,2) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(not,(13),13,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(sub,(14,14),15,1) 1",
+          "size": 210
+        }, {
+          "name": "AreaOp(bits,(9),1,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaMux(8,0,0) 2",
+          "size": 128
+        }, {
+          "name": "AreaOp(pad,(11),13,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(16),15,0) 2",
+          "size": 0
+        }, {
+          "name": "AreaOp(or,(32,32),32,0) 5",
+          "size": 640
+        }, {
+          "name": "AreaOp(neq,(11,11),1,1) 2",
+          "size": 60
+        }, {
+          "name": "AreaOp(bits,(162),108,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(and,(32,32),32,0) 2",
+          "size": 256
+        }, {
+          "name": "AreaMux(55,0,0) 1",
+          "size": 440
+        }, {
+          "name": "AreaOp(bits,(32),30,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(3),2,0) 4",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(108),64,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(14),1,0) 2",
+          "size": 0
+        }, {
+          "name": "AreaOp(or,(55,55),55,0) 2",
+          "size": 440
+        }, {
+          "name": "AreaOp(neq,(2,2),1,1) 2",
+          "size": 8
+        }, {
+          "name": "AreaMux(56,0,2) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(pad,(65),88,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(add,(55,55),56,1) 2",
+          "size": 1568
+        }, {
+          "name": "AreaMux(22,0,2) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(162),66,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaMux(1,0,0) 8",
+          "size": 64
+        }, {
+          "name": "AreaOp(bits,(8),5,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(not,(50),50,0) 8",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(162),86,0) 5",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(65),50,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(55),2,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(14),13,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(cat,(54,2),56,1) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(cat,(1,3),4,0) 7",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(14),3,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(dshr,(33,5),33,1) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(shr,(16),8,0) 2",
+          "size": 0
+        }, {
+          "name": "AreaOp(cat,(1,1),2,1) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(pad,(56),57,0) 3",
+          "size": 0
+        }, {
+          "name": "AreaOp(neq,(44,44),1,1) 3",
+          "size": 390
+        }, {
+          "name": "AreaOp(bits,(18),16,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(162),32,0) 2",
+          "size": 0
+        }, {
+          "name": "AreaOp(or,(14,14),14,0) 2",
+          "size": 112
+        }, {
+          "name": "AreaOp(or,(56,56),56,0) 1",
+          "size": 224
+        }, {
+          "name": "AreaMux(88,0,0) 6",
+          "size": 4224
+        }, {
+          "name": "AreaOp(bits,(3),1,0) 4",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(12),8,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(cat,(4,3),7,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(shl,(15),16,0) 2",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(162),2,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaMux(55,0,1) 3",
+          "size": 660
+        }, {
+          "name": "AreaOp(eq,(3,3),1,1) 5",
+          "size": 30
+        }, {
+          "name": "AreaMux(4,0,0) 3",
+          "size": 96
+        }, {
+          "name": "AreaOp(and,(16,16),16,1) 14",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(162),11,0) 2",
+          "size": 0
+        }, {
+          "name": "AreaOp(cat,(1,4),5,0) 3",
+          "size": 0
+        }, {
+          "name": "AreaMux(54,0,0) 1",
+          "size": 432
+        }, {
+          "name": "AreaOp(cat,(16,2),18,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(neq,(4,4),1,1) 14",
+          "size": 140
+        }, {
+          "name": "AreaOp(eq,(11,11),1,1) 1",
+          "size": 30
+        }, {
+          "name": "AreaOp(xor,(1,1),1,0) 2",
+          "size": 20
+        }, {
+          "name": "AreaOp(and,(55,55),55,0) 1",
+          "size": 220
+        }, {
+          "name": "AreaOp(pad,(8),14,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(4),2,0) 4",
+          "size": 0
+        }, {
+          "name": "AreaMux(4,0,1) 4",
+          "size": 64
+        }, {
+          "name": "AreaOp(shl,(24),32,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(pad,(66),87,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(2),1,0) 14",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(31),15,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(108),44,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(leq,(13,13),1,0) 1",
+          "size": 416
+        }, {
+          "name": "AreaOp(bits,(32),28,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaMux(54,0,2) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(cat,(1,2),3,0) 13",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(10),9,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(pad,(15),16,0) 2",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(57),2,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(11),1,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(shl,(8),16,0) 2",
+          "size": 0
+        }, {
+          "name": "AreaOp(shr,(16),15,0) 2",
+          "size": 0
+        }, {
+          "name": "AreaOp(pad,(4),8,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(pad,(31),32,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(lt,(12,12),1,1) 1",
+          "size": 168
+        }, {
+          "name": "AreaOp(or,(52,52),52,0) 1",
+          "size": 208
+        }, {
+          "name": "AreaOp(bits,(109),108,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(88),87,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaMux(52,0,0) 2",
+          "size": 832
+        }, {
+          "name": "AreaOp(or,(87,87),87,0) 3",
+          "size": 1044
+        }, {
+          "name": "AreaOp(bits,(16),14,0) 2",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(13),1,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(cat,(64,1),65,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(9),8,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(8),6,0) 2",
+          "size": 0
+        }, {
+          "name": "AreaOp(shl,(108),109,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(pad,(55),57,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(cat,(1,5),6,0) 2",
+          "size": 0
+        }, {
+          "name": "AreaOp(shl,(16),32,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(add,(14,14),15,1) 1",
+          "size": 210
+        }, {
+          "name": "AreaOp(shr,(32),16,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(pad,(1),54,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(shl,(6),8,0) 1",
+          "size": 0
+        }]
+      }]
+    }]
+  }, {
+    "name": "DivSqrtRecF64",
+    "children": [{
+      "name": "AreaOp(bits,(4),1,0) 1",
+      "size": 0
+    }, {
+      "name": "mul",
+      "children": [{
+        "name": "AreaRegister(105) 1",
+        "size": 3150
+      }, {
+        "name": "AreaOp(add,(105,105),106,0) 1",
+        "size": 3392
+      }, {
+        "name": "AreaMux(105,0,0) 1",
+        "size": 840
+      }, {
+        "name": "AreaRegister(1) 2",
+        "size": 60
+      }, {
+        "name": "AreaOp(bits,(108),105,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(mul,(54,54),108,0) 1",
+        "size": 190080
+      }, {
+        "name": "AreaRegister(54) 4",
+        "size": 6480
+      }, {
+        "name": "AreaMux(54,0,0) 6",
+        "size": 2592
+      }, {
+        "name": "AreaOp(tail,(106),105,0) 1",
+        "size": 0
+      }]
+    }, {
+      "name": "ds",
+      "children": [{
+        "name": "AreaOp(not,(1),1,0) 98",
+        "size": 0
+      }, {
+        "name": "AreaOp(mul,(9,9),18,0) 1",
+        "size": 5760
+      }, {
+        "name": "AreaOp(bits,(32),31,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaMux(54,0,1) 5",
+        "size": 1080
+      }, {
+        "name": "AreaOp(add,(20,20),21,1) 1",
+        "size": 294
+      }, {
+        "name": "AreaMux(51,0,0) 4",
+        "size": 1632
+      }, {
+        "name": "AreaOp(not,(12),12,0) 4",
+        "size": 0
+      }, {
+        "name": "AreaOp(pad,(16),32,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(54),1,0) 2",
+        "size": 0
+      }, {
+        "name": "AreaOp(tail,(8),7,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaMux(53,0,1) 7",
+        "size": 1484
+      }, {
+        "name": "AreaOp(bits,(26),9,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(shl,(31),32,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(eq,(4,4),1,1) 10",
+        "size": 100
+      }, {
+        "name": "AreaOp(or,(16,16),16,0) 4",
+        "size": 256
+      }, {
+        "name": "AreaOp(shl,(2),56,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(and,(32,32),32,1) 9",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(58),31,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(14),12,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(shl,(58),105,0) 2",
+        "size": 0
+      }, {
+        "name": "AreaOp(and,(12,12),12,0) 4",
+        "size": 192
+      }, {
+        "name": "AreaOp(pad,(52),53,0) 2",
+        "size": 0
+      }, {
+        "name": "AreaOp(cat,(2,1),3,0) 2",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(12),1,0) 3",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(11),10,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(pad,(12),14,0) 2",
+        "size": 0
+      }, {
+        "name": "AreaMux(13,0,1) 2",
+        "size": 104
+      }, {
+        "name": "AreaOp(cat,(53,1),54,1) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(cat,(13,52),65,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(53),21,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(pad,(11),21,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaMux(20,0,1) 1",
+        "size": 80
+      }, {
+        "name": "AreaMux(14,0,0) 6",
+        "size": 672
+      }, {
+        "name": "AreaOp(pad,(24),32,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(cat,(7,18),25,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaMux(33,0,1) 1",
+        "size": 132
+      }, {
+        "name": "AreaOp(not,(53),53,0) 3",
+        "size": 0
+      }, {
+        "name": "AreaOp(shl,(30),32,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(shr,(54),53,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(58),46,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(18),2,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(16),8,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(shr,(25),16,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(tail,(15),14,0) 2",
+        "size": 0
+      }, {
+        "name": "AreaRegister(53) 1",
+        "size": 1590
+      }, {
+        "name": "AreaOp(pad,(56),105,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(58),33,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaMux(12,0,2) 16",
+        "size": 0
+      }, {
+        "name": "AreaOp(pad,(53),55,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(7),6,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaMux(33,0,0) 1",
+        "size": 264
+      }, {
+        "name": "AreaOp(cat,(1,15),16,1) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(shr,(32),28,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaMux(3,0,1) 9",
+        "size": 108
+      }, {
+        "name": "AreaOp(pad,(24),25,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(33),30,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(eq,(53,53),1,1) 1",
+        "size": 156
+      }, {
+        "name": "AreaOp(or,(9,9),9,0) 20",
+        "size": 720
+      }, {
+        "name": "AreaMux(2,0,0) 6",
+        "size": 96
+      }, {
+        "name": "AreaOp(add,(7,7),8,1) 1",
+        "size": 112
+      }, {
+        "name": "AreaOp(pad,(13),14,0) 2",
+        "size": 0
+      }, {
+        "name": "AreaMux(6,0,2) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(16),12,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(or,(12,12),12,0) 11",
+        "size": 528
+      }, {
+        "name": "AreaRegister(21) 1",
+        "size": 630
+      }, {
+        "name": "AreaOp(pad,(8),16,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(25),7,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(105),53,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(not,(54),54,0) 4",
+        "size": 0
+      }, {
+        "name": "AreaOp(not,(11),11,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaMux(25,0,1) 1",
+        "size": 100
+      }, {
+        "name": "AreaOp(pad,(18),19,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaMux(52,0,1) 3",
+        "size": 624
+      }, {
+        "name": "AreaOp(cat,(50,3),53,1) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(dshr,(65,6),65,1) 1",
+        "size": 0
+      }, {
+        "name": "AreaRegister(32) 1",
+        "size": 960
+      }, {
+        "name": "AreaOp(shl,(31),46,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(56),2,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(32),24,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(pad,(20),21,0) 2",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(19),18,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(8),7,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(and,(1,1),1,0) 165",
+        "size": 660
+      }, {
+        "name": "AreaMux(15,0,1) 1",
+        "size": 60
+      }, {
+        "name": "AreaOp(or,(13,13),13,0) 3",
+        "size": 156
+      }, {
+        "name": "AreaOp(shl,(14),16,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(shr,(53),52,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(pad,(30),32,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(leq,(3,3),1,1) 1",
+        "size": 42
+      }, {
+        "name": "AreaRegister(4) 1",
+        "size": 120
+      }, {
+        "name": "AreaOp(bits,(19),1,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(pad,(54),105,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(or,(105,105),105,0) 4",
+        "size": 1680
+      }, {
+        "name": "AreaOp(cat,(2,51),53,0) 3",
+        "size": 0
+      }, {
+        "name": "AreaOp(xor,(2,2),2,0) 1",
+        "size": 20
+      }, {
+        "name": "AreaMux(4,0,2) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(10),1,0) 2",
+        "size": 0
+      }, {
+        "name": "AreaOp(pad,(3),53,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(or,(10,10),10,0) 3",
+        "size": 120
+      }, {
+        "name": "AreaRegister(51) 4",
+        "size": 6120
+      }, {
+        "name": "AreaMux(9,0,0) 2",
+        "size": 144
+      }, {
+        "name": "AreaOp(or,(25,25),25,0) 2",
+        "size": 200
+      }, {
+        "name": "AreaOp(cat,(32,18),50,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(pad,(12),16,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(add,(13,13),14,1) 2",
+        "size": 392
+      }, {
+        "name": "AreaOp(cat,(1,1),2,0) 7",
+        "size": 0
+      }, {
+        "name": "AreaRegister(9) 3",
+        "size": 810
+      }, {
+        "name": "AreaOp(add,(54,54),55,1) 1",
+        "size": 770
+      }, {
+        "name": "AreaOp(bits,(32),16,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(51),1,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(pad,(14),16,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(50),18,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(50),32,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(pad,(25),26,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(52),3,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(pad,(34),53,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaMux(10,0,2) 5",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(52),51,0) 2",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(56),54,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(cat,(1,13),14,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaMux(14,0,1) 7",
+        "size": 392
+      }, {
+        "name": "AreaOp(shr,(14),13,0) 2",
+        "size": 0
+      }, {
+        "name": "AreaMux(11,0,2) 1",
+        "size": 0
+      }, {
+        "name": "AreaRegister(17) 1",
+        "size": 510
+      }, {
+        "name": "AreaOp(cat,(3,2),5,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(53),9,0) 2",
+        "size": 0
+      }, {
+        "name": "AreaOp(pad,(28),32,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(shr,(32),24,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(16),10,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(53),1,0) 4",
+        "size": 0
+      }, {
+        "name": "AreaOp(shr,(16),14,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(eq,(54,54),1,1) 1",
+        "size": 160
+      }, {
+        "name": "AreaOp(pad,(2),3,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaRegister(3) 9",
+        "size": 810
+      }, {
+        "name": "AreaMux(23,0,1) 1",
+        "size": 92
+      }, {
+        "name": "AreaOp(pad,(51),52,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(shl,(12),16,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(7),1,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(shl,(9),19,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(cat,(14,6),20,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(or,(20,20),20,0) 1",
+        "size": 80
+      }, {
+        "name": "AreaMux(46,0,1) 4",
+        "size": 736
+      }, {
+        "name": "AreaOp(or,(54,54),54,0) 4",
+        "size": 864
+      }, {
+        "name": "AreaOp(or,(1,1),1,0) 136",
+        "size": 544
+      }, {
+        "name": "AreaOp(bits,(105),46,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaMux(2,0,2) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(eq,(2,2),1,1) 12",
+        "size": 48
+      }, {
+        "name": "AreaMux(8,0,2) 1",
+        "size": 0
+      }, {
+        "name": "AreaMux(51,0,1) 1",
+        "size": 204
+      }, {
+        "name": "AreaOp(shl,(17),53,0) 2",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(54),52,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(pad,(19),20,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(add,(54,54),55,0) 1",
+        "size": 1760
+      }, {
+        "name": "AreaMux(16,0,0) 2",
+        "size": 256
+      }, {
+        "name": "AreaOp(cat,(1,12),13,0) 2",
+        "size": 0
+      }, {
+        "name": "AreaOp(shr,(16),12,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(tail,(21),20,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(8),1,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(cat,(1,18),19,1) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(pad,(30),53,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaRegister(14) 3",
+        "size": 1260
+      }, {
+        "name": "AreaMux(58,0,0) 2",
+        "size": 928
+      }, {
+        "name": "AreaOp(bits,(12),11,0) 2",
+        "size": 0
+      }, {
+        "name": "AreaOp(cat,(2,2),4,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(shr,(25),14,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(pad,(46),53,0) 4",
+        "size": 0
+      }, {
+        "name": "AreaOp(neq,(53,53),1,1) 1",
+        "size": 156
+      }, {
+        "name": "AreaMux(56,0,1) 1",
+        "size": 224
+      }, {
+        "name": "AreaMux(9,0,1) 7",
+        "size": 252
+      }, {
+        "name": "AreaOp(tail,(4),3,0) 3",
+        "size": 0
+      }, {
+        "name": "AreaOp(shr,(25),23,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(56),1,0) 2",
+        "size": 0
+      }, {
+        "name": "AreaRegister(58) 2",
+        "size": 3480
+      }, {
+        "name": "AreaMux(7,0,0) 1",
+        "size": 56
+      }, {
+        "name": "AreaOp(bits,(12),3,0) 2",
+        "size": 0
+      }, {
+        "name": "AreaOp(shr,(32),31,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(cat,(1,8),9,1) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(shr,(32),30,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaRegister(1) 21",
+        "size": 630
+      }, {
+        "name": "AreaOp(bits,(14),9,0) 2",
+        "size": 0
+      }, {
+        "name": "AreaMux(3,0,0) 14",
+        "size": 336
+      }, {
+        "name": "AreaOp(bits,(13),12,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaMux(52,0,2) 2",
+        "size": 0
+      }, {
+        "name": "AreaMux(50,0,1) 4",
+        "size": 800
+      }, {
+        "name": "AreaMux(21,0,0) 1",
+        "size": 168
+      }, {
+        "name": "AreaOp(shl,(28),32,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(cat,(13,1),14,1) 2",
+        "size": 0
+      }, {
+        "name": "AreaOp(shl,(9),25,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(25),18,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(not,(13),13,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(9),1,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(65),3,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(16),15,0) 2",
+        "size": 0
+      }, {
+        "name": "AreaOp(or,(32,32),32,0) 5",
+        "size": 640
+      }, {
+        "name": "AreaOp(shl,(16),17,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(pad,(53),54,0) 2",
+        "size": 0
+      }, {
+        "name": "AreaOp(add,(19,19),20,0) 1",
+        "size": 640
+      }, {
+        "name": "AreaOp(pad,(16),17,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaMux(21,0,1) 2",
+        "size": 168
+      }, {
+        "name": "AreaOp(bits,(105),32,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(32),30,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(3),2,0) 9",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(14),1,0) 3",
+        "size": 0
+      }, {
+        "name": "AreaMux(3,0,2) 3",
+        "size": 0
+      }, {
+        "name": "AreaMux(26,0,0) 1",
+        "size": 208
+      }, {
+        "name": "AreaOp(shl,(25),26,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(sub,(3,3),4,1) 3",
+        "size": 168
+      }, {
+        "name": "AreaOp(shr,(26),16,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(cat,(3,11),14,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(tail,(55),54,0) 3",
+        "size": 0
+      }, {
+        "name": "AreaMux(13,0,2) 4",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(105),56,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(shl,(58),104,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(105),1,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(shl,(9),24,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(tail,(14),13,0) 2",
+        "size": 0
+      }, {
+        "name": "AreaMux(1,0,0) 43",
+        "size": 344
+      }, {
+        "name": "AreaMux(32,0,0) 1",
+        "size": 256
+      }, {
+        "name": "AreaOp(bits,(105),54,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(not,(50),50,0) 8",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(65),50,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(or,(21,21),21,0) 5",
+        "size": 420
+      }, {
+        "name": "AreaOp(bits,(52),9,0) 3",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(105),58,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(14),13,0) 4",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(65),12,0) 2",
+        "size": 0
+      }, {
+        "name": "AreaOp(shl,(16),52,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaMux(9,0,2) 12",
+        "size": 0
+      }, {
+        "name": "AreaOp(neq,(3,3),1,1) 3",
+        "size": 18
+      }, {
+        "name": "AreaOp(pad,(16),25,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(14),3,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(shr,(16),8,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaMux(1,0,1) 3",
+        "size": 12
+      }, {
+        "name": "AreaOp(cat,(1,1),2,1) 5",
+        "size": 0
+      }, {
+        "name": "AreaOp(cat,(13,8),21,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(65),52,0) 2",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(18),16,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(or,(3,3),3,0) 2",
+        "size": 24
+      }, {
+        "name": "AreaOp(bits,(25),21,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(or,(14,14),14,0) 10",
+        "size": 560
+      }, {
+        "name": "AreaOp(bits,(3),1,0) 3",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(52),1,0) 2",
+        "size": 0
+      }, {
+        "name": "AreaOp(not,(46),46,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(tail,(22),21,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaMux(30,0,1) 1",
+        "size": 120
+      }, {
+        "name": "AreaOp(shl,(1),54,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(105),33,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(cat,(1,53),54,1) 3",
+        "size": 0
+      }, {
+        "name": "AreaOp(shl,(15),16,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaMux(53,0,0) 2",
+        "size": 848
+      }, {
+        "name": "AreaOp(cat,(10,10),20,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(tail,(5),4,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(pad,(10),16,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(pad,(104),105,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(eq,(3,3),1,1) 31",
+        "size": 186
+      }, {
+        "name": "AreaOp(bits,(23),9,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaRegister(10) 1",
+        "size": 300
+      }, {
+        "name": "AreaRegister(2) 3",
+        "size": 180
+      }, {
+        "name": "AreaOp(and,(16,16),16,1) 7",
+        "size": 0
+      }, {
+        "name": "AreaMux(4,0,0) 2",
+        "size": 64
+      }, {
+        "name": "AreaRegister(33) 1",
+        "size": 990
+      }, {
+        "name": "AreaOp(bits,(25),1,0) 3",
+        "size": 0
+      }, {
+        "name": "AreaMux(54,0,0) 1",
+        "size": 432
+      }, {
+        "name": "AreaOp(cat,(16,2),18,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(neq,(4,4),1,1) 1",
+        "size": 10
+      }, {
+        "name": "AreaOp(bits,(46),34,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(sub,(4,4),5,1) 1",
+        "size": 70
+      }, {
+        "name": "AreaOp(xor,(1,1),1,0) 3",
+        "size": 30
+      }, {
+        "name": "AreaOp(pad,(9),14,0) 6",
+        "size": 0
+      }, {
+        "name": "AreaMux(105,0,1) 2",
+        "size": 840
+      }, {
+        "name": "AreaOp(and,(54,54),54,0) 3",
+        "size": 648
+      }, {
+        "name": "AreaMux(17,0,0) 2",
+        "size": 272
+      }, {
+        "name": "AreaOp(shl,(33),46,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaMux(24,0,1) 1",
+        "size": 96
+      }, {
+        "name": "AreaMux(4,0,1) 1",
+        "size": 16
+      }, {
+        "name": "AreaOp(shl,(24),32,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(pad,(33),53,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(not,(25),25,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(2),1,0) 4",
+        "size": 0
+      }, {
+        "name": "AreaMux(31,0,0) 1",
+        "size": 248
+      }, {
+        "name": "AreaOp(add,(21,21),22,1) 1",
+        "size": 308
+      }, {
+        "name": "AreaOp(or,(53,53),53,0) 11",
+        "size": 2332
+      }, {
+        "name": "AreaOp(leq,(13,13),1,1) 1",
+        "size": 182
+      }, {
+        "name": "AreaOp(bits,(32),28,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(10),9,0) 2",
+        "size": 0
+      }, {
+        "name": "AreaOp(and,(53,53),53,0) 2",
+        "size": 424
+      }, {
+        "name": "AreaOp(pad,(15),16,0) 2",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(11),1,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(lt,(13,13),1,1) 1",
+        "size": 182
+      }, {
+        "name": "AreaOp(shr,(16),15,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(shl,(8),16,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(shl,(32),51,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(pad,(31),32,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaMux(25,0,0) 1",
+        "size": 200
+      }, {
+        "name": "AreaOp(or,(52,52),52,0) 2",
+        "size": 416
+      }, {
+        "name": "AreaOp(add,(14,14),15,0) 1",
+        "size": 480
+      }, {
+        "name": "AreaMux(52,0,0) 1",
+        "size": 416
+      }, {
+        "name": "AreaOp(bits,(54),53,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(16),14,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(13),1,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(9),8,0) 2",
+        "size": 0
+      }, {
+        "name": "AreaOp(shr,(25),15,0) 2",
+        "size": 0
+      }, {
+        "name": "AreaOp(pad,(21),25,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaMux(104,0,1) 1",
+        "size": 416
+      }, {
+        "name": "AreaOp(tail,(20),19,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(15),9,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(shl,(16),32,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaRegister(31) 1",
+        "size": 930
+      }, {
+        "name": "AreaOp(shr,(32),16,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(65),1,0) 2",
+        "size": 0
+      }, {
+        "name": "AreaOp(add,(14,14),15,1) 1",
+        "size": 210
+      }, {
+        "name": "AreaOp(pad,(1),54,0) 1",
+        "size": 0
+      }]
+    }]
+  }, {
+    "name": "sfma",
+    "children": [{
+      "name": "AreaOp(not,(1),1,0) 1",
+      "size": 0
+    }, {
+      "name": "AreaOp(bits,(5),1,0) 2",
+      "size": 0
+    }, {
+      "name": "AreaRegister(65) 5",
+      "size": 9750
+    }, {
+      "name": "AreaMux(5,0,0) 3",
+      "size": 120
+    }, {
+      "name": "AreaOp(pad,(33),65,0) 2",
+      "size": 0
+    }, {
+      "name": "AreaOp(and,(1,1),1,0) 1",
+      "size": 4
+    }, {
+      "name": "AreaOp(cat,(1,1),2,0) 1",
+      "size": 0
+    }, {
+      "name": "AreaOp(bits,(5),2,0) 1",
+      "size": 0
+    }, {
+      "name": "AreaRegister(3) 1",
+      "size": 90
+    }, {
+      "name": "AreaOp(or,(1,1),1,0) 1",
+      "size": 4
+    }, {
+      "name": "AreaRegister(5) 3",
+      "size": 450
+    }, {
+      "name": "AreaOp(bits,(65),33,0) 3",
+      "size": 0
+    }, {
+      "name": "AreaOp(shl,(1),33,0) 1",
+      "size": 0
+    }, {
+      "name": "AreaRegister(1) 2",
+      "size": 60
+    }, {
+      "name": "AreaMux(3,0,0) 1",
+      "size": 24
+    }, {
+      "name": "AreaOp(bits,(3),2,0) 1",
+      "size": 0
+    }, {
+      "name": "AreaMux(1,0,1) 1",
+      "size": 4
+    }, {
+      "name": "AreaOp(pad,(2),5,0) 1",
+      "size": 0
+    }, {
+      "name": "AreaMux(65,0,1) 1",
+      "size": 260
+    }, {
+      "name": "AreaMux(65,0,0) 6",
+      "size": 3120
+    }, {
+      "name": "AreaOp(xor,(1,1),1,0) 1",
+      "size": 10
+    }, {
+      "name": "AreaOp(bits,(65),1,0) 2",
+      "size": 0
+    }, {
+      "name": "fma",
+      "children": [{
+        "name": "AreaOp(mul,(24,24),48,0) 1",
+        "size": 38400
+      }, {
+        "name": "AreaOp(pad,(48),49,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(add,(49,49),50,0) 1",
+        "size": 1600
+      }, {
+        "name": "AreaOp(cat,(1,48),49,1) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(tail,(50),49,0) 1",
+        "size": 0
+      }, {
+        "name": "mulAddRecFN_postMul",
+        "children": [{
+          "name": "AreaOp(not,(1),1,0) 38",
+          "size": 0
+        }, {
+          "name": "AreaMux(23,0,0) 2",
+          "size": 368
+        }, {
+          "name": "AreaOp(tail,(8),7,0) 2",
+          "size": 0
+        }, {
+          "name": "AreaOp(shl,(4),8,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(7),4,0) 2",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(26),2,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(or,(16,16),16,0) 4",
+          "size": 256
+        }, {
+          "name": "AreaOp(neq,(8,8),1,1) 3",
+          "size": 66
+        }, {
+          "name": "AreaOp(sub,(11,11),12,1) 1",
+          "size": 168
+        }, {
+          "name": "AreaOp(xor,(51,51),51,0) 1",
+          "size": 510
+        }, {
+          "name": "AreaOp(pad,(34),42,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(shl,(7),8,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(cat,(10,23),33,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaMux(23,0,2) 2",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(5),1,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(cat,(8,7),15,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(shr,(8),4,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(cat,(2,1),3,0) 2",
+          "size": 0
+        }, {
+          "name": "AreaOp(cat,(1,9),10,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(cat,(26,48),74,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(11),10,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(15),7,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(75),18,0) 2",
+          "size": 0
+        }, {
+          "name": "AreaOp(neq,(16,16),1,1) 4",
+          "size": 184
+        }, {
+          "name": "AreaOp(not,(9),9,0) 4",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(7),3,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(28),3,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaMux(26,0,1) 3",
+          "size": 312
+        }, {
+          "name": "AreaOp(bits,(18),2,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(pad,(8),10,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(16),8,0) 7",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(75),10,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(cat,(25,2),27,1) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(15),8,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(pad,(1),4,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(7),6,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(shr,(8),6,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(75),27,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(eq,(16,16),1,1) 1",
+          "size": 46
+        }, {
+          "name": "AreaOp(bits,(75),16,0) 2",
+          "size": 0
+        }, {
+          "name": "AreaOp(or,(9,9),9,0) 4",
+          "size": 144
+        }, {
+          "name": "AreaMux(2,0,0) 6",
+          "size": 96
+        }, {
+          "name": "AreaOp(cat,(16,5),21,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(49),48,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaMux(27,0,2) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(16),12,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(shr,(27),26,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaMux(5,0,0) 1",
+          "size": 40
+        }, {
+          "name": "AreaOp(pad,(8),16,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(not,(4),4,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaMux(32,0,2) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(4),1,0) 36",
+          "size": 0
+        }, {
+          "name": "AreaMux(25,0,1) 2",
+          "size": 200
+        }, {
+          "name": "AreaOp(bits,(26),1,0) 2",
+          "size": 0
+        }, {
+          "name": "AreaOp(pad,(26),27,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(and,(8,8),8,1) 5",
+          "size": 0
+        }, {
+          "name": "AreaOp(cat,(32,1),33,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(dshr,(65,6),65,1) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(lt,(9,9),1,1) 1",
+          "size": 126
+        }, {
+          "name": "AreaOp(pad,(4),25,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(pad,(7),8,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaMux(42,0,0) 4",
+          "size": 1344
+        }, {
+          "name": "AreaOp(pad,(6),8,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(28),1,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(8),7,0) 2",
+          "size": 0
+        }, {
+          "name": "AreaOp(shl,(27),43,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(pad,(5),7,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(and,(1,1),1,0) 61",
+          "size": 244
+        }, {
+          "name": "AreaOp(or,(11,11),11,0) 2",
+          "size": 88
+        }, {
+          "name": "AreaOp(shl,(14),16,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(not,(26),26,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(cat,(21,4),25,1) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(add,(11,11),12,1) 1",
+          "size": 168
+        }, {
+          "name": "AreaOp(bits,(10),1,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(5),4,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(not,(27),27,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(75),50,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(21),5,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(65),4,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(or,(25,25),25,0) 1",
+          "size": 100
+        }, {
+          "name": "AreaOp(pad,(12),16,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(cat,(1,1),2,0) 10",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(8),4,0) 13",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(75),26,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(cat,(42,1),43,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(pad,(6),7,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(or,(28,28),28,0) 1",
+          "size": 112
+        }, {
+          "name": "AreaOp(pad,(1),2,0) 12",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(32),16,0) 2",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(50),32,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(50),18,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(pad,(14),16,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(75),41,0) 4",
+          "size": 0
+        }, {
+          "name": "AreaOp(not,(75),75,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaMux(43,0,0) 5",
+          "size": 1720
+        }, {
+          "name": "AreaOp(not,(28),28,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(cat,(3,2),5,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(shl,(50),51,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(75),11,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(cat,(15,1),16,1) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(shr,(8),7,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(and,(27,27),27,0) 1",
+          "size": 108
+        }, {
+          "name": "AreaOp(or,(42,42),42,0) 3",
+          "size": 504
+        }, {
+          "name": "AreaOp(shr,(16),14,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(cat,(10,32),42,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaMux(2,0,1) 24",
+          "size": 192
+        }, {
+          "name": "AreaOp(pad,(27),28,0) 3",
+          "size": 0
+        }, {
+          "name": "AreaOp(shl,(12),16,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(7),1,0) 4",
+          "size": 0
+        }, {
+          "name": "AreaOp(or,(1,1),1,0) 41",
+          "size": 164
+        }, {
+          "name": "AreaOp(not,(10),10,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(51),50,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(eq,(2,2),1,1) 8",
+          "size": 32
+        }, {
+          "name": "AreaMux(8,0,2) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(pad,(7),11,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(17),15,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(65),21,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(shr,(16),12,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(8),1,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(and,(28,28),28,0) 4",
+          "size": 448
+        }, {
+          "name": "AreaOp(bits,(43),42,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(cat,(2,2),4,0) 3",
+          "size": 0
+        }, {
+          "name": "AreaOp(or,(23,23),23,0) 1",
+          "size": 92
+        }, {
+          "name": "AreaMux(7,0,0) 2",
+          "size": 112
+        }, {
+          "name": "AreaOp(pad,(1),25,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaMux(3,0,0) 3",
+          "size": 72
+        }, {
+          "name": "AreaOp(pad,(33),43,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(49),1,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(or,(8,8),8,0) 3",
+          "size": 96
+        }, {
+          "name": "AreaOp(bits,(9),1,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaMux(16,0,2) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(16),15,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(not,(16),16,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(cat,(33,1),34,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(tail,(12),11,0) 3",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(7),5,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaMux(21,0,1) 1",
+          "size": 84
+        }, {
+          "name": "AreaOp(shr,(28),26,0) 2",
+          "size": 0
+        }, {
+          "name": "AreaOp(leq,(10,10),1,0) 1",
+          "size": 320
+        }, {
+          "name": "AreaOp(bits,(3),2,0) 4",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(43),28,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(cat,(26,16),42,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(75),32,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(neq,(18,18),1,1) 3",
+          "size": 156
+        }, {
+          "name": "AreaMux(26,0,0) 1",
+          "size": 208
+        }, {
+          "name": "AreaOp(sub,(7,7),8,1) 2",
+          "size": 224
+        }, {
+          "name": "AreaOp(neq,(2,2),1,1) 3",
+          "size": 12
+        }, {
+          "name": "AreaOp(cat,(4,1),5,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(or,(27,27),27,0) 1",
+          "size": 108
+        }, {
+          "name": "AreaMux(1,0,0) 7",
+          "size": 56
+        }, {
+          "name": "AreaMux(11,0,1) 3",
+          "size": 132
+        }, {
+          "name": "AreaOp(and,(26,26),26,0) 1",
+          "size": 104
+        }, {
+          "name": "AreaOp(dshr,(17,4),17,1) 1",
+          "size": 0
+        }, {
+          "name": "AreaMux(9,0,2) 8",
+          "size": 0
+        }, {
+          "name": "AreaOp(dshr,(42,4),42,0) 1",
+          "size": 1680
+        }, {
+          "name": "AreaOp(bits,(75),33,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(pad,(50),51,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(cat,(1,3),4,0) 3",
+          "size": 0
+        }, {
+          "name": "AreaOp(shr,(16),8,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(cat,(1,1),2,1) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(18),16,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(3),1,0) 4",
+          "size": 0
+        }, {
+          "name": "AreaOp(cat,(4,3),7,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(21),16,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(shl,(15),16,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(eq,(3,3),1,1) 5",
+          "size": 30
+        }, {
+          "name": "AreaOp(tail,(27),26,0) 2",
+          "size": 0
+        }, {
+          "name": "AreaOp(and,(9,9),9,0) 4",
+          "size": 144
+        }, {
+          "name": "AreaOp(cat,(74,1),75,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaMux(4,0,0) 2",
+          "size": 64
+        }, {
+          "name": "AreaOp(and,(16,16),16,1) 7",
+          "size": 0
+        }, {
+          "name": "AreaOp(cat,(1,4),5,0) 2",
+          "size": 0
+        }, {
+          "name": "AreaOp(pad,(26),28,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(neq,(4,4),1,1) 6",
+          "size": 60
+        }, {
+          "name": "AreaOp(xor,(1,1),1,0) 2",
+          "size": 20
+        }, {
+          "name": "AreaOp(and,(16,16),16,0) 2",
+          "size": 128
+        }, {
+          "name": "AreaOp(bits,(4),2,0) 6",
+          "size": 0
+        }, {
+          "name": "AreaMux(4,0,1) 1",
+          "size": 16
+        }, {
+          "name": "AreaOp(not,(21),21,0) 2",
+          "size": 0
+        }, {
+          "name": "AreaMux(42,0,1) 4",
+          "size": 672
+        }, {
+          "name": "AreaOp(bits,(2),1,0) 17",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(75),1,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(neq,(28,28),1,1) 2",
+          "size": 164
+        }, {
+          "name": "AreaOp(bits,(26),23,0) 2",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(11),3,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(shl,(11),43,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(add,(26,26),27,1) 2",
+          "size": 756
+        }, {
+          "name": "AreaOp(cat,(1,2),3,0) 6",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(10),9,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(11),9,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(75),42,0) 2",
+          "size": 0
+        }, {
+          "name": "AreaOp(pad,(15),16,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(cat,(41,1),42,0) 4",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(11),1,0) 2",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(43),16,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(shl,(8),16,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(shr,(16),15,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(pad,(4),8,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaMux(25,0,0) 1",
+          "size": 200
+        }, {
+          "name": "AreaOp(bits,(16),14,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(or,(26,26),26,0) 2",
+          "size": 208
+        }, {
+          "name": "AreaOp(bits,(9),8,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(28),2,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(eq,(28,28),1,1) 1",
+          "size": 82
+        }, {
+          "name": "AreaOp(bits,(8),6,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(sub,(11,11),12,0) 1",
+          "size": 384
+        }, {
+          "name": "AreaOp(cat,(1,5),6,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(pad,(42),43,0) 3",
+          "size": 0
+        }, {
+          "name": "AreaOp(shl,(6),8,0) 1",
+          "size": 0
+        }]
+      }, {
+        "name": "mulAddRecFN_preMul",
+        "children": [{
+          "name": "AreaOp(not,(1),1,0) 4",
+          "size": 0
+        }, {
+          "name": "AreaOp(shl,(4),8,0) 2",
+          "size": 0
+        }, {
+          "name": "AreaOp(shl,(7),8,0) 2",
+          "size": 0
+        }, {
+          "name": "AreaOp(shr,(8),4,0) 2",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(11),10,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(dshr,(75,7),75,0) 1",
+          "size": 6000
+        }, {
+          "name": "AreaOp(bits,(76),75,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(14),6,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(7),6,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(shr,(8),6,0) 2",
+          "size": 0
+        }, {
+          "name": "AreaOp(and,(24,24),24,0) 1",
+          "size": 96
+        }, {
+          "name": "AreaOp(bits,(65),14,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(asSInt,(75),75,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(cat,(3,8),11,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(and,(8,8),8,1) 10",
+          "size": 0
+        }, {
+          "name": "AreaOp(dshr,(65,6),65,1) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(cat,(8,2),10,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(75),48,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(pad,(6),8,0) 2",
+          "size": 0
+        }, {
+          "name": "AreaOp(pad,(7),8,0) 2",
+          "size": 0
+        }, {
+          "name": "AreaOp(and,(1,1),1,0) 1",
+          "size": 4
+        }, {
+          "name": "AreaOp(bits,(8),7,0) 2",
+          "size": 0
+        }, {
+          "name": "AreaOp(add,(11,11),12,1) 1",
+          "size": 168
+        }, {
+          "name": "AreaOp(cat,(4,2),6,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(8),4,0) 2",
+          "size": 0
+        }, {
+          "name": "AreaOp(cat,(1,1),2,0) 4",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(75),26,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaMux(50,0,2) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(6),4,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(shr,(8),7,0) 2",
+          "size": 0
+        }, {
+          "name": "AreaOp(cat,(75,1),76,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(23),1,0) 3",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(7),1,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(or,(1,1),1,0) 5",
+          "size": 20
+        }, {
+          "name": "AreaOp(not,(24),24,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(9),3,0) 6",
+          "size": 0
+        }, {
+          "name": "AreaOp(cat,(2,2),4,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(cat,(10,14),24,1) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(asUInt,(75),75,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(33),1,0) 3",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(11),7,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(or,(8,8),8,0) 6",
+          "size": 192
+        }, {
+          "name": "AreaOp(bits,(9),1,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaMux(11,0,0) 1",
+          "size": 88
+        }, {
+          "name": "AreaOp(tail,(12),11,0) 3",
+          "size": 0
+        }, {
+          "name": "AreaOp(pad,(9),11,0) 3",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(65),10,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaMux(3,0,2) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(10),8,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(33),9,0) 3",
+          "size": 0
+        }, {
+          "name": "AreaOp(neq,(24,24),1,1) 1",
+          "size": 70
+        }, {
+          "name": "AreaOp(cat,(1,23),24,0) 3",
+          "size": 0
+        }, {
+          "name": "AreaOp(pad,(14),24,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(cat,(25,50),75,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(cat,(1,24),25,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(10),2,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(eq,(3,3),1,1) 3",
+          "size": 18
+        }, {
+          "name": "AreaMux(24,0,0) 2",
+          "size": 384
+        }, {
+          "name": "AreaOp(bits,(6),2,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(add,(11,11),12,0) 1",
+          "size": 384
+        }, {
+          "name": "AreaOp(eq,(10,10),1,1) 1",
+          "size": 28
+        }, {
+          "name": "AreaOp(xor,(1,1),1,0) 7",
+          "size": 70
+        }, {
+          "name": "AreaOp(bits,(4),2,0) 2",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(33),23,0) 3",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(2),1,0) 10",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(75),1,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(11),1,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(pad,(4),8,0) 2",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(14),8,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(lt,(10,10),1,1) 2",
+          "size": 280
+        }, {
+          "name": "AreaOp(bits,(9),8,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(cat,(8,6),14,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(8),6,0) 2",
+          "size": 0
+        }, {
+          "name": "AreaMux(7,0,1) 2",
+          "size": 56
+        }, {
+          "name": "AreaOp(sub,(11,11),12,0) 1",
+          "size": 384
+        }, {
+          "name": "AreaOp(shl,(6),8,0) 2",
+          "size": 0
+        }]
+      }]
+    }]
+  }, {
+    "name": "fpiu",
+    "children": [{
+      "name": "AreaOp(pad,(1),64,0) 1",
+      "size": 0
+    }, {
+      "name": "AreaOp(not,(1),1,0) 14",
+      "size": 0
+    }, {
+      "name": "AreaMux(23,0,0) 1",
+      "size": 184
+    }, {
+      "name": "AreaOp(sub,(11,11),12,1) 1",
+      "size": 168
+    }, {
+      "name": "AreaOp(tail,(7),6,0) 1",
+      "size": 0
+    }, {
+      "name": "AreaOp(bits,(9),2,0) 1",
+      "size": 0
+    }, {
+      "name": "AreaOp(tail,(9),8,0) 1",
+      "size": 0
+    }, {
+      "name": "AreaOp(not,(3),3,0) 3",
+      "size": 0
+    }, {
+      "name": "AreaOp(cat,(9,23),32,0) 2",
+      "size": 0
+    }, {
+      "name": "AreaOp(bits,(12),1,0) 1",
+      "size": 0
+    }, {
+      "name": "AreaOp(cat,(2,1),3,0) 4",
+      "size": 0
+    }, {
+      "name": "AreaOp(cat,(13,52),65,0) 2",
+      "size": 0
+    }, {
+      "name": "AreaOp(eq,(5,5),1,1) 3",
+      "size": 36
+    }, {
+      "name": "AreaOp(bits,(12),6,0) 1",
+      "size": 0
+    }, {
+      "name": "AreaOp(bits,(53),52,0) 1",
+      "size": 0
+    }, {
+      "name": "AreaOp(and,(3,3),3,0) 1",
+      "size": 12
+    }, {
+      "name": "AreaOp(geq,(3,3),1,1) 2",
+      "size": 84
+    }, {
+      "name": "AreaOp(sub,(12,12),13,1) 2",
+      "size": 364
+    }, {
+      "name": "AreaMux(2,0,0) 1",
+      "size": 16
+    }, {
+      "name": "AreaRegister(65) 2",
+      "size": 3900
+    }, {
+      "name": "AreaMux(5,0,0) 4",
+      "size": 160
+    }, {
+      "name": "AreaMux(32,0,2) 2",
+      "size": 0
+    }, {
+      "name": "AreaMux(52,0,1) 1",
+      "size": 208
+    }, {
+      "name": "AreaOp(cat,(5,5),10,0) 2",
+      "size": 0
+    }, {
+      "name": "AreaOp(bits,(9),5,0) 1",
+      "size": 0
+    }, {
+      "name": "AreaOp(shr,(76),52,0) 2",
+      "size": 0
+    }, {
+      "name": "AreaOp(and,(1,1),1,0) 34",
+      "size": 136
+    }, {
+      "name": "AreaOp(cat,(32,32),64,0) 2",
+      "size": 0
+    }, {
+      "name": "AreaOp(dshr,(53,6),53,0) 1",
+      "size": 3180
+    }, {
+      "name": "AreaOp(pad,(9),12,0) 2",
+      "size": 0
+    }, {
+      "name": "AreaOp(cat,(1,1),2,0) 9",
+      "size": 0
+    }, {
+      "name": "AreaOp(cat,(3,9),12,0) 2",
+      "size": 0
+    }, {
+      "name": "AreaMux(11,0,2) 1",
+      "size": 0
+    }, {
+      "name": "AreaOp(cat,(3,2),5,0) 4",
+      "size": 0
+    }, {
+      "name": "AreaOp(bits,(12),9,0) 2",
+      "size": 0
+    }, {
+      "name": "AreaRegister(3) 1",
+      "size": 90
+    }, {
+      "name": "AreaOp(pad,(2),3,0) 1",
+      "size": 0
+    }, {
+      "name": "AreaOp(bits,(23),1,0) 1",
+      "size": 0
+    }, {
+      "name": "AreaMux(23,0,1) 1",
+      "size": 92
+    }, {
+      "name": "AreaOp(or,(1,1),1,0) 12",
+      "size": 48
+    }, {
+      "name": "AreaOp(add,(12,12),13,1) 2",
+      "size": 364
+    }, {
+      "name": "AreaOp(sub,(8,8),9,1) 1",
+      "size": 126
+    }, {
+      "name": "AreaOp(eq,(2,2),1,1) 12",
+      "size": 48
+    }, {
+      "name": "AreaMux(8,0,2) 1",
+      "size": 0
+    }, {
+      "name": "AreaOp(bits,(12),2,0) 1",
+      "size": 0
+    }, {
+      "name": "AreaOp(and,(5,5),5,1) 2",
+      "size": 0
+    }, {
+      "name": "AreaRegister(5) 1",
+      "size": 150
+    }, {
+      "name": "AreaOp(bits,(12),10,0) 1",
+      "size": 0
+    }, {
+      "name": "AreaOp(cat,(1,12),13,0) 2",
+      "size": 0
+    }, {
+      "name": "AreaOp(bits,(9),3,0) 3",
+      "size": 0
+    }, {
+      "name": "AreaOp(dshr,(24,5),24,0) 1",
+      "size": 1440
+    }, {
+      "name": "AreaOp(bits,(12),11,0) 1",
+      "size": 0
+    }, {
+      "name": "AreaOp(bits,(9),7,0) 1",
+      "size": 0
+    }, {
+      "name": "AreaOp(bits,(65),9,0) 3",
+      "size": 0
+    }, {
+      "name": "AreaOp(bits,(12),3,0) 1",
+      "size": 0
+    }, {
+      "name": "AreaRegister(1) 2",
+      "size": 60
+    }, {
+      "name": "AreaMux(3,0,0) 1",
+      "size": 24
+    }, {
+      "name": "AreaMux(64,0,0) 6",
+      "size": 3072
+    }, {
+      "name": "AreaOp(bits,(9),1,0) 1",
+      "size": 0
+    }, {
+      "name": "AreaOp(sub,(6,6),7,1) 1",
+      "size": 98
+    }, {
+      "name": "AreaMux(8,0,0) 1",
+      "size": 64
+    }, {
+      "name": "AreaMux(11,0,0) 1",
+      "size": 88
+    }, {
+      "name": "AreaOp(tail,(12),11,0) 1",
+      "size": 0
+    }, {
+      "name": "AreaOp(bits,(3),2,0) 6",
+      "size": 0
+    }, {
+      "name": "AreaOp(tail,(13),12,0) 4",
+      "size": 0
+    }, {
+      "name": "AreaOp(neq,(2,2),1,1) 2",
+      "size": 8
+    }, {
+      "name": "AreaOp(pad,(10),64,0) 1",
+      "size": 0
+    }, {
+      "name": "AreaOp(cat,(4,1),5,0) 2",
+      "size": 0
+    }, {
+      "name": "AreaMux(12,0,0) 2",
+      "size": 192
+    }, {
+      "name": "AreaOp(sub,(5,5),6,1) 1",
+      "size": 84
+    }, {
+      "name": "AreaMux(1,0,0) 1",
+      "size": 8
+    }, {
+      "name": "AreaOp(bits,(24),23,0) 1",
+      "size": 0
+    }, {
+      "name": "AreaOp(bits,(65),12,0) 1",
+      "size": 0
+    }, {
+      "name": "AreaOp(neq,(3,3),1,1) 1",
+      "size": 6
+    }, {
+      "name": "AreaOp(shl,(23),76,0) 2",
+      "size": 0
+    }, {
+      "name": "AreaOp(bits,(65),52,0) 1",
+      "size": 0
+    }, {
+      "name": "AreaOp(lt,(7,7),1,1) 1",
+      "size": 98
+    }, {
+      "name": "AreaOp(tail,(6),5,0) 1",
+      "size": 0
+    }, {
+      "name": "AreaOp(bits,(3),1,0) 4",
+      "size": 0
+    }, {
+      "name": "AreaOp(cat,(1,8),9,0) 2",
+      "size": 0
+    }, {
+      "name": "AreaOp(bits,(52),1,0) 1",
+      "size": 0
+    }, {
+      "name": "AreaMux(10,0,0) 1",
+      "size": 80
+    }, {
+      "name": "AreaOp(cat,(1,11),12,0) 1",
+      "size": 0
+    }, {
+      "name": "AreaOp(eq,(3,3),1,1) 8",
+      "size": 48
+    }, {
+      "name": "AreaOp(cat,(1,52),53,1) 1",
+      "size": 0
+    }, {
+      "name": "AreaRegister(2) 1",
+      "size": 60
+    }, {
+      "name": "AreaMux(65,0,0) 4",
+      "size": 2080
+    }, {
+      "name": "AreaOp(cat,(1,3),4,1) 2",
+      "size": 0
+    }, {
+      "name": "AreaOp(bits,(65),23,0) 3",
+      "size": 0
+    }, {
+      "name": "AreaOp(bits,(2),1,0) 2",
+      "size": 0
+    }, {
+      "name": "AreaOp(bits,(32),1,0) 2",
+      "size": 0
+    }, {
+      "name": "AreaOp(cat,(12,52),64,0) 1",
+      "size": 0
+    }, {
+      "name": "AreaOp(cat,(1,23),24,1) 1",
+      "size": 0
+    }, {
+      "name": "AreaMux(5,0,1) 1",
+      "size": 20
+    }, {
+      "name": "AreaOp(lt,(10,10),1,1) 1",
+      "size": 140
+    }, {
+      "name": "AreaMux(52,0,0) 1",
+      "size": 416
+    }, {
+      "name": "AreaOp(bits,(9),8,0) 1",
+      "size": 0
+    }, {
+      "name": "AreaOp(bits,(65),1,0) 4",
+      "size": 0
+    }, {
+      "name": "RecFNToIN_1",
+      "children": [{
+        "name": "AreaOp(tail,(65),64,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaMux(6,0,1) 1",
+        "size": 24
+      }, {
+        "name": "AreaOp(not,(1),1,0) 9",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(12),1,0) 2",
+        "size": 0
+      }, {
+        "name": "AreaOp(cat,(2,1),3,0) 2",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(64),62,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(add,(64,64),65,1) 1",
+        "size": 910
+      }, {
+        "name": "AreaOp(pad,(63),64,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(cat,(1,52),53,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(12),6,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(neq,(51,51),1,1) 1",
+        "size": 150
+      }, {
+        "name": "AreaOp(not,(11),11,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(and,(1,1),1,0) 21",
+        "size": 84
+      }, {
+        "name": "AreaOp(cat,(1,1),2,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(64),63,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(neq,(63,63),1,1) 1",
+        "size": 186
+      }, {
+        "name": "AreaOp(not,(62),62,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(or,(1,1),1,0) 12",
+        "size": 48
+      }, {
+        "name": "AreaOp(or,(64,64),64,0) 2",
+        "size": 512
+      }, {
+        "name": "AreaOp(eq,(2,2),1,1) 6",
+        "size": 24
+      }, {
+        "name": "AreaOp(bits,(12),2,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(12),11,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(not,(2),2,0) 2",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(12),3,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaMux(64,0,0) 3",
+        "size": 1536
+      }, {
+        "name": "AreaOp(bits,(116),2,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(pad,(53),116,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(3),2,0) 2",
+        "size": 0
+      }, {
+        "name": "AreaOp(neq,(2,2),1,1) 1",
+        "size": 4
+      }, {
+        "name": "AreaMux(1,0,0) 4",
+        "size": 32
+      }, {
+        "name": "AreaOp(bits,(116),64,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(65),12,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(65),52,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(64),1,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaMux(64,0,2) 2",
+        "size": 0
+      }, {
+        "name": "AreaOp(not,(64),64,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(eq,(3,3),1,1) 1",
+        "size": 6
+      }, {
+        "name": "AreaMux(63,0,2) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(dshlw,(116,6),116,0) 1",
+        "size": 6960
+      }, {
+        "name": "AreaOp(xor,(1,1),1,0) 1",
+        "size": 10
+      }, {
+        "name": "AreaOp(eq,(11,11),1,1) 3",
+        "size": 90
+      }, {
+        "name": "AreaOp(bits,(116),51,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(geq,(11,11),1,1) 1",
+        "size": 154
+      }, {
+        "name": "AreaOp(eq,(62,62),1,1) 1",
+        "size": 184
+      }, {
+        "name": "AreaOp(bits,(65),1,0) 1",
+        "size": 0
+      }]
+    }, {
+      "name": "RecFNToIN",
+      "children": [{
+        "name": "AreaOp(bits,(32),31,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(not,(1),1,0) 9",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(84),51,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(12),1,0) 2",
+        "size": 0
+      }, {
+        "name": "AreaOp(cat,(2,1),3,0) 2",
+        "size": 0
+      }, {
+        "name": "AreaOp(cat,(1,52),53,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(pad,(53),84,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(neq,(51,51),1,1) 1",
+        "size": 150
+      }, {
+        "name": "AreaOp(not,(32),32,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaMux(32,0,2) 2",
+        "size": 0
+      }, {
+        "name": "AreaOp(not,(11),11,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(not,(30),30,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaMux(31,0,2) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(and,(1,1),1,0) 21",
+        "size": 84
+      }, {
+        "name": "AreaOp(bits,(84),32,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(cat,(1,1),2,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(or,(1,1),1,0) 12",
+        "size": 48
+      }, {
+        "name": "AreaOp(eq,(30,30),1,1) 1",
+        "size": 88
+      }, {
+        "name": "AreaOp(eq,(2,2),1,1) 6",
+        "size": 24
+      }, {
+        "name": "AreaOp(bits,(12),2,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(dshlw,(84,5),84,0) 1",
+        "size": 5040
+      }, {
+        "name": "AreaOp(bits,(12),11,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(not,(2),2,0) 2",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(12),3,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(or,(32,32),32,0) 2",
+        "size": 256
+      }, {
+        "name": "AreaOp(bits,(32),30,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(tail,(33),32,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(84),2,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(3),2,0) 2",
+        "size": 0
+      }, {
+        "name": "AreaOp(neq,(2,2),1,1) 1",
+        "size": 4
+      }, {
+        "name": "AreaMux(1,0,0) 4",
+        "size": 32
+      }, {
+        "name": "AreaMux(32,0,0) 3",
+        "size": 768
+      }, {
+        "name": "AreaOp(add,(32,32),33,1) 1",
+        "size": 462
+      }, {
+        "name": "AreaOp(bits,(65),12,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(65),52,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(eq,(3,3),1,1) 1",
+        "size": 6
+      }, {
+        "name": "AreaOp(xor,(1,1),1,0) 1",
+        "size": 10
+      }, {
+        "name": "AreaOp(eq,(11,11),1,1) 3",
+        "size": 90
+      }, {
+        "name": "AreaOp(bits,(32),1,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(pad,(31),32,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(geq,(11,11),1,1) 1",
+        "size": 154
+      }, {
+        "name": "AreaMux(5,0,1) 1",
+        "size": 20
+      }, {
+        "name": "AreaOp(neq,(31,31),1,1) 1",
+        "size": 90
+      }, {
+        "name": "AreaOp(bits,(12),5,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(65),1,0) 1",
+        "size": 0
+      }]
+    }, {
+      "name": "dcmp",
+      "children": [{
+        "name": "AreaOp(not,(1),1,0) 16",
+        "size": 0
+      }, {
+        "name": "AreaOp(eq,(13,13),1,0) 1",
+        "size": 166
+      }, {
+        "name": "AreaOp(bits,(12),1,0) 2",
+        "size": 0
+      }, {
+        "name": "AreaOp(cat,(1,4),5,1) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(and,(1,1),1,0) 21",
+        "size": 84
+      }, {
+        "name": "AreaOp(or,(1,1),1,0) 9",
+        "size": 36
+      }, {
+        "name": "AreaOp(bits,(12),2,0) 2",
+        "size": 0
+      }, {
+        "name": "AreaOp(eq,(2,2),1,1) 2",
+        "size": 8
+      }, {
+        "name": "AreaOp(lt,(13,13),1,0) 1",
+        "size": 416
+      }, {
+        "name": "AreaOp(bits,(56),1,0) 2",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(12),3,0) 2",
+        "size": 0
+      }, {
+        "name": "AreaOp(cat,(52,2),54,1) 2",
+        "size": 0
+      }, {
+        "name": "AreaOp(eq,(1,1),1,0) 1",
+        "size": 10
+      }, {
+        "name": "AreaOp(lt,(56,56),1,0) 1",
+        "size": 1792
+      }, {
+        "name": "AreaOp(eq,(56,56),1,0) 1",
+        "size": 726
+      }, {
+        "name": "AreaOp(bits,(65),12,0) 2",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(65),52,0) 2",
+        "size": 0
+      }, {
+        "name": "AreaOp(cat,(1,1),2,1) 2",
+        "size": 0
+      }, {
+        "name": "AreaOp(eq,(3,3),1,1) 2",
+        "size": 12
+      }, {
+        "name": "AreaOp(cvt,(12),13,0) 2",
+        "size": 0
+      }, {
+        "name": "AreaOp(cat,(2,54),56,0) 2",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(65),1,0) 2",
+        "size": 0
+      }]
+    }]
+  }, {
+    "name": "fpmu",
+    "children": [{
+      "name": "AreaOp(not,(1),1,0) 7",
+      "size": 0
+    }, {
+      "name": "AreaOp(not,(3),3,0) 4",
+      "size": 0
+    }, {
+      "name": "AreaOp(bits,(65),64,0) 1",
+      "size": 0
+    }, {
+      "name": "AreaOp(eq,(5,5),1,1) 2",
+      "size": 24
+    }, {
+      "name": "AreaOp(neq,(1,1),1,0) 1",
+      "size": 10
+    }, {
+      "name": "AreaRegister(65) 3",
+      "size": 5850
+    }, {
+      "name": "AreaMux(5,0,0) 5",
+      "size": 200
+    }, {
+      "name": "AreaOp(and,(1,1),1,0) 8",
+      "size": 32
+    }, {
+      "name": "AreaMux(65,0,2) 1",
+      "size": 0
+    }, {
+      "name": "AreaRegister(3) 1",
+      "size": 90
+    }, {
+      "name": "AreaOp(or,(1,1),1,0) 6",
+      "size": 24
+    }, {
+      "name": "AreaOp(shr,(65),32,0) 2",
+      "size": 0
+    }, {
+      "name": "AreaRegister(5) 2",
+      "size": 300
+    }, {
+      "name": "AreaOp(cat,(1,32),33,0) 1",
+      "size": 0
+    }, {
+      "name": "AreaOp(and,(5,5),5,1) 2",
+      "size": 0
+    }, {
+      "name": "AreaOp(cat,(32,33),65,0) 2",
+      "size": 0
+    }, {
+      "name": "AreaOp(bits,(65),33,0) 1",
+      "size": 0
+    }, {
+      "name": "AreaOp(not,(65),65,0) 1",
+      "size": 0
+    }, {
+      "name": "AreaRegister(1) 2",
+      "size": 60
+    }, {
+      "name": "AreaMux(3,0,0) 1",
+      "size": 24
+    }, {
+      "name": "AreaOp(xor,(65,65),65,0) 1",
+      "size": 650
+    }, {
+      "name": "AreaOp(bits,(65),3,0) 4",
+      "size": 0
+    }, {
+      "name": "AreaOp(shl,(1),5,0) 1",
+      "size": 0
+    }, {
+      "name": "AreaOp(bits,(3),2,0) 1",
+      "size": 0
+    }, {
+      "name": "AreaMux(1,0,0) 4",
+      "size": 32
+    }, {
+      "name": "AreaOp(cat,(1,64),65,0) 1",
+      "size": 0
+    }, {
+      "name": "AreaMux(1,0,1) 1",
+      "size": 4
+    }, {
+      "name": "AreaOp(bits,(3),1,0) 2",
+      "size": 0
+    }, {
+      "name": "AreaOp(eq,(3,3),1,1) 4",
+      "size": 24
+    }, {
+      "name": "AreaMux(65,0,0) 12",
+      "size": 6240
+    }, {
+      "name": "AreaMux(5,0,1) 1",
+      "size": 20
+    }, {
+      "name": "AreaOp(bits,(65),32,0) 1",
+      "size": 0
+    }, {
+      "name": "AreaOp(bits,(65),1,0) 6",
+      "size": 0
+    }, {
+      "name": "RecFNToRecFN",
+      "children": [{
+        "name": "AreaOp(not,(1),1,0) 3",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(12),1,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(cat,(1,9),10,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(56),30,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(and,(1,1),1,0) 4",
+        "size": 16
+      }, {
+        "name": "AreaOp(add,(13,13),14,1) 1",
+        "size": 196
+      }, {
+        "name": "AreaOp(bits,(14),4,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(27),1,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(eq,(2,2),1,1) 1",
+        "size": 4
+      }, {
+        "name": "AreaOp(bits,(12),2,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(cat,(26,1),27,0) 2",
+        "size": 0
+      }, {
+        "name": "AreaMux(9,0,1) 1",
+        "size": 36
+      }, {
+        "name": "AreaOp(bits,(12),3,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(14),9,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(lt,(14,14),1,1) 1",
+        "size": 196
+      }, {
+        "name": "AreaOp(cat,(52,2),54,1) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(65),12,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(cat,(1,1),2,1) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(65),52,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(eq,(3,3),1,1) 2",
+        "size": 12
+      }, {
+        "name": "AreaOp(cvt,(12),13,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(neq,(4,4),1,1) 1",
+        "size": 10
+      }, {
+        "name": "AreaOp(asSInt,(10),10,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(neq,(30,30),1,1) 1",
+        "size": 88
+      }, {
+        "name": "AreaOp(bits,(56),26,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(65),1,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(cat,(2,54),56,0) 1",
+        "size": 0
+      }, {
+        "name": "RoundRawFNToRecFN",
+        "children": [{
+          "name": "AreaOp(not,(1),1,0) 8",
+          "size": 0
+        }, {
+          "name": "AreaMux(23,0,0) 2",
+          "size": 368
+        }, {
+          "name": "AreaOp(or,(16,16),16,0) 4",
+          "size": 256
+        }, {
+          "name": "AreaOp(pad,(3),25,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(cat,(10,23),33,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaMux(23,0,2) 2",
+          "size": 0
+        }, {
+          "name": "AreaOp(neq,(27,27),1,1) 2",
+          "size": 156
+        }, {
+          "name": "AreaOp(cat,(2,1),3,0) 2",
+          "size": 0
+        }, {
+          "name": "AreaOp(cat,(1,9),10,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(not,(9),9,0) 5",
+          "size": 0
+        }, {
+          "name": "AreaOp(lt,(11,11),1,1) 1",
+          "size": 154
+        }, {
+          "name": "AreaMux(26,0,1) 1",
+          "size": 104
+        }, {
+          "name": "AreaOp(cat,(25,2),27,1) 2",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(16),8,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(7),6,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaMux(3,0,1) 1",
+          "size": 12
+        }, {
+          "name": "AreaOp(or,(9,9),9,0) 4",
+          "size": 144
+        }, {
+          "name": "AreaOp(shr,(27),26,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(16),12,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(pad,(8),16,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaMux(25,0,1) 1",
+          "size": 100
+        }, {
+          "name": "AreaOp(add,(25,25),26,1) 1",
+          "size": 364
+        }, {
+          "name": "AreaOp(shr,(27),25,0) 2",
+          "size": 0
+        }, {
+          "name": "AreaOp(dshr,(65,6),65,1) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(22),6,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(and,(1,1),1,0) 16",
+          "size": 64
+        }, {
+          "name": "AreaOp(bits,(8),7,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaMux(22,0,1) 1",
+          "size": 88
+        }, {
+          "name": "AreaOp(not,(26),26,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(shl,(14),16,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(shr,(28),27,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(cvt,(2),3,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(not,(27),27,0) 2",
+          "size": 0
+        }, {
+          "name": "AreaOp(cat,(4,2),6,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(or,(25,25),25,0) 2",
+          "size": 200
+        }, {
+          "name": "AreaOp(pad,(12),16,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(cat,(1,1),2,0) 5",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(22),16,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(pad,(25),26,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(pad,(14),16,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(6),4,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(cat,(3,2),5,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(shr,(11),4,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(pad,(3),10,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(and,(27,27),27,0) 4",
+          "size": 432
+        }, {
+          "name": "AreaOp(shr,(26),2,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(pad,(9),10,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(shr,(16),14,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(7),1,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(shl,(12),16,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(or,(1,1),1,0) 11",
+          "size": 44
+        }, {
+          "name": "AreaOp(eq,(2,2),1,1) 3",
+          "size": 12
+        }, {
+          "name": "AreaOp(bits,(27),1,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(lt,(10,10),1,0) 1",
+          "size": 320
+        }, {
+          "name": "AreaOp(shr,(16),12,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(8),1,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(cat,(2,2),4,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(or,(23,23),23,0) 1",
+          "size": 92
+        }, {
+          "name": "AreaOp(pad,(1),25,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(65),22,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaMux(25,0,2) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(9),1,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(65),3,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(geq,(4,4),1,1) 1",
+          "size": 56
+        }, {
+          "name": "AreaOp(bits,(16),15,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(not,(22),22,0) 2",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(3),2,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaMux(26,0,0) 1",
+          "size": 208
+        }, {
+          "name": "AreaOp(or,(27,27),27,0) 1",
+          "size": 108
+        }, {
+          "name": "AreaOp(and,(26,26),26,0) 1",
+          "size": 104
+        }, {
+          "name": "AreaMux(9,0,2) 9",
+          "size": 0
+        }, {
+          "name": "AreaOp(cat,(1,1),2,1) 1",
+          "size": 0
+        }, {
+          "name": "AreaMux(1,0,1) 1",
+          "size": 4
+        }, {
+          "name": "AreaOp(shr,(16),8,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(3),1,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(add,(10,10),11,0) 1",
+          "size": 352
+        }, {
+          "name": "AreaOp(cat,(1,27),28,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(shl,(15),16,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(and,(9,9),9,0) 4",
+          "size": 144
+        }, {
+          "name": "AreaOp(and,(16,16),16,1) 7",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(6),2,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(4),2,0) 2",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(2),1,0) 8",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(26),23,0) 2",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(11),9,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(10),9,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(pad,(15),16,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(shl,(8),16,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(shr,(16),15,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(cat,(22,3),25,1) 1",
+          "size": 0
+        }, {
+          "name": "AreaMux(25,0,0) 1",
+          "size": 200
+        }, {
+          "name": "AreaOp(lt,(10,10),1,1) 1",
+          "size": 140
+        }, {
+          "name": "AreaOp(bits,(16),14,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(bits,(9),8,0) 1",
+          "size": 0
+        }, {
+          "name": "AreaOp(cat,(16,6),22,0) 1",
+          "size": 0
+        }]
+      }]
+    }, {
+      "name": "RecFNToRecFN_1",
+      "children": [{
+        "name": "AreaOp(not,(1),1,0) 4",
+        "size": 0
+      }, {
+        "name": "AreaOp(not,(12),12,0) 2",
+        "size": 0
+      }, {
+        "name": "AreaOp(cat,(23,2),25,1) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(9),2,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(and,(12,12),12,0) 2",
+        "size": 96
+      }, {
+        "name": "AreaOp(cat,(13,52),65,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaMux(12,0,2) 4",
+        "size": 0
+      }, {
+        "name": "AreaOp(or,(12,12),12,0) 2",
+        "size": 96
+      }, {
+        "name": "AreaOp(cat,(1,4),5,1) 1",
+        "size": 0
+      }, {
+        "name": "AreaMux(52,0,1) 1",
+        "size": 208
+      }, {
+        "name": "AreaOp(and,(1,1),1,0) 4",
+        "size": 16
+      }, {
+        "name": "AreaOp(add,(12,12),13,1) 1",
+        "size": 182
+      }, {
+        "name": "AreaOp(or,(1,1),1,0) 1",
+        "size": 4
+      }, {
+        "name": "AreaOp(eq,(2,2),1,1) 1",
+        "size": 4
+      }, {
+        "name": "AreaOp(cat,(1,12),13,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(shl,(27),56,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(9),3,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(56),1,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(33),1,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(13),12,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(9),1,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(cat,(2,25),27,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(cvt,(9),10,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(33),9,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(cat,(1,1),2,1) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(eq,(3,3),1,1) 1",
+        "size": 6
+      }, {
+        "name": "AreaOp(pad,(10),12,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(33),23,0) 1",
+        "size": 0
+      }, {
+        "name": "AreaOp(bits,(56),52,0) 1",
+        "size": 0
+      }]
+    }]
+  }]
+}
