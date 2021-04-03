@@ -48,7 +48,10 @@ lazy val commonSettings = Seq(
   ),
   libraryDependencies += "io.spray" %%  "spray-json" % "1.3.3",
   libraryDependencies += "com.typesafe.play" %% "play-netty-server" % "2.6.1",
-  libraryDependencies += "edu.berkeley.cs" %% "chisel3" % "3.4.1",
+  //libraryDependencies += "edu.berkeley.cs" %% "chisel3" % "3.4.1",
+  //libraryDependencies += "edu.berkeley.cs" %% "chisel-iotesters" % "??",
+  libraryDependencies += "edu.berkeley.cs" %% "chisel3" % "3.2.1",
+  libraryDependencies += "edu.berkeley.cs" %% "chisel-iotesters" % "1.3.8",
 
   // starting with scala 2.13 the parallel collections are separate from the standard library
   // libraryDependencies ++= (Seq("chisel3","chisel-iotesters").map {

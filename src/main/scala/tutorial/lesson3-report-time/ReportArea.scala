@@ -123,12 +123,12 @@ class ReportArea extends Transform {
   def outputForm = LowForm
 
   def execute(state: CircuitState): CircuitState = {
+    println(state.circuit.serialize)
     val ledger = new Ledger()
     val circuit = state.circuit
     circuit map walkModule(ledger)
     val area = ledger.report
     ledger.reportJson( circuit, "areas.json")
-
     state.copy( annotations = state.annotations ++ Seq(AreaAnnotation( area)))
   }
 
