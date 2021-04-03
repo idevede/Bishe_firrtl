@@ -1,14 +1,14 @@
 {
   "name": "top",
   "children": [{
-    "name": "AreaMux(32,0,2) 1",
-    "size": 0
-  }, {
     "name": "AreaOp(gt,(32,32),1,1) 1",
     "size": 448
   }, {
-    "name": "AreaOp(add,(32,32),33,0) 1",
+    "name": "AreaOp(add,(32,0),33,0) 1",
     "size": 1056
+  }, {
+    "name": "AreaMux(-1,0,2) 1",
+    "size": 0
   }, {
     "name": "AreaOp(tail,(33),32,0) 1",
     "size": 0

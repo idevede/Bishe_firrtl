@@ -300,7 +300,7 @@ object CommonSubexpressionElimination extends Pass {
 
     val Statement1 = eliminateNodeRefs(s)
     //至此完成第一遍pass
-
+    //接下来计算公共子表达式外提
     //var stmts = new collection.mutable.ArrayBuffer[Statement]
     var Stmts_node = collection.mutable.HashMap[String, Statement]()
     //var new_block_head = Block(stmts)
@@ -470,6 +470,10 @@ object CommonSubexpressionElimination extends Pass {
     var new_mux_Node = collection.mutable.ArrayBuffer[DefNode]()
     
     var new_op_Nodes = collection.mutable.ArrayBuffer[DefNode]()
+
+    //记录新添加的节点名字
+    var new_Node_Name = collection.mutable.HashMap[String, Statement]() //collection.mutable.ArrayBuffer[DefNode]()
+
     MUXs.foreach{
       node=>
         var flag_1 = 0
@@ -650,7 +654,8 @@ object CommonSubexpressionElimination extends Pass {
                 var new_Tail = DoPrim(PrimOps.Tail, collection.mutable.ArrayBuffer(new_add),collection.mutable.ArrayBuffer(1),UIntType(IntWidth(new_width)))
                 new_Tail_Node = firrtl.ir.DefNode(NoInfo,node._7,new_Tail)
                 new_Stat += new_Tail_Node   
-                new_op_Nodes += firrtl.ir.DefNode(NoInfo,node._7,new_Tail)
+                //new_op_Nodes += firrtl.ir.DefNode(NoInfo,node._7,new_Tail)
+                new_Node_Name(node._7) = new_Tail_Node
               case 6 =>
                 //var opp = 
                 //println("new_node_gen!",new_add2)
@@ -659,7 +664,8 @@ object CommonSubexpressionElimination extends Pass {
                     var new_op = DoPrim(op, collection.mutable.ArrayBuffer(new_Mux_0, new_Mux_1),collection.mutable.ArrayBuffer.empty,UIntType(IntWidth(new_width+1)))
                     //new_Tail_Node = firrtl.ir.DefNode(NoInfo,node._7,new_op)
               
-                    new_op_Nodes += firrtl.ir.DefNode(NoInfo,node._7,new_op)
+                    //new_op_Nodes += firrtl.ir.DefNode(NoInfo,node._7,new_op)
+                    new_Node_Name(node._7) = firrtl.ir.DefNode(NoInfo,node._7,new_op)
                   case _ =>
 
                 }
@@ -786,29 +792,23 @@ object CommonSubexpressionElimination extends Pass {
                 }
             conn_tpe = UIntType(IntWidth(new_width))
             ////println("state",state,state.getClass)
-          /*
+          
           case DefNode(info,name,value)=>
-            name match{
-              case "_T" =>
-                ////println("_T")
-                stmts+= state._2
-              case "_GEN_0" =>
-                ////println("_GEN_0")
-                stmts+= state._2
+            new_Node_Name.get(name) match {
+              case Some(statement_temp) =>
+                stmts+= statement_temp
               case _ =>
                 stmts+= state._2
             }
             ////println("state",state,state.getClass)
-          case _ =>
-            stmts+= state._2
-          */
+  
           case _ =>
             all_statement +=1
             stmts+= state._2
         }
     }
 
-    println("all_statement1",all_statement)
+    //println("all_statement1",all_statement)
 
     //stmts += new_Tail_Node  
     new_op_Nodes.foreach{

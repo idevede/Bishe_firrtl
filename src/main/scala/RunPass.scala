@@ -22,7 +22,6 @@ object RunPass extends App {
    |    node _T_2 = tail(_T_1, 1)
    |    node _T_3 = add(io_in, UInt<32>("h6"))
    |    node _T_4 = tail(_T_3, 1)
-   |    node _GEN_0 = mux(_T, _T_2, _T_4)
    |    node _GEN_1 = tail(add(io_in, mux(_T, UInt<32>("h6"), UInt<32>("h7"))), 1)
    |    io_out <= _GEN_1
   """.stripMargin
