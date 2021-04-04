@@ -753,7 +753,8 @@ object CommonSubexpressionElimination extends Pass {
 
             ////println("ddddddddd",dd)
             new_Stat += new_not_Node
-            new_op_Nodes += new_not_Node
+            //new_op_Nodes += new_not_Node
+            new_Node_Name(node._1) = new_not_Node//firrtl.ir.DefNode(NoInfo,node._7,new_op)
             //这个是修改ROcketCore之后需要的
             //Stmts_node_array.remove(dd)
 
@@ -811,10 +812,10 @@ object CommonSubexpressionElimination extends Pass {
     //println("all_statement1",all_statement)
 
     //stmts += new_Tail_Node  
-    new_op_Nodes.foreach{
-      node =>
-        stmts += node
-    }
+    // new_op_Nodes.foreach{
+    //   node =>
+    //     stmts += node
+    // }
     
     all_statement = 0
     Stmts_node_array.foreach{

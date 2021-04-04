@@ -42,7 +42,7 @@ import firrtl.Mappers._
 // Scala's mutable collections
 import scala.collection.mutable
 
-
+// 被dove注释掉
 // sealed abstract class Area()
 // case object AreaNone extends Area
 // case class AreaModule( templateName : String, instanceName : String) extends Area

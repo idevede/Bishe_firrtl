@@ -1,6 +1,6 @@
 [{
   "header": {
-    "delay": 17.0,
+    "delay": 6.0,
     "source": "io_fn",
     "sink": "io_out"
   },
@@ -8,39 +8,25 @@
     "arrival": 0.0,
     "net": "io_fn"
   }, {
+    "op": "or,((32,32))",
+    "incr": 6.0,
+    "fanout": 1
+  }, {
+    "arrival": 6.0,
+    "net": "_GEN_0"
+  }, {
     "op": "not,((32))",
     "incr": 0.0,
     "fanout": 1
   }, {
-    "arrival": 0.0,
-    "net": "_T_1"
-  }, {
-    "op": "mul,((32,32))",
-    "incr": 10.0,
-    "fanout": 1
-  }, {
-    "arrival": 10.0,
-    "net": "_T_2"
-  }, {
-    "op": "add,((64,64))",
-    "incr": 7.0,
-    "fanout": 1
-  }, {
-    "arrival": 17.0,
-    "net": "_GEN_1"
-  }, {
-    "op": "bits,((65))",
-    "incr": 0.0,
-    "fanout": 1
-  }, {
-    "arrival": 17.0,
+    "arrival": 6.0,
     "net": "new_DoPrim0"
   }, {
     "op": "copy,((32))",
     "incr": 0.0,
     "fanout": 0
   }, {
-    "arrival": 17.0,
+    "arrival": 6.0,
     "net": "io_out"
   }]
 }]
