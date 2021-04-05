@@ -73,7 +73,7 @@ object CommonSubexpressionElimination extends Pass {
               //println("Catch Tail")
               expr.foreachExpr(checkExpr)
             case PrimOps.Eq =>
-              println("Eq")
+              //println("Eq")
             
             case _ =>
               println("Catch Other")
@@ -81,7 +81,7 @@ object CommonSubexpressionElimination extends Pass {
             
         case WRef(name, _, _, _)=>
           //println(expr)
-          println("WRef",name, name.getClass)
+          //println("WRef",name, name.getClass)
         case Mux(cond, tval, fval, tpe) =>
           //println("Mux")
           expr.foreachExpr(checkExpr)
@@ -141,13 +141,13 @@ object CommonSubexpressionElimination extends Pass {
                     }//)
                     Tails(x.name) = (new_exp,tail_name)
                 case PrimOps.Eq =>
-                    println("Eq")
+                    //println("Eq")
                 case _ =>
                     op
               }
             case WRef(name, _, _, _)=>
-              println("New name")
-              println(name)
+              //println("New name")
+              //println(name)
               //println(new_exp)
             case Mux(cond, tval, fval, tpe) =>
               var cond_name : String =""
@@ -180,7 +180,7 @@ object CommonSubexpressionElimination extends Pass {
 
               MUXs += ((tval, fval,cond_name,tval_name,fval_name,cond,x.name))//new_ex
                      //Expression,Expression,String,String,String, Expression,String
-              println(x.name)
+              //println(x.name)
         
             case _ => x.value
                   //println("New Type")
@@ -190,7 +190,7 @@ object CommonSubexpressionElimination extends Pass {
           nodes(x.name) = new_exp//x.value
           x.name match{
             case "io_out" =>
-              println("io_out")
+              //println("io_out")
             case _ =>
               expressions.getOrElseUpdate(new_exp, x.name)
           }
@@ -203,7 +203,8 @@ object CommonSubexpressionElimination extends Pass {
     }
    
 
-    val Statement1 = eliminateNodeRefs(s)    
+    val Statement1 = eliminateNodeRefs(s) 
+    //完成第一遍循环   
     var stmts = new collection.mutable.ArrayBuffer[Statement]
     var Stmts_node = collection.mutable.LinkedHashMap[String, Statement]()
     var Stmts_node_array = collection.mutable.ArrayBuffer[(String, Statement)]()
@@ -220,6 +221,7 @@ object CommonSubexpressionElimination extends Pass {
                 Stmts_node(name) = state
                 Stmts_node_array += ((name,state))
               case Connect(_,outputPortRef, expr) =>
+                println("State,Connect:",state)
                 outputPortRef match {
                   case WRef(name,_,_,_)=>
                     Stmts_node(name) = state
@@ -235,7 +237,7 @@ object CommonSubexpressionElimination extends Pass {
                 Stmts_node_array += (("Other"+temp_count.toString,state))
            }
     }
-    println("Stmts_node_array",Stmts_node_array)
+    //println("Stmts_node_array",Stmts_node_array)
 
     var new_name = "_Mux_op_"
     var index = 0
@@ -247,7 +249,7 @@ object CommonSubexpressionElimination extends Pass {
         var new_Node = collection.mutable.ArrayBuffer[DefNode]()
         var flag = 0 
         var Ref = new Array[Expression](3)
-        println("node",node)
+        //println("node",node)
         node._1 match {
           case DoPrim(op,args,consts,tpe)=>
             //rintln("node",node._2._1)
@@ -291,20 +293,24 @@ object CommonSubexpressionElimination extends Pass {
             stmt => stmt._1 match{
               case node._7 =>
                 pos = i
+                println("ready2delete:", stmt)
                 //break
               case _ =>
                 i +=1
             }
           }
 
-          println("pos",pos)
+          //println("pos",pos)
 
           Stmts_node_array.remove(pos)
           var NN = DefNode(NoInfo,node._7,Mux(Ref(2),Ref(0),Ref(1))) 
+          //println("ready2add", NN)
+          //println(new_Node.length)
           new_Node.length match{
             case 0 =>
               Stmts_node_array.insert(pos,(node._7,NN))
             case 1 =>
+              println(new_Node(0))
               Stmts_node_array.insert(pos,(("a",new_Node(0))),((node._7,NN)))
             case 2 =>
               Stmts_node_array.insert(pos,(("a",new_Node(0))),(("b",new_Node(1))),((node._7,NN)))
@@ -333,17 +339,21 @@ object CommonSubexpressionElimination extends Pass {
     //     println("new_node",node)
     //     stmts += node
     // }
-
-    Stmts_node_array.foreach{
+     Stmts_node_array.foreach{
       node => 
-        println("node",node)
-        node._2 match{
-        case DefNode(_,name,_)=>
-            println("node._2",node._2)
-            stmts += node._2
-        case  _ =>
-      }    
-    }
+        stmts += node._2
+     }
+
+    // Stmts_node_array.foreach{
+    //   node => 
+    //     //println("node",node)
+    //     node._2 match{
+    //     case DefNode(_,name,_)=>
+    //         //println("node._2",node._2)
+    //         stmts += node._2
+    //     case  _ =>
+    //   }    
+    // }
     // new_Node.foreach{
     //   node =>
     //     println(node)
@@ -356,21 +366,21 @@ object CommonSubexpressionElimination extends Pass {
     //     stmts += node
     // }
 
-    Stmts_node_array.foreach{
-      node => node._2 match{
-        case DefNode(_,name,_)=>
+    // Stmts_node_array.foreach{
+    //   node => node._2 match{
+    //     case DefNode(_,name,_)=>
             
-        case  _ =>
-          stmts += node._2
-      }    
-    }
+    //     case  _ =>
+    //       stmts += node._2
+    //   }    
+    // }
 
     //stmts + new_Node
     val final_stmts = Block(stmts)
     //Statement1
-    stmts.foreach{
-      node => println("node",node)
-    }
+    // stmts.foreach{
+    //   node => println("node",node)
+    // }
     final_stmts
 
     //接下来的数据分支进行处理

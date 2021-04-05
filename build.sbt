@@ -16,6 +16,10 @@ def javacOptionsVersion(scalaVersion: String): Seq[String] = {
   }
 }
 
+// val defaultVersions = Map(
+//   "chisel3" -> "3.2-SNAPSHOT",
+//   "chisel-iotesters" -> "1.3-SNAPSHOT"
+//   ),
 
 lazy val commonSettings = Seq(
   organization := "edu.berkeley.cs",
@@ -42,7 +46,16 @@ lazy val commonSettings = Seq(
     "org.json4s" %% "json4s-native" % "3.6.9",
     "org.apache.commons" % "commons-text" % "1.8"
   ),
+  libraryDependencies += "io.spray" %%  "spray-json" % "1.3.3",
+  libraryDependencies += "com.typesafe.play" %% "play-netty-server" % "2.6.1",
+  //libraryDependencies += "edu.berkeley.cs" %% "chisel3" % "3.4.1",
+  //libraryDependencies += "edu.berkeley.cs" %% "chisel-iotesters" % "??",
+  libraryDependencies += "edu.berkeley.cs" %% "chisel3" % "3.2.1",
+  libraryDependencies += "edu.berkeley.cs" %% "chisel-iotesters" % "1.3.8",
+
   // starting with scala 2.13 the parallel collections are separate from the standard library
+  // libraryDependencies ++= (Seq("chisel3","chisel-iotesters").map {
+  // dep: String => "edu.berkeley.cs" %% dep % sys.props.getOrElse(dep + "Version", defaultVersions(dep)) }),
   libraryDependencies ++= {
     CrossVersion.partialVersion(scalaVersion.value) match {
       case Some((2, major)) if major <= 12 => Seq()
@@ -244,3 +257,10 @@ lazy val fuzzer = (project in file("fuzzer"))
         otherArgs)
     }).evaluated,
   )
+
+  assemblyMergeStrategy in assembly := {
+      case x if x.contains("io.netty.versions.properties") => MergeStrategy.discard
+      case x =>
+        val oldStrategy = (assemblyMergeStrategy in assembly).value
+        oldStrategy(x)
+}

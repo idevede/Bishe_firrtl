@@ -1,0 +1,31 @@
+{
+  "name": "top",
+  "children": [{
+    "name": "AreaMux(-1,0,1) 1",
+    "size": 4
+  }, {
+    "name": "AreaMux(1,0,2) 1",
+    "size": 0
+  }, {
+    "name": "AreaOp(pad,(1),2,0) 1",
+    "size": 0
+  }, {
+    "name": "AreaOp(pad,(2),32,0) 1",
+    "size": 0
+  }, {
+    "name": "AreaMux(2,0,1) 1",
+    "size": 8
+  }, {
+    "name": "AreaOp(or,(1,1),1,0) 1",
+    "size": 4
+  }, {
+    "name": "AreaOp(eq,(2,2),1,1) 4",
+    "size": 16
+  }, {
+    "name": "AreaOp(add,(32,32),33,0) 1",
+    "size": 1056
+  }, {
+    "name": "AreaOp(tail,(33),32,0) 1",
+    "size": 0
+  }]
+}
