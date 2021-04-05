@@ -8324,8 +8324,6 @@ module Rob(
   wire  _GEN_54 = 5'h15 == rob_tail | T_23706_21; // @[rob.scala 347:34 rob.scala 347:34]
   wire  _GEN_55 = 5'h16 == rob_tail | T_23706_22; // @[rob.scala 347:34 rob.scala 347:34]
   wire  _GEN_56 = 5'h17 == rob_tail | T_23706_23; // @[rob.scala 347:34 rob.scala 347:34]
-  wire  T_28318 = ~io_dis_uops_0_is_fence; // @[rob.scala 348:37]
-  wire  T_28320 = ~io_dis_uops_0_is_fencei; // @[rob.scala 349:37]
   wire [31:0] _GEN_129 = 5'h0 == rob_tail ? io_dis_uops_0_inst : T_26182_0_inst; // @[rob.scala 350:34 rob.scala 350:34]
   wire [31:0] _GEN_130 = 5'h1 == rob_tail ? io_dis_uops_0_inst : T_26182_1_inst; // @[rob.scala 350:34 rob.scala 350:34]
   wire [31:0] _GEN_131 = 5'h2 == rob_tail ? io_dis_uops_0_inst : T_26182_2_inst; // @[rob.scala 350:34 rob.scala 350:34]
@@ -13378,8 +13376,6 @@ module Rob(
   wire  _GEN_14197 = 5'h15 == rob_tail | T_35634_21; // @[rob.scala 347:34 rob.scala 347:34]
   wire  _GEN_14198 = 5'h16 == rob_tail | T_35634_22; // @[rob.scala 347:34 rob.scala 347:34]
   wire  _GEN_14199 = 5'h17 == rob_tail | T_35634_23; // @[rob.scala 347:34 rob.scala 347:34]
-  wire  T_40246 = ~io_dis_uops_1_is_fence; // @[rob.scala 348:37]
-  wire  T_40248 = ~io_dis_uops_1_is_fencei; // @[rob.scala 349:37]
   wire [31:0] _GEN_14272 = 5'h0 == rob_tail ? io_dis_uops_1_inst : T_38110_0_inst; // @[rob.scala 350:34 rob.scala 350:34]
   wire [31:0] _GEN_14273 = 5'h1 == rob_tail ? io_dis_uops_1_inst : T_38110_1_inst; // @[rob.scala 350:34 rob.scala 350:34]
   wire [31:0] _GEN_14274 = 5'h2 == rob_tail ? io_dis_uops_1_inst : T_38110_2_inst; // @[rob.scala 350:34 rob.scala 350:34]
@@ -17107,8 +17103,7 @@ module Rob(
   wire  T_48167 = T_23625 != 2'h0; // @[rob.scala 734:36]
   wire  T_48169 = ~io_dis_partial_stall; // @[rob.scala 734:51]
   wire  T_48170 = T_48167 & T_48169; // @[rob.scala 734:48]
-  wire  T_48174 = ~T_29369; // @[rob.scala 731:4]
-  wire  T_48175 = T_48154 & T_48174; // @[rob.scala 731:4]
+  wire  T_48175 = ~(T_48144 | T_29369);
   wire  T_48176 = T_48175 & T_48170; // @[rob.scala 735:4]
   wire  T_48178 = rob_tail == 5'h17; // @[util.scala 75:28]
   wire [4:0] T_48182 = rob_tail + 5'h1; // @[util.scala 76:35]
@@ -18038,7 +18033,7 @@ module Rob(
   wire [4:0] new_DoPrim113799640 = T_23573[4:0];
   wire  new_DoPrim113799714 = T_23559 & io_dis_new_packet;
   wire  new_DoPrim113799794 = T_23559 & io_dis_new_packet;
-  wire  new_DoPrim113799882 = T_28318 & T_28320;
+  wire  new_DoPrim113799882 = ~(io_dis_uops_0_is_fence | io_dis_uops_0_is_fencei);
   wire  new_DoPrim113799884 = io_wb_resps_0_valid & T_28592;
   wire [4:0] new_DoPrim113799885 = T_28589[4:0];
   wire  new_DoPrim113799889 = io_wb_resps_1_valid & T_28600;
@@ -18056,7 +18051,7 @@ module Rob(
   wire [4:0] new_DoPrim113828225 = T_29064[4:0];
   wire  new_DoPrim113828229 = io_fflags_1_valid & T_29068;
   wire [4:0] new_DoPrim113828230 = T_29071[4:0];
-  wire  new_DoPrim113828312 = T_40246 & T_40248;
+  wire  new_DoPrim113828312 = ~(io_dis_uops_1_is_fence | io_dis_uops_1_is_fencei);
   wire  new_DoPrim113828314 = io_wb_resps_0_valid & T_28590;
   wire [4:0] new_DoPrim113828315 = T_28589[4:0];
   wire  new_DoPrim113828319 = io_wb_resps_1_valid & T_28598;
@@ -18074,10 +18069,6 @@ module Rob(
   wire [4:0] new_DoPrim113856655 = T_29064[4:0];
   wire  new_DoPrim113856659 = io_fflags_1_valid & T_29066;
   wire [4:0] new_DoPrim113856660 = T_29071[4:0];
-  wire  T_48175 = ~(T_48144 | T_29369);
-  wire  T_48175 = ~(T_48144 | T_29369);
-  wire  new_DoPrim113799882 = ~(io_dis_uops_0_is_fence | io_dis_uops_0_is_fencei);
-  wire  new_DoPrim113828312 = ~(io_dis_uops_1_is_fence | io_dis_uops_1_is_fencei);
   assign T_23555_T_23587_addr = new_DoPrim113799327;
   `ifndef RANDOMIZE_GARBAGE_ASSIGN
   assign T_23555_T_23587_data = T_23555[T_23555_T_23587_addr]; // @[rob.scala 893:22]

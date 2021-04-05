@@ -13,5 +13,6 @@ module ALU(
   wire [31:0] _T_8 = io_in + 32'h2; // @[cmd48.sc 29:27]
   wire [31:0] _GEN_0 = _T_6 ? _T_8 : 32'h1; // @[Conditional.scala 39:67 cmd48.sc 29:22 cmd48.sc 25:10]
   wire [31:0] _GEN_1 = _T_3 ? _T_5 : _GEN_0; // @[Conditional.scala 39:67 cmd48.sc 28:22]
-  assign io_out = _T ? _T_2 : _GEN_1; // @[Conditional.scala 40:58 cmd48.sc 27:22]
+  wire [31:0] result = _T ? _T_2 : _GEN_1; // @[Conditional.scala 40:58 cmd48.sc 27:22]
+  assign io_out = result; // @[Conditional.scala 40:58 cmd48.sc 27:22]
 endmodule

@@ -248,29 +248,30 @@ module ICache(
   wire  _T_314 = repl_way == 2'h1; // @[ICache.scala 101:84]
   wire  _T_316 = repl_way == 2'h2; // @[ICache.scala 101:84]
   wire  _T_318 = repl_way == 2'h3; // @[ICache.scala 101:84]
-  wire  _T_343 = refill_done & ~invalidated; // @[ICache.scala 105:21]
   wire [7:0] _T_344 = {repl_way,refill_idx}; // @[Cat.scala 30:58]
   wire [255:0] _T_347 = 256'h1 << _T_344; // @[ICache.scala 106:32]
   wire [255:0] _T_348 = vb_array | _T_347; // @[ICache.scala 106:32]
-  wire [255:0] _GEN_26 = refill_done & ~invalidated ? _T_348 : vb_array; // @[ICache.scala 105:38 ICache.scala 106:14 ICache.scala 104:21]
   wire  _GEN_28 = io_invalidate | invalidated; // @[ICache.scala 108:24 ICache.scala 110:17 ICache.scala 68:24]
   wire  _T_553 = io_mem_0_d_valid & _T_312; // @[ICache.scala 133:30]
   wire [8:0] _T_554 = {refill_idx, 3'h0}; // @[ICache.scala 136:36]
   wire [8:0] _GEN_104 = {{4'd0}, refill_cnt}; // @[ICache.scala 136:63]
   wire  _T_559 = ~_T_553; // @[ICache.scala 139:45]
   reg [63:0] _T_568; // @[Reg.scala 34:16]
+  wire [63:0] s1_dout_0 = s1_dout_valid ? _T_550__T_566_data : _T_568; // @[Package.scala 27:42]
   wire  _T_575 = io_mem_0_d_valid & _T_314; // @[ICache.scala 133:30]
   wire  _T_581 = ~_T_575; // @[ICache.scala 139:45]
   reg [63:0] _T_590; // @[Reg.scala 34:16]
+  wire [63:0] s1_dout_1 = s1_dout_valid ? _T_572__T_588_data : _T_590; // @[Package.scala 27:42]
   wire  _T_597 = io_mem_0_d_valid & _T_316; // @[ICache.scala 133:30]
   wire  _T_603 = ~_T_597; // @[ICache.scala 139:45]
   reg [63:0] _T_612; // @[Reg.scala 34:16]
+  wire [63:0] s1_dout_2 = s1_dout_valid ? _T_594__T_610_data : _T_612; // @[Package.scala 27:42]
   wire  _T_619 = io_mem_0_d_valid & _T_318; // @[ICache.scala 133:30]
   wire  _T_625 = ~_T_619; // @[ICache.scala 139:45]
   reg [63:0] _T_634; // @[Reg.scala 34:16]
+  wire [63:0] s1_dout_3 = s1_dout_valid ? _T_616__T_632_data : _T_634; // @[Package.scala 27:42]
   wire  _T_638 = ~stall; // @[ICache.scala 148:51]
   reg  _T_639; // @[Reg.scala 26:44]
-  wire  _GEN_81 = _T_638 ? s1_hit : _T_639; // @[Reg.scala 43:19 Reg.scala 43:23 Reg.scala 26:44]
   reg  _T_654_0; // @[Reg.scala 34:16]
   reg  _T_654_1; // @[Reg.scala 34:16]
   reg  _T_654_2; // @[Reg.scala 34:16]
@@ -330,8 +331,6 @@ module ICache(
   wire  new_DoPrim1491 = _T_625 & s0_valid;
   wire  new_DoPrim1541 = io_mem_0_d_valid & _T_318;
   wire [8:0] new_DoPrim1542 = _T_554 | _GEN_104;
-  wire [255:0] _GEN_26 = (_T_343 ? _T_246 : vb_array) + (_T_343 ? 5'h1 : _T_347);
-  wire [4:0] _GEN_81 = (_T_638 ? _T_246 : out_valid) + (_T_638 ? 5'h1 : s1_any_tag_hit);
   assign tag_array_0_tag_rdata_addr = tag_array_0_tag_rdata_addr_pipe_0;
   assign tag_array_0_tag_rdata_data = tag_array_0[tag_array_0_tag_rdata_addr]; // @[ICache.scala 97:25]
   assign tag_array_0__T_328_data = new_DoPrim1159;
@@ -488,8 +487,8 @@ module ICache(
       vb_array <= 256'h0; // @[ICache.scala 104:21]
     end else if (io_invalidate) begin // @[ICache.scala 108:24]
       vb_array <= 256'h0; // @[ICache.scala 109:14]
-    end else begin
-      vb_array <= _GEN_26;
+    end else if (refill_done & ~invalidated) begin // @[ICache.scala 105:38]
+      vb_array <= _T_348; // @[ICache.scala 106:14]
     end
     s1_dout_valid <= new_DoPrim343; // @[ICache.scala 81:52]
     if (s1_dout_valid) begin // @[Reg.scala 35:19]
@@ -522,22 +521,14 @@ module ICache(
     end else if (s1_miss) begin // @[LFSR.scala 23:22]
       _T_262 <= _T_271; // @[LFSR.scala 23:29]
     end
-    if (s1_dout_valid) begin // @[Reg.scala 35:19]
-      _T_568 <= _T_550__T_566_data; // @[Reg.scala 35:23]
-    end
-    if (s1_dout_valid) begin // @[Reg.scala 35:19]
-      _T_590 <= _T_572__T_588_data; // @[Reg.scala 35:23]
-    end
-    if (s1_dout_valid) begin // @[Reg.scala 35:19]
-      _T_612 <= _T_594__T_610_data; // @[Reg.scala 35:23]
-    end
-    if (s1_dout_valid) begin // @[Reg.scala 35:19]
-      _T_634 <= _T_616__T_632_data; // @[Reg.scala 35:23]
-    end
+    _T_568 <= s1_dout_0; // @[Reg.scala 35:19 Reg.scala 35:23 Reg.scala 34:16]
+    _T_590 <= s1_dout_1; // @[Reg.scala 35:19 Reg.scala 35:23 Reg.scala 34:16]
+    _T_612 <= s1_dout_2; // @[Reg.scala 35:19 Reg.scala 35:23 Reg.scala 34:16]
+    _T_634 <= s1_dout_3; // @[Reg.scala 35:19 Reg.scala 35:23 Reg.scala 34:16]
     if (reset) begin // @[Reg.scala 26:44]
       _T_639 <= 1'h0; // @[Reg.scala 26:44]
-    end else begin
-      _T_639 <= _GEN_81;
+    end else if (_T_638) begin // @[Reg.scala 43:19]
+      _T_639 <= s1_hit; // @[Reg.scala 43:23]
     end
     if (_T_638) begin // @[Reg.scala 35:19]
       _T_654_0 <= s1_tag_hit_0; // @[Reg.scala 35:23]

@@ -55,8 +55,8 @@ object ComputeArea {
     case AreaOp( "div", List(w0,w1), w, 0) => 2*apply( AreaOp( "mul", List(w0,w1), w, 0), tbl)
     case AreaOp( "div", List(w0,w1), w, 1) => 0 // only if constant a power of 2
     case AreaOp( "div", List(w0,w1), w, 2) => 0
-    case AreaOp( "rem", List(w0,w1), w, c) => apply( AreaOp( "div", List(w0,w1), w, c), tbl)
-    case AreaOp( op, List(w0,w1), w, c) if List("lt","gt","leq","geq").contains( op) => apply( AreaOp( "add", List(w0,w1), w0, c),tbl)
+    case AreaOp( "rem", List(w0,w1), w, c) => apply( AreaOp( "div", List(w0.abs,w1.abs), w.abs, c), tbl)
+    case AreaOp( op, List(w0,w1), w, c) if List("lt","gt","leq","geq").contains( op) => apply( AreaOp( "add", List(w0.abs,w1.abs), w0.abs, c),tbl)
     case AreaOp( "cat", _, _, _) => 0
     case AreaOp( "bits", _, _, _) => 0
     case AreaOp( "pad", _, _, _) => 0
@@ -64,12 +64,12 @@ object ComputeArea {
     case AreaOp( "asUInt", _, _, _) => 0
     case AreaOp( "asSInt", _, _, _) => 0
     case AreaOp( "cvt", _, _, _) => 0
-    case AreaRegister( w) => w*cReg
+    case AreaRegister( w) => w.abs*cReg
     case AreaMemory( bitWidth, words, _, _, _) => bitWidth*words*cBitCell
-    case AreaMux( w, 0, 0) => w*cMux
+    case AreaMux( w, 0, 0) => w.abs*cMux
     case AreaMux( w, 1, _) => 0
     case AreaMux( w, 0, 2) => 0
-    case AreaMux( w, 0, 1) => apply( AreaOp( "and", List(w,w), w, 0),tbl)
+    case AreaMux( w, 0, 1) => apply( AreaOp( "and", List(w.abs,w.abs), w.abs, 0),tbl)
     case AreaModule( templateName, instanceName) =>
       if ( tbl.contains(templateName))
         tbl(templateName)

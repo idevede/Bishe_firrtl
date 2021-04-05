@@ -40,4 +40,3 @@ circuit ALU :
           result <= _T_8 @[cmd48.sc 29:22]
           skip @[Conditional.scala 39:67]
     io.out <= result @[cmd48.sc 31:10]
-    io.out <= result @[cmd48.sc 33:10]
