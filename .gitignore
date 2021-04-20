@@ -4,7 +4,6 @@
 */*/*/*.DS_STORE
 */*/*/*/*.DS_STORE
 *.icloud
-*.rpt
 *.tmp
 */*.temp
 */*/*.temp
