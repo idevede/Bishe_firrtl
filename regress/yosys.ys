@@ -1,0 +1,5 @@
+read -sv FPU.v
+hierarchy -top FPU
+techmap; opt
+dfflibmap -liberty ../../yosys/examples/cmos/cmos_cells.lib
+abc -liberty ../../yosys/examples/cmos/cmos_cells.lib

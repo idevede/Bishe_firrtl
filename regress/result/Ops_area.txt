@@ -1,0 +1,194 @@
+(State,Connect:,Connect(,Reference(os,SIntType(IntWidth(14)),PortKind,SinkFlow),DoPrim(pad,List(Reference(_GEN_14,SIntType(IntWidth(9)),NodeKind,SourceFlow)),List(14),SIntType(IntWidth(14)))))
+(State,Connect:,Connect(,Reference(ou,UIntType(IntWidth(13)),PortKind,SinkFlow),DoPrim(pad,List(Reference(_GEN_15,UIntType(IntWidth(9)),NodeKind,SourceFlow)),List(13),UIntType(IntWidth(13)))))
+(State,Connect:,Connect(,Reference(obool,UIntType(IntWidth(1)),PortKind,SinkFlow),UIntLiteral(0,IntWidth(1))))
+(ready2delete:,(_GEN_1,DefNode(,_GEN_1,Mux(DoPrim(eq,ArrayBuffer(Reference(sel,UIntType(IntWidth(4)),PortKind,SourceFlow), UIntLiteral(4,IntWidth(4))),ArrayBuffer(),UIntType(IntWidth(1))),UIntLiteral(2,IntWidth(2)),UIntLiteral(0,IntWidth(2)),UIntType(IntWidth(2))))))
+DefNode(,_Mux_op_0,DoPrim(eq,ArrayBuffer(Reference(sel,UIntType(IntWidth(4)),PortKind,SourceFlow), UIntLiteral(4,IntWidth(4))),ArrayBuffer(),UIntType(IntWidth(1))))
+(ready2delete:,(_GEN_2,DefNode(,_GEN_2,Mux(DoPrim(eq,ArrayBuffer(Reference(sel,UIntType(IntWidth(4)),PortKind,SourceFlow), UIntLiteral(5,IntWidth(4))),ArrayBuffer(),UIntType(IntWidth(1))),UIntLiteral(2,IntWidth(2)),Reference(_GEN_1,UIntType(IntWidth(2)),NodeKind,SourceFlow),UIntType(IntWidth(2))))))
+DefNode(,_Mux_op_1,DoPrim(eq,ArrayBuffer(Reference(sel,UIntType(IntWidth(4)),PortKind,SourceFlow), UIntLiteral(5,IntWidth(4))),ArrayBuffer(),UIntType(IntWidth(1))))
+(ready2delete:,(_GEN_3,DefNode(,_GEN_3,Mux(DoPrim(eq,ArrayBuffer(Reference(sel,UIntType(IntWidth(4)),PortKind,SourceFlow), UIntLiteral(4,IntWidth(4))),ArrayBuffer(),UIntType(IntWidth(1))),UIntLiteral(0,IntWidth(2)),Reference(_GEN_2,UIntType(IntWidth(2)),NodeKind,SourceFlow),UIntType(IntWidth(2))))))
+DefNode(,_Mux_op_2,DoPrim(eq,ArrayBuffer(Reference(sel,UIntType(IntWidth(4)),PortKind,SourceFlow), UIntLiteral(4,IntWidth(4))),ArrayBuffer(),UIntType(IntWidth(1))))
+(ready2delete:,(_GEN_4,DefNode(,_GEN_4,Mux(DoPrim(eq,ArrayBuffer(Reference(sel,UIntType(IntWidth(4)),PortKind,SourceFlow), UIntLiteral(5,IntWidth(4))),ArrayBuffer(),UIntType(IntWidth(1))),UIntLiteral(2,IntWidth(2)),Reference(_GEN_3,UIntType(IntWidth(2)),NodeKind,SourceFlow),UIntType(IntWidth(2))))))
+DefNode(,_Mux_op_3,DoPrim(eq,ArrayBuffer(Reference(sel,UIntType(IntWidth(4)),PortKind,SourceFlow), UIntLiteral(5,IntWidth(4))),ArrayBuffer(),UIntType(IntWidth(1))))
+(ready2delete:,(_GEN_5,DefNode(,_GEN_5,Mux(DoPrim(eq,ArrayBuffer(Reference(sel,UIntType(IntWidth(4)),PortKind,SourceFlow), UIntLiteral(4,IntWidth(4))),ArrayBuffer(),UIntType(IntWidth(1))),UIntLiteral(0,IntWidth(9)),DoPrim(pad,List(Reference(_GEN_4,UIntType(IntWidth(2)),NodeKind,SourceFlow)),List(9),UIntType(IntWidth(9))),UIntType(IntWidth(9))))))
+(ready2delete:,(_GEN_6,DefNode(,_GEN_6,Mux(DoPrim(eq,ArrayBuffer(Reference(sel,UIntType(IntWidth(4)),PortKind,SourceFlow), UIntLiteral(5,IntWidth(4))),ArrayBuffer(),UIntType(IntWidth(1))),DoPrim(add,ArrayBuffer(Reference(_GEN_16,UIntType(IntWidth(8)),NodeKind,SourceFlow), Reference(iu,UIntType(IntWidth(8)),PortKind,SourceFlow)),ArrayBuffer(),UIntType(IntWidth(9))),Reference(_GEN_5,UIntType(IntWidth(9)),NodeKind,SourceFlow),UIntType(IntWidth(9))))))
+(ready2delete:,(_GEN_7,DefNode(,_GEN_7,Mux(DoPrim(eq,ArrayBuffer(Reference(sel,UIntType(IntWidth(4)),PortKind,SourceFlow), UIntLiteral(4,IntWidth(4))),ArrayBuffer(),UIntType(IntWidth(1))),DoPrim(add,ArrayBuffer(Reference(_GEN_16,UIntType(IntWidth(8)),NodeKind,SourceFlow), Reference(iu,UIntType(IntWidth(8)),PortKind,SourceFlow)),ArrayBuffer(),UIntType(IntWidth(9))),Reference(_GEN_6,UIntType(IntWidth(9)),NodeKind,SourceFlow),UIntType(IntWidth(9))))))
+(ready2delete:,(_GEN_9,DefNode(,_GEN_9,Mux(DoPrim(eq,ArrayBuffer(Reference(sel,UIntType(IntWidth(4)),PortKind,SourceFlow), UIntLiteral(3,IntWidth(4))),ArrayBuffer(),UIntType(IntWidth(1))),UIntLiteral(0,IntWidth(9)),Reference(_GEN_7,UIntType(IntWidth(9)),NodeKind,SourceFlow),UIntType(IntWidth(9))))))
+DefNode(,_Mux_op_10,DoPrim(eq,ArrayBuffer(Reference(sel,UIntType(IntWidth(4)),PortKind,SourceFlow), UIntLiteral(3,IntWidth(4))),ArrayBuffer(),UIntType(IntWidth(1))))
+(ready2delete:,(_GEN_10,DefNode(,_GEN_10,Mux(DoPrim(eq,ArrayBuffer(Reference(sel,UIntType(IntWidth(4)),PortKind,SourceFlow), UIntLiteral(2,IntWidth(4))),ArrayBuffer(),UIntType(IntWidth(1))),SIntLiteral(1,IntWidth(9)),SIntLiteral(0,IntWidth(9)),SIntType(IntWidth(9))))))
+DefNode(,_Mux_op_11,DoPrim(eq,ArrayBuffer(Reference(sel,UIntType(IntWidth(4)),PortKind,SourceFlow), UIntLiteral(2,IntWidth(4))),ArrayBuffer(),UIntType(IntWidth(1))))
+(ready2delete:,(_GEN_11,DefNode(,_GEN_11,Mux(DoPrim(eq,ArrayBuffer(Reference(sel,UIntType(IntWidth(4)),PortKind,SourceFlow), UIntLiteral(2,IntWidth(4))),ArrayBuffer(),UIntType(IntWidth(1))),UIntLiteral(1,IntWidth(9)),Reference(_GEN_9,UIntType(IntWidth(9)),NodeKind,SourceFlow),UIntType(IntWidth(9))))))
+DefNode(,_Mux_op_12,DoPrim(eq,ArrayBuffer(Reference(sel,UIntType(IntWidth(4)),PortKind,SourceFlow), UIntLiteral(2,IntWidth(4))),ArrayBuffer(),UIntType(IntWidth(1))))
+(ready2delete:,(_GEN_12,DefNode(,_GEN_12,Mux(DoPrim(eq,ArrayBuffer(Reference(sel,UIntType(IntWidth(4)),PortKind,SourceFlow), UIntLiteral(1,IntWidth(4))),ArrayBuffer(),UIntType(IntWidth(1))),SIntLiteral(0,IntWidth(9)),Reference(_GEN_10,SIntType(IntWidth(9)),NodeKind,SourceFlow),SIntType(IntWidth(9))))))
+DefNode(,_Mux_op_13,DoPrim(eq,ArrayBuffer(Reference(sel,UIntType(IntWidth(4)),PortKind,SourceFlow), UIntLiteral(1,IntWidth(4))),ArrayBuffer(),UIntType(IntWidth(1))))
+(ready2delete:,(_GEN_13,DefNode(,_GEN_13,Mux(DoPrim(eq,ArrayBuffer(Reference(sel,UIntType(IntWidth(4)),PortKind,SourceFlow), UIntLiteral(1,IntWidth(4))),ArrayBuffer(),UIntType(IntWidth(1))),UIntLiteral(0,IntWidth(9)),Reference(_GEN_11,UIntType(IntWidth(9)),NodeKind,SourceFlow),UIntType(IntWidth(9))))))
+DefNode(,_Mux_op_14,DoPrim(eq,ArrayBuffer(Reference(sel,UIntType(IntWidth(4)),PortKind,SourceFlow), UIntLiteral(1,IntWidth(4))),ArrayBuffer(),UIntType(IntWidth(1))))
+(ready2delete:,(_GEN_14,DefNode(,_GEN_14,Mux(DoPrim(eq,ArrayBuffer(Reference(sel,UIntType(IntWidth(4)),PortKind,SourceFlow), UIntLiteral(0,IntWidth(4))),ArrayBuffer(),UIntType(IntWidth(1))),DoPrim(add,ArrayBuffer(Reference(is,SIntType(IntWidth(8)),PortKind,SourceFlow), Reference(is,SIntType(IntWidth(8)),PortKind,SourceFlow)),ArrayBuffer(),SIntType(IntWidth(9))),Reference(_GEN_12,SIntType(IntWidth(9)),NodeKind,SourceFlow),SIntType(IntWidth(9))))))
+(ready2delete:,(_GEN_15,DefNode(,_GEN_15,Mux(DoPrim(eq,ArrayBuffer(Reference(sel,UIntType(IntWidth(4)),PortKind,SourceFlow), UIntLiteral(0,IntWidth(4))),ArrayBuffer(),UIntType(IntWidth(1))),DoPrim(add,ArrayBuffer(Reference(iu,UIntType(IntWidth(8)),PortKind,SourceFlow), Reference(iu,UIntType(IntWidth(8)),PortKind,SourceFlow)),ArrayBuffer(),UIntType(IntWidth(9))),Reference(_GEN_13,UIntType(IntWidth(9)),NodeKind,SourceFlow),UIntType(IntWidth(9))))))
+(ready2delete:,(_GEN_18,DefNode(,_GEN_18,Mux(DoPrim(eq,ArrayBuffer(Reference(sel,UIntType(IntWidth(4)),PortKind,SourceFlow), UIntLiteral(0,IntWidth(4))),ArrayBuffer(),UIntType(IntWidth(1))),DoPrim(add,ArrayBuffer(Reference(is,SIntType(IntWidth(8)),PortKind,SourceFlow), Reference(is,SIntType(IntWidth(8)),PortKind,SourceFlow)),ArrayBuffer(),SIntType(IntWidth(9))),Reference(_GEN_12,SIntType(IntWidth(9)),NodeKind,SourceFlow),SIntType(IntWidth(9))))))
+(ready2delete:,(_GEN_19,DefNode(,_GEN_19,Mux(DoPrim(eq,ArrayBuffer(Reference(sel,UIntType(IntWidth(4)),PortKind,SourceFlow), UIntLiteral(0,IntWidth(4))),ArrayBuffer(),UIntType(IntWidth(1))),DoPrim(add,ArrayBuffer(Reference(iu,UIntType(IntWidth(8)),PortKind,SourceFlow), Reference(iu,UIntType(IntWidth(8)),PortKind,SourceFlow)),ArrayBuffer(),UIntType(IntWidth(9))),Reference(_GEN_13,UIntType(IntWidth(9)),NodeKind,SourceFlow),UIntType(IntWidth(9))))))
+circuit Ops :
+  module Ops :
+    input sel : UInt<4>
+    input is : SInt<8>
+    input iu : UInt<8>
+    output os : SInt<14>
+    output ou : UInt<13>
+    output obool : UInt<1>
+
+    skip
+    node _Mux_op_0 = eq(sel, UInt<4>("h4"))
+    node _GEN_1 = mux(_Mux_op_0, UInt<2>("h2"), UInt<2>("h0"))
+    node _Mux_op_1 = eq(sel, UInt<4>("h5"))
+    node _GEN_2 = mux(_Mux_op_1, UInt<2>("h2"), _GEN_1)
+    node _Mux_op_2 = eq(sel, UInt<4>("h4"))
+    node _GEN_3 = mux(_Mux_op_2, UInt<2>("h0"), _GEN_2)
+    node _Mux_op_3 = eq(sel, UInt<4>("h5"))
+    node _GEN_4 = mux(_Mux_op_3, UInt<2>("h2"), _GEN_3)
+    node _Mux_op_4 = pad(_GEN_4, 9)
+    node _Mux_op_5 = eq(sel, UInt<4>("h4"))
+    node _GEN_5 = mux(_Mux_op_5, UInt<9>("h0"), _Mux_op_4)
+    node _GEN_16 = asUInt(is)
+    node _Mux_op_6 = add(_GEN_16, iu)
+    node _Mux_op_7 = eq(sel, UInt<4>("h5"))
+    node _GEN_6 = mux(_Mux_op_7, _Mux_op_6, _GEN_5)
+    skip
+    node _Mux_op_8 = add(_GEN_16, iu)
+    node _Mux_op_9 = eq(sel, UInt<4>("h4"))
+    node _GEN_7 = mux(_Mux_op_9, _Mux_op_8, _GEN_6)
+    skip
+    node _Mux_op_10 = eq(sel, UInt<4>("h3"))
+    node _GEN_9 = mux(_Mux_op_10, UInt<9>("h0"), _GEN_7)
+    node _Mux_op_11 = eq(sel, UInt<4>("h2"))
+    node _GEN_10 = mux(_Mux_op_11, SInt<9>("h1"), SInt<9>("h0"))
+    node _Mux_op_12 = eq(sel, UInt<4>("h2"))
+    node _GEN_11 = mux(_Mux_op_12, UInt<9>("h1"), _GEN_9)
+    node _Mux_op_13 = eq(sel, UInt<4>("h1"))
+    node _GEN_12 = mux(_Mux_op_13, SInt<9>("h0"), _GEN_10)
+    node _Mux_op_14 = eq(sel, UInt<4>("h1"))
+    node _GEN_13 = mux(_Mux_op_14, UInt<9>("h0"), _GEN_11)
+    node _Mux_op_15 = add(is, is)
+    node _Mux_op_16 = eq(sel, UInt<4>("h0"))
+    node _GEN_14 = mux(_Mux_op_16, _Mux_op_15, _GEN_12)
+    node _Mux_op_17 = add(iu, iu)
+    node _Mux_op_18 = eq(sel, UInt<4>("h0"))
+    node _GEN_15 = mux(_Mux_op_18, _Mux_op_17, _GEN_13)
+    skip
+    skip
+    skip
+    os <= pad(_GEN_14, 14)
+    skip
+    skip
+    skip
+    ou <= pad(_GEN_15, 13)
+    obool <= UInt<1>("h0")
+Ops                                Area    Count         Total      Cumulative
+-------------------------------    ----    -----     -------------  ----------
+AreaOp(add,(8,8),9,0)               288        4      1152   85.0%       85.0%
+AreaOp(eq,(4,4),1,1)                 10       14       140   10.3%       95.3%
+AreaMux(-1,0,0)                       8        4        32    2.4%       97.6%
+AreaMux(-1,0,1)                       4        8        32    2.4%      100.0%
+AreaMux(-1,0,2)                       0        2         0    0.0%      100.0%
+AreaOp(asUInt,(8),8,0)                0        1         0    0.0%      100.0%
+AreaOp(pad,(2),9,0)                   0        1         0    0.0%      100.0%
+AreaOp(pad,(9),13,0)                  0        1         0    0.0%      100.0%
+AreaOp(pad,(9),14,0)                  0        1         0    0.0%      100.0%
+-------------------------------    ----    -----     -------------  ----------
+Sum                                                   1356
+==============================================================================
+(State,Connect:,Connect(,Reference(os,SIntType(IntWidth(14)),PortKind,SinkFlow),DoPrim(pad,List(Reference(_GEN_14,SIntType(IntWidth(9)),NodeKind,SourceFlow)),List(14),SIntType(IntWidth(14)))))
+(State,Connect:,Connect(,Reference(ou,UIntType(IntWidth(13)),PortKind,SinkFlow),DoPrim(pad,List(Reference(_GEN_15,UIntType(IntWidth(9)),NodeKind,SourceFlow)),List(13),UIntType(IntWidth(13)))))
+(State,Connect:,Connect(,Reference(obool,UIntType(IntWidth(1)),PortKind,SinkFlow),UIntLiteral(0,IntWidth(1))))
+(ready2delete:,(_GEN_1,DefNode(,_GEN_1,Mux(DoPrim(eq,ArrayBuffer(Reference(sel,UIntType(IntWidth(4)),PortKind,SourceFlow), UIntLiteral(4,IntWidth(4))),ArrayBuffer(),UIntType(IntWidth(1))),UIntLiteral(2,IntWidth(2)),UIntLiteral(0,IntWidth(2)),UIntType(IntWidth(2))))))
+DefNode(,_Mux_op_0,DoPrim(eq,ArrayBuffer(Reference(sel,UIntType(IntWidth(4)),PortKind,SourceFlow), UIntLiteral(4,IntWidth(4))),ArrayBuffer(),UIntType(IntWidth(1))))
+(ready2delete:,(_GEN_2,DefNode(,_GEN_2,Mux(DoPrim(eq,ArrayBuffer(Reference(sel,UIntType(IntWidth(4)),PortKind,SourceFlow), UIntLiteral(5,IntWidth(4))),ArrayBuffer(),UIntType(IntWidth(1))),UIntLiteral(2,IntWidth(2)),Reference(_GEN_1,UIntType(IntWidth(2)),NodeKind,SourceFlow),UIntType(IntWidth(2))))))
+DefNode(,_Mux_op_1,DoPrim(eq,ArrayBuffer(Reference(sel,UIntType(IntWidth(4)),PortKind,SourceFlow), UIntLiteral(5,IntWidth(4))),ArrayBuffer(),UIntType(IntWidth(1))))
+(ready2delete:,(_GEN_3,DefNode(,_GEN_3,Mux(DoPrim(eq,ArrayBuffer(Reference(sel,UIntType(IntWidth(4)),PortKind,SourceFlow), UIntLiteral(4,IntWidth(4))),ArrayBuffer(),UIntType(IntWidth(1))),UIntLiteral(0,IntWidth(2)),Reference(_GEN_2,UIntType(IntWidth(2)),NodeKind,SourceFlow),UIntType(IntWidth(2))))))
+DefNode(,_Mux_op_2,DoPrim(eq,ArrayBuffer(Reference(sel,UIntType(IntWidth(4)),PortKind,SourceFlow), UIntLiteral(4,IntWidth(4))),ArrayBuffer(),UIntType(IntWidth(1))))
+(ready2delete:,(_GEN_4,DefNode(,_GEN_4,Mux(DoPrim(eq,ArrayBuffer(Reference(sel,UIntType(IntWidth(4)),PortKind,SourceFlow), UIntLiteral(5,IntWidth(4))),ArrayBuffer(),UIntType(IntWidth(1))),UIntLiteral(2,IntWidth(2)),Reference(_GEN_3,UIntType(IntWidth(2)),NodeKind,SourceFlow),UIntType(IntWidth(2))))))
+DefNode(,_Mux_op_3,DoPrim(eq,ArrayBuffer(Reference(sel,UIntType(IntWidth(4)),PortKind,SourceFlow), UIntLiteral(5,IntWidth(4))),ArrayBuffer(),UIntType(IntWidth(1))))
+(ready2delete:,(_GEN_5,DefNode(,_GEN_5,Mux(DoPrim(eq,ArrayBuffer(Reference(sel,UIntType(IntWidth(4)),PortKind,SourceFlow), UIntLiteral(4,IntWidth(4))),ArrayBuffer(),UIntType(IntWidth(1))),UIntLiteral(0,IntWidth(9)),DoPrim(pad,List(Reference(_GEN_4,UIntType(IntWidth(2)),NodeKind,SourceFlow)),List(9),UIntType(IntWidth(9))),UIntType(IntWidth(9))))))
+(ready2delete:,(_GEN_6,DefNode(,_GEN_6,Mux(DoPrim(eq,ArrayBuffer(Reference(sel,UIntType(IntWidth(4)),PortKind,SourceFlow), UIntLiteral(5,IntWidth(4))),ArrayBuffer(),UIntType(IntWidth(1))),DoPrim(add,ArrayBuffer(Reference(_GEN_16,UIntType(IntWidth(8)),NodeKind,SourceFlow), Reference(iu,UIntType(IntWidth(8)),PortKind,SourceFlow)),ArrayBuffer(),UIntType(IntWidth(9))),Reference(_GEN_5,UIntType(IntWidth(9)),NodeKind,SourceFlow),UIntType(IntWidth(9))))))
+(ready2delete:,(_GEN_7,DefNode(,_GEN_7,Mux(DoPrim(eq,ArrayBuffer(Reference(sel,UIntType(IntWidth(4)),PortKind,SourceFlow), UIntLiteral(4,IntWidth(4))),ArrayBuffer(),UIntType(IntWidth(1))),DoPrim(add,ArrayBuffer(Reference(_GEN_16,UIntType(IntWidth(8)),NodeKind,SourceFlow), Reference(iu,UIntType(IntWidth(8)),PortKind,SourceFlow)),ArrayBuffer(),UIntType(IntWidth(9))),Reference(_GEN_6,UIntType(IntWidth(9)),NodeKind,SourceFlow),UIntType(IntWidth(9))))))
+(ready2delete:,(_GEN_9,DefNode(,_GEN_9,Mux(DoPrim(eq,ArrayBuffer(Reference(sel,UIntType(IntWidth(4)),PortKind,SourceFlow), UIntLiteral(3,IntWidth(4))),ArrayBuffer(),UIntType(IntWidth(1))),UIntLiteral(0,IntWidth(9)),Reference(_GEN_7,UIntType(IntWidth(9)),NodeKind,SourceFlow),UIntType(IntWidth(9))))))
+DefNode(,_Mux_op_10,DoPrim(eq,ArrayBuffer(Reference(sel,UIntType(IntWidth(4)),PortKind,SourceFlow), UIntLiteral(3,IntWidth(4))),ArrayBuffer(),UIntType(IntWidth(1))))
+(ready2delete:,(_GEN_10,DefNode(,_GEN_10,Mux(DoPrim(eq,ArrayBuffer(Reference(sel,UIntType(IntWidth(4)),PortKind,SourceFlow), UIntLiteral(2,IntWidth(4))),ArrayBuffer(),UIntType(IntWidth(1))),SIntLiteral(1,IntWidth(9)),SIntLiteral(0,IntWidth(9)),SIntType(IntWidth(9))))))
+DefNode(,_Mux_op_11,DoPrim(eq,ArrayBuffer(Reference(sel,UIntType(IntWidth(4)),PortKind,SourceFlow), UIntLiteral(2,IntWidth(4))),ArrayBuffer(),UIntType(IntWidth(1))))
+(ready2delete:,(_GEN_11,DefNode(,_GEN_11,Mux(DoPrim(eq,ArrayBuffer(Reference(sel,UIntType(IntWidth(4)),PortKind,SourceFlow), UIntLiteral(2,IntWidth(4))),ArrayBuffer(),UIntType(IntWidth(1))),UIntLiteral(1,IntWidth(9)),Reference(_GEN_9,UIntType(IntWidth(9)),NodeKind,SourceFlow),UIntType(IntWidth(9))))))
+DefNode(,_Mux_op_12,DoPrim(eq,ArrayBuffer(Reference(sel,UIntType(IntWidth(4)),PortKind,SourceFlow), UIntLiteral(2,IntWidth(4))),ArrayBuffer(),UIntType(IntWidth(1))))
+(ready2delete:,(_GEN_12,DefNode(,_GEN_12,Mux(DoPrim(eq,ArrayBuffer(Reference(sel,UIntType(IntWidth(4)),PortKind,SourceFlow), UIntLiteral(1,IntWidth(4))),ArrayBuffer(),UIntType(IntWidth(1))),SIntLiteral(0,IntWidth(9)),Reference(_GEN_10,SIntType(IntWidth(9)),NodeKind,SourceFlow),SIntType(IntWidth(9))))))
+DefNode(,_Mux_op_13,DoPrim(eq,ArrayBuffer(Reference(sel,UIntType(IntWidth(4)),PortKind,SourceFlow), UIntLiteral(1,IntWidth(4))),ArrayBuffer(),UIntType(IntWidth(1))))
+(ready2delete:,(_GEN_13,DefNode(,_GEN_13,Mux(DoPrim(eq,ArrayBuffer(Reference(sel,UIntType(IntWidth(4)),PortKind,SourceFlow), UIntLiteral(1,IntWidth(4))),ArrayBuffer(),UIntType(IntWidth(1))),UIntLiteral(0,IntWidth(9)),Reference(_GEN_11,UIntType(IntWidth(9)),NodeKind,SourceFlow),UIntType(IntWidth(9))))))
+DefNode(,_Mux_op_14,DoPrim(eq,ArrayBuffer(Reference(sel,UIntType(IntWidth(4)),PortKind,SourceFlow), UIntLiteral(1,IntWidth(4))),ArrayBuffer(),UIntType(IntWidth(1))))
+(ready2delete:,(_GEN_14,DefNode(,_GEN_14,Mux(DoPrim(eq,ArrayBuffer(Reference(sel,UIntType(IntWidth(4)),PortKind,SourceFlow), UIntLiteral(0,IntWidth(4))),ArrayBuffer(),UIntType(IntWidth(1))),DoPrim(add,ArrayBuffer(Reference(is,SIntType(IntWidth(8)),PortKind,SourceFlow), Reference(is,SIntType(IntWidth(8)),PortKind,SourceFlow)),ArrayBuffer(),SIntType(IntWidth(9))),Reference(_GEN_12,SIntType(IntWidth(9)),NodeKind,SourceFlow),SIntType(IntWidth(9))))))
+(ready2delete:,(_GEN_15,DefNode(,_GEN_15,Mux(DoPrim(eq,ArrayBuffer(Reference(sel,UIntType(IntWidth(4)),PortKind,SourceFlow), UIntLiteral(0,IntWidth(4))),ArrayBuffer(),UIntType(IntWidth(1))),DoPrim(add,ArrayBuffer(Reference(iu,UIntType(IntWidth(8)),PortKind,SourceFlow), Reference(iu,UIntType(IntWidth(8)),PortKind,SourceFlow)),ArrayBuffer(),UIntType(IntWidth(9))),Reference(_GEN_13,UIntType(IntWidth(9)),NodeKind,SourceFlow),UIntType(IntWidth(9))))))
+(ready2delete:,(_GEN_18,DefNode(,_GEN_18,Mux(DoPrim(eq,ArrayBuffer(Reference(sel,UIntType(IntWidth(4)),PortKind,SourceFlow), UIntLiteral(0,IntWidth(4))),ArrayBuffer(),UIntType(IntWidth(1))),DoPrim(add,ArrayBuffer(Reference(is,SIntType(IntWidth(8)),PortKind,SourceFlow), Reference(is,SIntType(IntWidth(8)),PortKind,SourceFlow)),ArrayBuffer(),SIntType(IntWidth(9))),Reference(_GEN_12,SIntType(IntWidth(9)),NodeKind,SourceFlow),SIntType(IntWidth(9))))))
+(ready2delete:,(_GEN_19,DefNode(,_GEN_19,Mux(DoPrim(eq,ArrayBuffer(Reference(sel,UIntType(IntWidth(4)),PortKind,SourceFlow), UIntLiteral(0,IntWidth(4))),ArrayBuffer(),UIntType(IntWidth(1))),DoPrim(add,ArrayBuffer(Reference(iu,UIntType(IntWidth(8)),PortKind,SourceFlow), Reference(iu,UIntType(IntWidth(8)),PortKind,SourceFlow)),ArrayBuffer(),UIntType(IntWidth(9))),Reference(_GEN_13,UIntType(IntWidth(9)),NodeKind,SourceFlow),UIntType(IntWidth(9))))))
+circuit Ops :
+  module Ops :
+    input sel : UInt<4>
+    input is : SInt<8>
+    input iu : UInt<8>
+    output os : SInt<14>
+    output ou : UInt<13>
+    output obool : UInt<1>
+
+    skip
+    node _Mux_op_0 = eq(sel, UInt<4>("h4"))
+    node _GEN_1 = mux(_Mux_op_0, UInt<2>("h2"), UInt<2>("h0"))
+    node _Mux_op_1 = eq(sel, UInt<4>("h5"))
+    node _GEN_2 = mux(_Mux_op_1, UInt<2>("h2"), _GEN_1)
+    node _Mux_op_2 = eq(sel, UInt<4>("h4"))
+    node _GEN_3 = mux(_Mux_op_2, UInt<2>("h0"), _GEN_2)
+    node _Mux_op_3 = eq(sel, UInt<4>("h5"))
+    node _GEN_4 = mux(_Mux_op_3, UInt<2>("h2"), _GEN_3)
+    node _Mux_op_4 = pad(_GEN_4, 9)
+    node _Mux_op_5 = eq(sel, UInt<4>("h4"))
+    node _GEN_5 = mux(_Mux_op_5, UInt<9>("h0"), _Mux_op_4)
+    node _GEN_16 = asUInt(is)
+    node _Mux_op_6 = add(_GEN_16, iu)
+    node _Mux_op_7 = eq(sel, UInt<4>("h5"))
+    node _GEN_6 = mux(_Mux_op_7, _Mux_op_6, _GEN_5)
+    skip
+    node _Mux_op_8 = add(_GEN_16, iu)
+    node _Mux_op_9 = eq(sel, UInt<4>("h4"))
+    node _GEN_7 = mux(_Mux_op_9, _Mux_op_8, _GEN_6)
+    skip
+    node _Mux_op_10 = eq(sel, UInt<4>("h3"))
+    node _GEN_9 = mux(_Mux_op_10, UInt<9>("h0"), _GEN_7)
+    node _Mux_op_11 = eq(sel, UInt<4>("h2"))
+    node _GEN_10 = mux(_Mux_op_11, SInt<9>("h1"), SInt<9>("h0"))
+    node _Mux_op_12 = eq(sel, UInt<4>("h2"))
+    node _GEN_11 = mux(_Mux_op_12, UInt<9>("h1"), _GEN_9)
+    node _Mux_op_13 = eq(sel, UInt<4>("h1"))
+    node _GEN_12 = mux(_Mux_op_13, SInt<9>("h0"), _GEN_10)
+    node _Mux_op_14 = eq(sel, UInt<4>("h1"))
+    node _GEN_13 = mux(_Mux_op_14, UInt<9>("h0"), _GEN_11)
+    node _Mux_op_15 = add(is, is)
+    node _Mux_op_16 = eq(sel, UInt<4>("h0"))
+    node _GEN_14 = mux(_Mux_op_16, _Mux_op_15, _GEN_12)
+    node _Mux_op_17 = add(iu, iu)
+    node _Mux_op_18 = eq(sel, UInt<4>("h0"))
+    node _GEN_15 = mux(_Mux_op_18, _Mux_op_17, _GEN_13)
+    skip
+    skip
+    skip
+    os <= pad(_GEN_14, 14)
+    skip
+    skip
+    skip
+    ou <= pad(_GEN_15, 13)
+    obool <= UInt<1>("h0")
+Ops                                Area    Count         Total      Cumulative
+-------------------------------    ----    -----     -------------  ----------
+AreaOp(add,(8,8),9,0)               288        4      1152   85.0%       85.0%
+AreaOp(eq,(4,4),1,1)                 10       14       140   10.3%       95.3%
+AreaMux(-1,0,0)                       8        4        32    2.4%       97.6%
+AreaMux(-1,0,1)                       4        8        32    2.4%      100.0%
+AreaMux(-1,0,2)                       0        2         0    0.0%      100.0%
+AreaOp(asUInt,(8),8,0)                0        1         0    0.0%      100.0%
+AreaOp(pad,(2),9,0)                   0        1         0    0.0%      100.0%
+AreaOp(pad,(9),13,0)                  0        1         0    0.0%      100.0%
+AreaOp(pad,(9),14,0)                  0        1         0    0.0%      100.0%
+-------------------------------    ----    -----     -------------  ----------
+Sum                                                   1356
+==============================================================================

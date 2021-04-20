@@ -1,0 +1,5 @@
+read -sv AAB_reduce.v
+synth -top AAB_reduce
+dfflibmap -liberty /Users/masongchen/Documents/workspace/yosys/examples/cmos/cmos_cells.lib
+abc -liberty /Users/masongchen/Documents/workspace/yosys/examples/cmos/cmos_cells.lib
+clean
