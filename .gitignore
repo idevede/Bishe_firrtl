@@ -42,7 +42,7 @@ spec/spec.synctex.gz
 notes/*.docx
 test_run_dir
 __pycache__
-
+HwachaSequencer.rpt
 .project
 
 # sbt specific
@@ -64,6 +64,6 @@ out/
 .bloop
 .metals
 project/metals.sbt
-
+*.rpt
 *~
 *#*#
