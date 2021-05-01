@@ -151,6 +151,7 @@ inSignals: Not Yet Implemented: DoPrim(and,ArrayBuffer(Reference(_T_625,UIntType
 Worst path delay to any PO or Reg: Some((state#ns,31.0))
 Worst path delay from any PI or Reg: Some((tag_array_1_tag_rdata_en_pipe_0#ps,31.0))
 Finished running ReportTiming on module ICache ...
+<<<<<<< HEAD
 (State,Connect:,Connect( @[ICache.scala 152:21],Reference(io_resp_valid,UIntType(IntWidth(1)),PortKind,SinkFlow),Reference(_T_639,UIntType(IntWidth(1)),RegKind,SourceFlow)))
 (State,Connect:,Connect(,Reference(io_resp_bits_data,UIntType(IntWidth(16)),PortKind,SinkFlow),UIntLiteral(0,IntWidth(16))))
 (State,Connect:,Connect( @[Mux.scala 19:72],Reference(io_resp_bits_datablock,UIntType(IntWidth(64)),PortKind,SinkFlow),DoPrim(or,ArrayBuffer(Reference(_T_712,UIntType(IntWidth(64)),NodeKind,SourceFlow), Reference(_T_709,UIntType(IntWidth(64)),NodeKind,SourceFlow)),ArrayBuffer(),UIntType(IntWidth(64)))))
@@ -304,3 +305,5 @@ inSignals: Not Yet Implemented: DoPrim(and,ArrayBuffer(Reference(_T_625,UIntType
 Worst path delay to any PO or Reg: Some((state#ns,31.0))
 Worst path delay from any PI or Reg: Some((tag_array_1_tag_rdata_en_pipe_0#ps,31.0))
 Finished running ReportTiming on module ICache ...
+=======
+>>>>>>> 994a6ae1599dbfa99746602b6c18b7f3aed02b53

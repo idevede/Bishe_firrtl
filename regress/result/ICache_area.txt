@@ -1006,6 +1006,7 @@ Sum                                                 942116
 ==============================================================================
 unknown op AreaOp(dshlw,(23,4),23,1)
 unknown op AreaOp(dshlw,(256,8),256,1)
+<<<<<<< HEAD
 (State,Connect:,Connect( @[ICache.scala 152:21],Reference(io_resp_valid,UIntType(IntWidth(1)),PortKind,SinkFlow),Reference(_T_639,UIntType(IntWidth(1)),RegKind,SourceFlow)))
 (State,Connect:,Connect(,Reference(io_resp_bits_data,UIntType(IntWidth(16)),PortKind,SinkFlow),UIntLiteral(0,IntWidth(16))))
 (State,Connect:,Connect( @[Mux.scala 19:72],Reference(io_resp_bits_datablock,UIntType(IntWidth(64)),PortKind,SinkFlow),DoPrim(or,ArrayBuffer(Reference(_T_712,UIntType(IntWidth(64)),NodeKind,SourceFlow), Reference(_T_709,UIntType(IntWidth(64)),NodeKind,SourceFlow)),ArrayBuffer(),UIntType(IntWidth(64)))))
@@ -2014,3 +2015,5 @@ Sum                                                 942116
 ==============================================================================
 unknown op AreaOp(dshlw,(23,4),23,1)
 unknown op AreaOp(dshlw,(256,8),256,1)
+=======
+>>>>>>> 994a6ae1599dbfa99746602b6c18b7f3aed02b53

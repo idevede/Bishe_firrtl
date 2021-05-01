@@ -37,6 +37,7 @@ AreaOp(tail,(33),32,0)                0        3         0    0.0%      100.0%
 -------------------------------    ----    -----     -------------  ----------
 Sum                                                   2038
 ==============================================================================
+<<<<<<< HEAD
 (State,Connect:,Connect( @[Conditional.scala 40:58 cmd48.sc 27:22],Reference(io_out,UIntType(IntWidth(32)),PortKind,SinkFlow),Mux(Reference(_T,UIntType(IntWidth(1)),NodeKind,SourceFlow),Reference(_T_2,UIntType(IntWidth(32)),NodeKind,SourceFlow),Reference(_GEN_1,UIntType(IntWidth(32)),NodeKind,SourceFlow),UIntType(IntWidth(32)))))
 circuit ALU :
   module ALU :
@@ -76,3 +77,5 @@ AreaOp(tail,(33),32,0)                0        3         0    0.0%      100.0%
 -------------------------------    ----    -----     -------------  ----------
 Sum                                                   2038
 ==============================================================================
+=======
+>>>>>>> 994a6ae1599dbfa99746602b6c18b7f3aed02b53

@@ -95,6 +95,7 @@ AreaOp(pad,(9),14,0)                  0        1         0    0.0%      100.0%
 -------------------------------    ----    -----     -------------  ----------
 Sum                                                   1356
 ==============================================================================
+<<<<<<< HEAD
 (State,Connect:,Connect(,Reference(os,SIntType(IntWidth(14)),PortKind,SinkFlow),DoPrim(pad,List(Reference(_GEN_14,SIntType(IntWidth(9)),NodeKind,SourceFlow)),List(14),SIntType(IntWidth(14)))))
 (State,Connect:,Connect(,Reference(ou,UIntType(IntWidth(13)),PortKind,SinkFlow),DoPrim(pad,List(Reference(_GEN_15,UIntType(IntWidth(9)),NodeKind,SourceFlow)),List(13),UIntType(IntWidth(13)))))
 (State,Connect:,Connect(,Reference(obool,UIntType(IntWidth(1)),PortKind,SinkFlow),UIntLiteral(0,IntWidth(1))))
@@ -192,3 +193,5 @@ AreaOp(pad,(9),14,0)                  0        1         0    0.0%      100.0%
 -------------------------------    ----    -----     -------------  ----------
 Sum                                                   1356
 ==============================================================================
+=======
+>>>>>>> 994a6ae1599dbfa99746602b6c18b7f3aed02b53

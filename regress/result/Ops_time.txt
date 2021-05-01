@@ -31,6 +31,7 @@ Running ReportTiming on module Ops ...
 Worst path delay to any PO or Reg: Some((ou,12.0))
 Worst path delay from any PI or Reg: Some((sel,12.0))
 Finished running ReportTiming on module Ops ...
+<<<<<<< HEAD
 (State,Connect:,Connect(,Reference(os,SIntType(IntWidth(14)),PortKind,SinkFlow),DoPrim(pad,List(Reference(_GEN_14,SIntType(IntWidth(9)),NodeKind,SourceFlow)),List(14),SIntType(IntWidth(14)))))
 (State,Connect:,Connect(,Reference(ou,UIntType(IntWidth(13)),PortKind,SinkFlow),DoPrim(pad,List(Reference(_GEN_15,UIntType(IntWidth(9)),NodeKind,SourceFlow)),List(13),UIntType(IntWidth(13)))))
 (State,Connect:,Connect(,Reference(obool,UIntType(IntWidth(1)),PortKind,SinkFlow),UIntLiteral(0,IntWidth(1))))
@@ -64,3 +65,5 @@ Running ReportTiming on module Ops ...
 Worst path delay to any PO or Reg: Some((ou,12.0))
 Worst path delay from any PI or Reg: Some((sel,12.0))
 Finished running ReportTiming on module Ops ...
+=======
+>>>>>>> 994a6ae1599dbfa99746602b6c18b7f3aed02b53
